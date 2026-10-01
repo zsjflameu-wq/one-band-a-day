@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日一队 #01 · はっぴいえんど（日本 · 东京）</title>
+<style>
+:root{
+  --paper:#F0EBE1;
+  --paper-2:#E7E0D3;
+  --ink:#1B1A17;
+  --ink-soft:#4A463E;
+  --ink-faint:#8A8377;
+  --sky:#2F4C63;
+  --warm:#B4622C;
+  --rule:#CFC6B6;
+  --serif:"Songti SC","Noto Serif CJK SC","Source Han Serif SC","STSong",Georgia,serif;
+  --sans:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+}
+*{box-sizing:border-box;}
+html{ -webkit-text-size-adjust:100%; }
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16.5px; line-height:1.95;
+  letter-spacing:.01em;
+  background-image:
+    radial-gradient(circle at 15% 12%, rgba(255,255,255,.55), transparent 45%),
+    radial-gradient(circle at 85% 78%, rgba(180,98,44,.06), transparent 50%);
+}
+.wrap{max-width:780px; margin:0 auto; padding:0 32px 120px;}
+
+/* ── 页眉 ── */
+.eyebrow{
+  display:flex; align-items:center; gap:14px;
+  padding:52px 0 0; font-size:12px; letter-spacing:.22em;
+  color:var(--ink-faint); text-transform:uppercase;
+}
+.eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--warm);}
+h1{
+  font-family:var(--serif); font-weight:600;
+  font-size:clamp(38px,7vw,58px); line-height:1.18;
+  margin:26px 0 6px; letter-spacing:.02em;
+}
+h1 .jp{display:block; font-size:clamp(30px,5.6vw,46px); color:var(--sky);}
+h1 .en{display:block; font-size:15px; letter-spacing:.34em; font-family:var(--sans);
+  color:var(--ink-faint); font-weight:400; margin-top:14px;}
+.dek{
+  font-family:var(--serif); font-size:19px; line-height:1.85; color:var(--ink-soft);
+  margin:26px 0 0; max-width:620px;
+}
+.meta{
+  display:flex; flex-wrap:wrap; gap:10px 0; margin:26px 0 0;
+  font-size:12.5px; color:var(--ink-faint); letter-spacing:.06em;
+}
+.meta span{ padding-right:16px; margin-right:16px; border-right:1px solid var(--rule); }
+.meta span:last-child{border:0;}
+
+/* ── 主图 ── */
+figure{margin:0;}
+.hero{margin:44px 0 0;}
+.hero img{
+  width:100%; display:block; filter:contrast(1.04) saturate(.92);
+  border:1px solid var(--rule);
+}
+figcaption{
+  font-size:12.5px; color:var(--ink-faint); line-height:1.7;
+  margin-top:10px; letter-spacing:.02em;
+}
+figcaption b{font-weight:600; color:var(--ink-soft);}
+
+/* ── 章节 ── */
+section{margin-top:76px;}
+h2{
+  font-family:var(--serif); font-weight:600; font-size:26px;
+  margin:0 0 6px; letter-spacing:.03em;
+}
+h2 .num{
+  font-family:var(--sans); font-size:11px; letter-spacing:.24em;
+  color:var(--warm); display:block; margin-bottom:12px; text-transform:uppercase;
+}
+.lede{color:var(--ink-soft); margin:0 0 26px;}
+p{margin:0 0 18px;}
+a{color:var(--sky); text-decoration:none; border-bottom:1px solid rgba(47,76,99,.28);}
+a:hover{border-bottom-color:var(--sky);}
+
+/* 上标引用 */
+sup.ref{
+  font-size:10px; vertical-align:super; color:var(--warm); font-weight:600;
+  padding-left:1px; letter-spacing:0;
+}
+
+/* ── 时间线 ── */
+.tl{margin:30px 0 0; border-left:1px solid var(--rule); padding-left:0;}
+.tl li{
+  list-style:none; position:relative; padding:0 0 24px 26px; margin:0;
+}
+.tl li:before{
+  content:""; position:absolute; left:-4.5px; top:11px;
+  width:8px; height:8px; border-radius:50%;
+  background:var(--paper); border:1.5px solid var(--ink-faint);
+}
+.tl li.key:before{background:var(--warm); border-color:var(--warm);}
+.tl .yr{
+  font-family:var(--serif); font-size:14px; color:var(--warm);
+  letter-spacing:.06em; margin-right:10px;
+}
+.tl .tx{color:var(--ink-soft);}
+.tl .tx b{color:var(--ink); font-weight:600;}
+
+/* ── 成员 ── */
+.members{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
+  background:var(--rule); border:1px solid var(--rule); margin-top:28px;
+}
+.member{background:var(--paper); padding:20px;}
+.member .ph{
+  width:100%; aspect-ratio:3/4; object-fit:cover; object-position:top center;
+  display:block; background:var(--paper-2); filter:saturate(.9);
+}
+.member .noph{
+  width:100%; aspect-ratio:3/4; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:8px;
+  background:
+    repeating-linear-gradient(135deg,var(--paper-2) 0 8px,transparent 8px 16px);
+  border:1px dashed var(--rule); text-align:center; padding:12px;
+}
+.member .noph em{
+  font-style:normal; font-family:var(--serif); font-size:22px; color:var(--ink);
+}
+.member .noph small{font-size:11px; color:var(--ink-faint); line-height:1.6;}
+.member h3{
+  font-family:var(--serif); font-size:19px; margin:16px 0 2px; font-weight:600;
+}
+.member .role{font-size:12.5px; color:var(--warm); letter-spacing:.05em; margin-bottom:8px;}
+.member .bio{font-size:13.5px; line-height:1.8; color:var(--ink-soft); margin:0;}
+
+/* ── 专辑 ── */
+.albums{margin-top:28px; display:flex; flex-direction:column; gap:1px; background:var(--rule); border:1px solid var(--rule);}
+.album{background:var(--paper); display:flex; gap:22px; padding:22px;}
+.album img{width:104px; height:104px; object-fit:cover; flex:none; border:1px solid var(--rule);}
+.album .info h3{font-family:var(--serif); font-size:20px; margin:0 0 4px; font-weight:600;}
+.album .info .spec{font-size:12px; color:var(--ink-faint); letter-spacing:.06em; margin-bottom:10px;}
+.album .info p{font-size:14px; line-height:1.8; color:var(--ink-soft); margin:0;}
+.album .info .tag{
+  display:inline-block; font-size:11px; letter-spacing:.1em; color:var(--warm);
+  border:1px solid rgba(180,98,44,.4); padding:1px 8px; margin-bottom:8px;
+}
+
+/* ── 氛围短片 ── */
+.film{margin:34px 0 0;}
+.film video{
+  width:100%; display:block; background:#111;
+  border:1px solid var(--rule);
+}
+
+/* ── 歌词引用 ── */
+blockquote{
+  margin:30px 0; padding:26px 28px; background:var(--paper-2);
+  border-left:3px solid var(--sky);
+}
+blockquote .jp{
+  font-family:var(--serif); font-size:18px; line-height:2.1; color:var(--ink);
+  display:block; margin-bottom:6px;
+}
+blockquote .zh{
+  font-size:14px; color:var(--ink-soft); line-height:1.9; display:block;
+}
+blockquote .src{
+  font-size:11.5px; color:var(--ink-faint); display:block; margin-top:16px;
+  letter-spacing:.02em;
+}
+
+/* ── 赏析要点 ── */
+.points{margin:26px 0 0; padding:0; }
+.points li{
+  list-style:none; padding:0 0 20px 0; margin:0;
+  border-top:1px solid var(--rule); padding-top:20px;
+}
+.points li:first-child{border-top:0; padding-top:0;}
+.points h4{
+  font-family:var(--serif); font-size:17px; margin:0 0 8px; font-weight:600;
+}
+.points p{font-size:15px; color:var(--ink-soft); margin:0;}
+
+/* ── 延伸曲目 ── */
+.tracks{margin:26px 0 0; padding:0;}
+.tracks li{
+  list-style:none; display:flex; gap:18px; align-items:baseline;
+  padding:14px 0; border-top:1px solid var(--rule);
+}
+.tracks li:first-child{border-top:0;}
+.tracks .t{font-family:var(--serif); font-size:18px; min-width:150px;}
+.tracks .d{font-size:14px; color:var(--ink-soft);}
+
+/* ── 图注警告 ── */
+.note{
+  margin:26px 0 0; padding:16px 18px; font-size:13px; line-height:1.8;
+  color:var(--ink-soft); background:rgba(180,98,44,.07);
+  border-left:3px solid var(--warm);
+}
+
+/* ── 来源 ── */
+.sources{margin-top:26px; padding:0; counter-reset:s;}
+.sources li{
+  list-style:none; counter-increment:s; position:relative;
+  padding:9px 0 9px 34px; font-size:13.5px; line-height:1.75; color:var(--ink-soft);
+  border-top:1px solid var(--rule); word-break:break-all;
+}
+.sources li:first-child{border-top:0;}
+.sources li:before{
+  content:counter(s); position:absolute; left:0; top:9px;
+  font-size:11px; color:var(--warm); font-weight:600; letter-spacing:.05em;
+}
+.sources li b{color:var(--ink); font-weight:600;}
+
+footer{
+  margin-top:80px; padding-top:26px; border-top:1px solid var(--rule);
+  font-size:12px; color:var(--ink-faint); line-height:1.9;
+}
+@media (max-width:640px){
+  .wrap{padding:0 20px 80px;}
+  .members{grid-template-columns:1fr;}
+  .album{flex-direction:column; gap:14px;}
+  .album img{width:88px;height:88px;}
+  .tracks li{flex-direction:column; gap:4px;}
+  .tracks .t{min-width:0;}
+}
+</style>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="site-bar">
+    <a class="brand" href="index.html">每日一队<em>One Band a Day</em></a>
+    <a class="back" href="index.html">← 全部期数</a>
+  </div>
+
+
+  <div class="eyebrow">
+    <span class="dot"></span>
+    <span>每日一队 · 第 01 期</span>
+    <span>·</span>
+    <span>亚洲巡游 · 第 1 站：日本（东京）</span>
+  </div>
+
+  <h1>
+    <span class="jp">はっぴいえんど</span>
+    <span class="en">H A P P Y &nbsp; E N D</span>
+  </h1>
+
+  <p class="dek">
+    只存在了三年、卖得并不好，却给整个日本流行音乐定下了「日语可以唱摇滚」这条底线。
+    四位成员后来各自成了日本乐坛的一条支流：一个组了 YMO，一个做了《A LONG VACATION》，
+    一个成了写下几百首国民歌词的人。
+  </p>
+
+  <div class="meta">
+    <span>1969–1972（另有 1973 / 1985 / 2015 / 2021 再聚）</span>
+    <span>东京都千代田区</span>
+    <span>民谣摇滚 · 迷幻摇滚</span>
+    <span>URC / Bellwood(King)</span>
+  </div>
+
+  <figure class="hero">
+    <img src="assets/HE-band-1971.jpg" alt="はっぴいえんど 1971 年合影">
+    <figcaption>
+      <b>はっぴいえんど，1971 年 9 月。</b>左起：大瀧詠一、細野晴臣、鈴木茂、松本隆。
+      图片来自英文维基百科 <a href="https://en.wikipedia.org/wiki/Happy_End_(band)" target="_blank" rel="noopener">Happy End (band)</a> 条目，
+      该站标注为「合理使用（fair use）」低分辨率图片，<b>版权归原摄影者／权利人所有</b>，此处仅作评论性引用。
+    </figcaption>
+  </figure>
+
+  <!-- ═══ 01 历史 ═══ -->
+  <section>
+    <h2><span class="num">01 / History</span>从一支迷幻乐队，到一场全国争论</h2>
+    <p class="lede">
+      他们不是凭空出现的。はっぴいえんど 的四个人，是从 1960 年代末东京地下摇滚的残骸里捡出来的。
+    </p>
+
+    <ul class="tl">
+      <li><span class="yr">1969.04</span><span class="tx">迷幻摇滚乐队 <b>エイプリル・フール（Apryl Fool）</b> 结成，細野晴臣弹贝斯、松本隆打鼓。</span><sup class="ref">2</sup></li>
+      <li><span class="yr">1969.09</span><span class="tx">Apryl Fool 发完唯一一张专辑后于 10 月解散。細野、松本原本打算和小坂忠另组新团，小坂去演了音乐剧《Hair》，于是找来曾在民谣组合里一起唱过的 <b>大瀧詠一</b>。</span><sup class="ref">2</sup></li>
+      <li><span class="yr">1969.09</span><span class="tx">新团沿用 <b>ヴァレンタイン・ブルー（Valentine Blue）</b> 之名——据松本隆回忆，这个名字是細野起的，理由是「情人节那天他会沮丧」。</span><sup class="ref">1,2</sup></li>
+      <li><span class="yr">1969.12</span><span class="tx">細野和松本听到 <b>鈴木茂</b> 在后来成为《12月の雨の日》的那段曲子上即兴，当场邀他加入。四人到齐。</span><sup class="ref">2</sup></li>
+      <li><span class="yr">1970.03–04</span><span class="tx">先给别人当伴奏：遠藤賢司《Niyago》、岡林信康《Miru Mae ni Tobe》。同年 4 月在 AOI Studio 录自己的首专。</span><sup class="ref">2,5</sup></li>
+      <li class="key"><span class="yr">1970.08.05</span><span class="tx">首张同名专辑《はっぴいえんど》由 <b>URC</b>（日本第一家独立唱片厂牌）发行。它几乎全用日语演唱，直接引爆了后来被称作 <b>「日本語ロック論争」</b> 的公开大辩论：摇滚到底能不能用日语唱。</span><sup class="ref">2</sup></li>
+      <li class="key"><span class="yr">1971.11.20</span><span class="tx">第二张《<b>風街ろまん</b>》发行。这张被认为是给那场争论画上句号的作品。</span><sup class="ref">2,3</sup></li>
+      <li><span class="yr">1972.10</span><span class="tx">已决定解散的乐队被 Bellwood 创办人三浦光紀拉去洛杉矶录音，10 月 13–18 日在好莱坞 <b>Sunset Sound Recorders</b> 完成第三张专辑。Van Dyke Parks、Kirby Johnson、Lowell George、Tom Scott 等参与。</span><sup class="ref">4,5</sup></li>
+      <li><span class="yr">1972.12.31</span><span class="tx">正式宣布解散。1973 年 2 月 25 日第三张专辑《HAPPY END》发行，成为最后一张录音室作品；同年 9 月 21 日举行告别演出。</span><sup class="ref">4,6</sup></li>
+      <li><span class="yr">2021.11</span><span class="tx">松本隆作词 50 周年纪念演出「風街オデッセイ2021」在日本武道馆举行，細野、松本、鈴木三人以「はっぴいえんど」之名时隔 36 年同台，演奏《花いちもんめ》《12月の雨の日》《風をあつめて》三曲。</span><sup class="ref">1</sup></li>
+    </ul>
+
+    <p style="margin-top:26px">
+      那场争论的双方，其实说得都很实在。内田裕也主张「摇滚是要跟世界沟通的东西，用英语唱不懂也照样能让人起舞」；
+      大瀧詠一的回答是——<b>「我可不是为了抗议才用日语唱的。要在日本做摇滚，就得想办法让它在日本扎根。」</b>
+      两句话并排放着，你就会明白 はっぴいえんど 到底在赌什么：不是民族情绪，是「听众是谁」这个很朴素的问题。<sup class="ref">7</sup>
+    </p>
+  </section>
+
+  <!-- ═══ 02 成员 ═══ -->
+  <section>
+    <h2><span class="num">02 / Members</span>四个人的分工，像一支写作小组</h2>
+    <p class="lede">
+      鼓手写词，吉他手和两个唱歌的人作曲——这个奇怪的分工，是他们所有chemistry的来源。
+    </p>
+
+    <div class="members">
+      <div class="member">
+        <img class="ph" src="assets/hosono-2019-s.jpg" alt="細野晴臣（2019）">
+        <h3>細野晴臣</h3>
+        <div class="role">主唱 / 贝斯 / 键盘 / 吉他</div>
+        <p class="bio">1947 年 7 月 9 日生。乐队的低音与旋律主力，《風をあつめて》的作曲者。解散后组建 Tin Pan Alley，1978 年与坂本龙一、高桥幸宏组成 <b>YMO</b>，把日本电子乐推到世界。图为 2019 年东京国际电影节。</p>
+      </div>
+      <div class="member">
+        <img class="ph" src="assets/ohtaki.png" alt="大瀧詠一">
+        <h3>大瀧詠一</h3>
+        <div class="role">主唱 / 吉他 / 作曲</div>
+        <p class="bio">1948 年 7 月 28 日生，2013 年 12 月 30 日因解离性动脉瘤去世，享年 65。人称「福生的仙人」。解散后做出《A LONG VACATION》（1981），一手建立了所谓的「Niagara Sound」。</p>
+      </div>
+      <div class="member">
+        <img class="ph" src="assets/matsumoto-nmnl-2021.jpg" alt="松本隆（2021）" style="object-position:center 22%;">
+        <h3>松本隆</h3>
+        <div class="role">鼓 / 作词（全专辑词作者）</div>
+        <p class="bio">1949 年 7 月 16 日生于东京。三张专辑几乎所有歌词都出自他手。后来成为日本最重量级的作词人之一，为松田聖子写下大量名曲——松田聖子也是唯一一位同时收到这四人供曲的歌手。<sup class="ref">1</sup></p>
+      </div>
+      <div class="member">
+        <img class="ph" src="assets/suzuki-bio.jpg" alt="鈴木茂（演出现场）" style="object-position:center 28%;">
+        <h3>鈴木茂</h3>
+        <div class="role">吉他 / 主唱 / 作曲</div>
+        <p class="bio">1951 年 12 月 20 日生。加入时还是高中生，被称「天才吉他手」。《風街ろまん》里的《花いちもんめ》是他的作曲处女作。解散后与細野共组 Tin Pan Alley，1975 年发表个人专辑《Band Wagon》。图为近年演出现场。</p>
+      </div>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-faint);margin-top:12px">
+      图片来源：細野晴臣 2019（东京国际电影节），Wikimedia Commons，CC BY 2.0，摄影 Dick Thomas Johnson；
+      大瀧詠一，英文维基百科，版权归原权利人；
+      鈴木茂，来自其官方网站 suzuki-shigeru.jp（©HIRANOX）；
+      松本隆（2021），日本コロムビア「松本隆 作詞活動50周年」特设站 columbia.jp/matsumototakashi，Tower Records「NO MUSIC, NO LIFE.」广告素材。
+      均为非商用个人阅读用途的引用。
+    </p>
+  </section>
+
+  <!-- ═══ 03 三张专辑 ═══ -->
+  <section>
+    <h2><span class="num">03 / Discography</span>三张专辑，一条三年就走完的弧线</h2>
+    <p class="lede">只有三张录音室专辑。不多不少，正好是一支乐队从立论、到完成、到告别的过程。</p>
+
+    <div class="albums">
+      <div class="album">
+        <img src="assets/cover-1970-hd.jpg" alt="はっぴいえんど 首张专辑封面">
+        <div class="info">
+          <span class="tag">1970.08.05 · URC</span>
+          <h3>はっぴいえんど</h3>
+          <div class="spec">通称「ゆでめん」· 1970 年 4 月 9–12 日录于 AOI Studio · 制作：秦政明</div>
+          <p>宣言式的第一张。封面本身就是一家名为「ゆでめん 風間商店」的面馆，通称由此而来。整张用日语写、用日语唱，在当时几乎等于挑衅。它引发的争论比销量重要得多。</p>
+        </div>
+      </div>
+      <div class="album">
+        <img src="assets/cover-1971-kazemachi-hd.jpg" alt="風街ろまん 专辑封面">
+        <div class="info">
+          <span class="tag">1971.11.20 · URC (URG-4009)</span>
+          <h3>風街ろまん</h3>
+          <div class="spec">1971 年 5 月 11 日–9 月 12 日录于 モウリ・スタジオ · 制作：はっぴいえんど／アート音楽出版</div>
+          <p>巅峰。日文维基的说法是：这张一发，乐队「实质上就解散了」——因为它已经完成了。2007 年 9 月，《Rolling Stone Japan》把它评为<b>日本摇滚史上最伟大的专辑</b>。<sup class="ref">2,3</sup> 封面插画与设计为 <b>宮谷一彦</b>，封面摄影 <b>野上真宏</b>。<sup class="ref">3</sup></p>
+        </div>
+      </div>
+      <div class="album">
+        <img src="assets/cover-1973-hd.jpg" alt="HAPPY END 专辑封面">
+        <div class="info">
+          <span class="tag">1973.02.25 · Bellwood / King (OFL-8)</span>
+          <h3>HAPPY END</h3>
+          <div class="spec">1972 年 10 月 13–18 日录于洛杉矶 Sunset Sound Recorders</div>
+          <p>解散之后才发行。最后一轨《さよならアメリカ さよならニッポン》是 <b>Van Dyke Parks</b> 写的曲子配上日语歌词。有乐评认为，四个人各自的才华在这张里反而摊得最开。<sup class="ref">4</sup></p>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-faint);margin-top:12px">
+      封面图片版权归各唱片公司／权利人所 有，此处为低分辨率评论性引用，非商业用途。
+    </p>
+  </section>
+
+  <!-- ═══ 04 经典赏析 ═══ -->
+  <section>
+    <h2><span class="num">04 / Close Reading</span>《風をあつめて》——隔着一层玻璃看东京</h2>
+    <p class="lede">
+      作词：松本隆｜作曲：細野晴臣｜3 分 50 秒｜收录于《風街ろまん》A 面第 3 首<sup class="ref">3</sup>。
+      2003 年出现在索菲亚·科波拉的《迷失东京》及原声带中<sup class="ref">2,8</sup>。
+    </p>
+
+    <figure class="film">
+          <div class="yt-slot">
+      <div class="tag">正片 · 待嵌入</div>
+      <p><b>4 分 02 秒，与《風をあつめて》等长。</b></p>
+      <p class="why">带配乐的版本将上传 YouTube 后在此嵌入。<br>本页可直接播放的是下方无声版资料短片——请自备音源同步播放。</p>
+    </div>
+      <figcaption>
+        <b>正片｜4 分 02 秒，与《風をあつめて》等长。</b>
+        结构：固定片头 7 秒 → 开场念白 → 十个画面段落的资料正片 → 片尾留白放歌。
+        全片以这首歌为底，解说与念白处压低约 14dB、间隙与片尾浮回原音量；人声比压低的伴奏高出约 11dB。
+        句间停顿处伴奏只回抬一半，且限制每秒最大回升幅度，避免音乐忽大忽小。
+        画面全部由本页核实过的真实图像与文字构成：1971 年乐队合影、三张专辑封面、四张成员肖像、歌词原文与中文译文。
+        中文解说与日语歌词朗诵均为合成语音（VoxFlow「温润男声」/「平和男旁白」），非乐队成员原声。
+        不含 AI 生成画面。1280×720。
+      </figcaption>
+    </figure>
+
+    <figure class="film" style="margin-top:22px">
+      <video src="01-happy-end-film.mp4" controls muted playsinline preload="metadata"></video>
+      <figcaption>
+        <b>早期版本 · 无声资料短片（3 分 50 秒）｜留档。</b>
+        重制前的版本，画面与解说相同但无 BGM。新版正片已内置这首歌，此版本仅作对照留存。1280×720。
+      </figcaption>
+    </figure>
+
+    
+
+    <blockquote>
+      <span class="jp">街のはずれの　背のびした路地を　散歩してたら<br>汚点だらけのモヤ越しに<br>起きぬけの路面電車が　海を渡るのが　見えたんです</span>
+      <span class="zh">远离尘嚣的大街，我漫步在这条懒洋洋的小巷里；透过斑斑点点的薄雾，看到路边的有轨电车飞驰而过，好像要跨越大海一样。</span>
+      <span class="jp" style="margin-top:16px">それで　ぼくも<br>風をあつめて　風をあつめて<br>蒼空を　翔けたいんです　蒼空を</span>
+      <span class="zh">于是我也想要，把风都收集起来、把风都收集起来、把风都收集起来，好想在苍穹展翅飞翔，在苍穹翱翔。</span>
+      <span class="src">歌词为评论性引用，原文依据歌ネット罗马字转写与藤女子大学学术论文所引文本核对；个别字句在不同版本间略有出入。<b>中文译文参考网易云音乐用户译文（译者：飞天侠_）</b>，为阅读通顺做了分行与标点调整，非官方译本。歌词著作权归原权利人所有。</span>
+    </blockquote>
+
+    <ul class="points">
+      <li>
+        <h4>三段，同一个句式：看见什么 → 于是我也</h4>
+        <p>三段主歌结构完全一致：先写「在某处消磨时间」，再写「隔着什么东西看见什么」，最后落到同一句「それで ぼくも 風をあつめて」。第一段是路地／路面电车渡海，第二段是波止場／挂着緋色帆的都市停泊，第三段是清晨无人的咖啡店／摩天楼的衣摆擦过、浸湿人行道。三幅画面一个比一个更「都市」，但情绪一次比一次更轻。</p>
+      </li>
+      <li>
+        <h4>「隔一层」是这首歌真正的主题</h4>
+        <p>モヤ（雾霭）、ガラス（裂了缝的玻璃）、波止場——每一段的视点都不是身处其中，而是从外围、从脏掉的介质后面看过去。松本隆写的是「正在消失的东京」：1964 年奥运会之后被开发吞掉的那座城，他把它放进一个虚构的「風街」里。<sup class="ref">3</sup> 所以「收集风」这个动作才成立——留不住的，只能收集。</p>
+      </li>
+      <li>
+        <h4>它回答了「日语能不能唱摇滚」这个技术问题</h4>
+        <p>有日语学者专门分析过細野的唱法：他不拖长母音，而是把音「ブツリブツリ」切断般地唱出来，是一种干涩的唱法，为了让日语贴合摇滚的节奏而主动变形了发音。<sup class="ref">7</sup> 换句话说，争论的答案不是写出来的，是唱出来的——日语没有迁就摇滚，摇滚也没有迁就日语，是歌手在嗓子里把它们硬拧在了一起。</p>
+      </li>
+      <li>
+        <h4>关于「它诞生在录音棚走廊」</h4>
+        <p>乐评人北中正和 2017 年在 WHAT's IN? tokyo 撰文，标题即为「はっぴいえんど的名曲《風をあつめて》诞生于录音棚的走廊」。<sup class="ref">1</sup> 该文原文页面已被归档、本次未能取回正文，因此这里只引用标题所载的主张，不作细节展开。</p>
+      </li>
+    </ul>
+
+    <div class="note">
+      <b>关于《迷失东京》：</b>英文维基百科的表述是这首曲子「出现在电影及原声带中」；中文网络资料常称其为「片尾曲」。本次未能核实到确切使用位置，故采用较保守的说法。<sup class="ref">2</sup>
+    </div>
+  </section>
+
+  <!-- ═══ 05 延伸 ═══ -->
+  <section>
+    <h2><span class="num">05 / Also Listen</span>另外三首，往三个方向各走一步</h2>
+    <ul class="tracks">
+      <li><span class="t">花いちもんめ</span><span class="d">《風街ろまん》收曲，作曲：鈴木茂。他的作曲处女作，也是四人里最「会写旋律」的那个人交的作业。<sup class="ref">3</sup></span></li>
+      <li><span class="t">颱風</span><span class="d">《風街ろまん》中最长的一首（6 分 26 秒），大瀧詠一作词作曲。如果想听他们「迷幻」那一面，从这首进。<sup class="ref">3</sup></span></li>
+      <li><span class="t">さよならアメリカ さよならニッポン</span><span class="d">第三张专辑收尾曲，Van Dyke Parks 作曲。一个美国人在洛杉矶写的旋律，被填上日语，唱的是告别——乐队的结束方式本身就很 はっぴいえんど。<sup class="ref">4</sup></span></li>
+    </ul>
+  </section>
+
+  <!-- ═══ 06 来源 ═══ -->
+  <section>
+    <h2><span class="num">06 / Sources</span>资料来源</h2>
+    <p class="lede">本页所有事实均来自以下公开来源，已逐条核对。未找到可靠来源的内容一律未写入。</p>
+    <ol class="sources">
+      <li><b>日本語版 Wikipedia「はっぴいえんど」</b> — 结成/解散年表、成员构成、2021 年武道馆再聚、代表曲被影视引用、北中正和报道的引注。<br><a href="https://ja.wikipedia.org/wiki/はっぴいえんど" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/はっぴいえんど</a></li>
+      <li><b>English Wikipedia「Happy End (band)」</b> — 结成经过、URC 签约、日本語ロック論争、Lost in Translation 使用、HMV「日本最重要 100 组流行音乐人」第 4 位（2003）。<br><a href="https://en.wikipedia.org/wiki/Happy_End_(band)" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Happy_End_(band)</a></li>
+      <li><b>日本語版 Wikipedia「風街ろまん」</b> — 发行日、URC 编号、录音期间与录音棚、曲目表与作词作曲、时长、封面设计者、Rolling Stone Japan 2007 年评选。<br><a href="https://ja.wikipedia.org/wiki/風街ろまん" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/風街ろまん</a></li>
+      <li><b>King Records「SOUND FUJI」Bellwood 50 周年专栏 Part 4</b> — 第三张专辑在洛杉矶 Sunset Sound 录音的经过、参与乐手、唱片公司视角的评价。<br><a href="https://soundfuji.kingrecords.co.jp/en/column/1054" target="_blank" rel="noopener">https://soundfuji.kingrecords.co.jp/en/column/1054</a></li>
+      <li><b>discog.info — Haruomi Hosono Discography</b> — 三张专辑的精确录音日期、录音棚、厂牌与编号。<br><a href="http://discog.info/hosono.html" target="_blank" rel="noopener">http://discog.info/hosono.html</a></li>
+      <li><b>細野晴臣相关传记资料（jazzrocksoul.com）</b> — 解散决定日 1972.12.31、告别演出 1973.09.21、录音期间。<br><a href="https://jazzrocksoul.com/artists/haruomi-hosono/" target="_blank" rel="noopener">https://jazzrocksoul.com/artists/haruomi-hosono/</a></li>
+      <li><b>藤女子大学学术仓储《日本語学から見たサザンオールスターズの楽曲》（PDF）</b> — 内田裕也与大瀧詠一关于「日语摇滚」的发言原文、細野唱法分析、《風をあつめて》歌词引文。<br><a href="https://fujijoshi.repo.nii.ac.jp/record/2000263/files/%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%AD%A6%E3%81%8B%E3%82%89%E8%A6%8B%E3%81%9F%E3%82%B5%E3%82%B6%E3%83%B3%E3%82%AA%E3%83%BC%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA%E3%81%AE%E6%A5%BD%E6%9B%B2.pdf" target="_blank" rel="noopener">fujijoshi.repo.nii.ac.jp / record / 2000263</a></li>
+      <li><b>歌ネット「風をあつめて」歌词页</b> — 歌词罗马字转写，用于核对字句。<br><a href="https://www.uta-net.com/global/en/lyric/106980" target="_blank" rel="noopener">https://www.uta-net.com/global/en/lyric/106980</a></li>
+      <li><b>日本語版 Wikipedia「大瀧詠一」「松本隆」「鈴木茂 (ギタリスト)」</b> — 生卒年与别称；「松本隆」条目外部链接确认其官方 X 账号为 @takashi_mtmt。</li>
+      <li><b>鈴木茂官方网站 suzuki-shigeru.jp（Biography 页）</b> — 生卒年、经历，以及 Biography 页肖像（©HIRANOX）。<br><a href="https://suzuki-shigeru.jp/biography/" target="_blank" rel="noopener">https://suzuki-shigeru.jp/biography/</a></li>
+      <li><b>松本隆官方 X 账号 @takashi_mtmt</b> — 成员卡肖像来源。<br><a href="https://x.com/takashi_mtmt" target="_blank" rel="noopener">https://x.com/takashi_mtmt</a></li>
+      <li><b>MusicBrainz / Cover Art Archive</b> — 三张专辑的发行条目与高清封面图。<br><a href="https://coverartarchive.org/release/dfdadab2-459e-4694-9a2c-918adeeb03cc" target="_blank" rel="noopener">coverartarchive.org / release / dfdadab2…</a>　<a href="https://coverartarchive.org/release/3167a329-c77f-4c13-b44d-cc1003e3a9c3" target="_blank" rel="noopener">3167a329…</a>　<a href="https://coverartarchive.org/release/02a50988-dedf-4154-920e-b28730ca7ab5" target="_blank" rel="noopener">02a50988…</a></li>
+      <li><b>Wikimedia Commons</b> — 細野晴臣 2019 年照片（CC BY 2.0，摄影 Dick Thomas Johnson）。<br><a href="https://commons.wikimedia.org/wiki/File:Hosono_Haruomi_from_%22No_Smoking%22_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2019_(49013189233).jpg" target="_blank" rel="noopener">File:Hosono Haruomi … 2019 (49013189233).jpg</a></li>
+    </ol>
+  </section>
+
+  <footer>
+    每日一队 · 亚洲巡游第 1 站（日本）<br>
+    本页为非商用个人阅读用途的资料整理。所引图片版权归各自权利人，均注明出处；正片配乐为网易云音乐内录的《風をあつめて》，仅供个人学习。
+    页面内唯一的 AI 生成内容是那段 5 秒氛围短片，已单独标注，未用于冒充任何历史照片。<br>
+    生成时间：2026 年 9 月 29 日（更新：9 月 30 日重制正片——固定片头、开场念白、BGM ducking；同日再修伴奏起伏并给歌词页补入中文译文）
+  </footer>
+
+<nav class="pager">
+  <span class="void"><span class="dir">First Issue</span><span class="ttl">已是第一期</span></span>
+  <a class="next" href="02-beyond.html"><span class="dir">Next · #02</span><span class="ttl">Beyond</span><span class="sub">中国香港 · 1983–2005</span></a>
+</nav>
+
+</div>
+</body>
+</html>

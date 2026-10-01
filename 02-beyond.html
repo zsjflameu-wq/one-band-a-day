@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日一队 02 · 中国香港 — Beyond</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --line:#262b35; --ink:#e8e6e0; --ink2:#a5a29a;
+    --red:#e85046; --gold:#d9b36c; --serif:"Songti SC","Noto Serif CJK SC",serif;
+    --sans:"Hiragino Sans GB","PingFang SC",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.9;font-size:17px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px 90px}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(217,179,108,.35)}
+  a:hover{border-bottom-color:var(--gold)}
+  sup{font-size:.72em;line-height:0}
+  sup a{border:none;color:var(--gold);opacity:.9}
+
+  /* 站牌 */
+  .stop{display:flex;align-items:center;gap:14px;margin:44px 0 18px;color:var(--ink2);font-size:14px;letter-spacing:.12em}
+  .stop .no{font-family:var(--serif);border:1px solid var(--line);padding:4px 12px;border-radius:3px}
+  .stop .route{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  h1{font-family:var(--serif);font-size:56px;line-height:1.25;font-weight:700;letter-spacing:.02em}
+  h1 .en{display:block;font-size:30px;color:var(--red);letter-spacing:.32em;margin-top:6px;font-weight:600}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin:22px 0 0;color:var(--ink2);font-size:14.5px}
+  .meta b{color:var(--ink);font-weight:600}
+  .lede{font-family:var(--serif);font-size:20px;color:#cfcfc8;border-left:3px solid var(--red);padding:6px 0 6px 20px;margin:34px 0 10px;line-height:2}
+
+  section{margin-top:64px}
+  h2{font-family:var(--serif);font-size:27px;font-weight:700;margin-bottom:6px;display:flex;align-items:baseline;gap:14px}
+  h2 .k{color:var(--red);font-size:16px;letter-spacing:.18em;font-family:var(--sans);font-weight:600}
+  .rule{height:1px;background:var(--line);margin:14px 0 26px}
+  h3{font-size:18.5px;margin:30px 0 8px;color:var(--ink)}
+  p{margin:12px 0;color:#d6d4cd}
+  .muted{color:var(--ink2);font-size:14.5px}
+
+  figure{margin:26px 0}
+  figure img{width:100%;display:block;border-radius:4px}
+  figure.half{max-width:520px;margin-left:auto;margin-right:auto}
+  figcaption{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.7}
+  figcaption b{color:#bdbab2;font-weight:600}
+  .row{display:flex;gap:16px;flex-wrap:wrap}
+  .row figure{flex:1 1 260px;margin:20px 0 0}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px 24px;margin:22px 0}
+  .fact{display:grid;grid-template-columns:120px 1fr;gap:6px 18px;font-size:15.5px}
+  .fact dt{color:var(--ink2)}
+  .fact dd{color:var(--ink)}
+
+  table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--ink2);font-weight:600;font-size:13.5px;letter-spacing:.06em}
+  td.yr{color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+  .tl{list-style:none;margin:18px 0}
+  .tl li{position:relative;padding:0 0 22px 118px;font-size:15.5px}
+  .tl li::before{content:"";position:absolute;left:86px;top:11px;bottom:-2px;width:1px;background:var(--line)}
+  .tl li:last-child::before{display:none}
+  .tl .yr{position:absolute;left:0;top:1px;font-family:var(--serif);color:var(--gold);font-size:16px;letter-spacing:.03em}
+  .tl b{color:var(--ink)}
+
+  .song{background:linear-gradient(180deg,#1a1d25,#141720);border:1px solid var(--line);border-radius:10px;padding:30px 30px 24px;margin-top:22px}
+  .song .t{font-family:var(--serif);font-size:34px;font-weight:700}
+  .song .t span{color:var(--red)}
+  .lyric{font-family:var(--serif);color:#e9e6de;font-size:21px;line-height:2.1;border-left:3px solid var(--gold);padding-left:20px;margin:26px 0}
+  .lyric small{display:block;font-family:var(--sans);font-size:13px;color:var(--ink2);margin-top:6px}
+  .recs{display:flex;gap:16px;flex-wrap:wrap}
+  .rec{flex:1 1 300px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+  .rec .n{font-family:var(--serif);font-size:21px;font-weight:700}
+  .rec .y{color:var(--gold);font-size:14px;margin-left:8px}
+  .rec p{font-size:14.5px;margin-top:8px;color:#c9c7c0}
+
+  .video-box{background:#000;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:20px 0}
+  video{width:100%;display:block;aspect-ratio:16/9;background:#000}
+  .note{background:rgba(232,80,70,.08);border:1px solid rgba(232,80,70,.35);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#e6c9c5;margin:16px 0}
+  .warn{background:rgba(217,179,108,.07);border:1px solid rgba(217,179,108,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#d8cbb2;margin:16px 0}
+
+  ol.src{font-size:13.5px;color:var(--ink2);line-height:2;padding-left:24px}
+  ol.src li{margin:4px 0}
+  ol.src a{word-break:break-all}
+  .credits{font-size:13px;color:var(--ink2);line-height:2}
+  footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--line);color:var(--ink2);font-size:13px}
+</style>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="site-bar">
+    <a class="brand" href="index.html">每日一队<em>One Band a Day</em></a>
+    <a class="back" href="index.html">← 全部期数</a>
+  </div>
+
+
+  <div class="stop"><span class="no">第 02 站</span><span>亚洲 · 中国香港</span><span class="route"></span><span>每日一队</span></div>
+
+  <h1>Beyond<span class="en">超越自己的那四个字</span></h1>
+  <div class="meta">
+    <span><b>1983</b>–<b>2005</b>（其中 1999–2003 暂别）</span>
+    <span>英属香港 → 中国香港</span>
+    <span>摇滚 / 流行摇滚 / 艺术摇滚<sup><a href="#s2">[1]</a><a href="#s1">[2]</a></sup></span>
+  </div>
+
+  <p class="lede">主唱黄家驹说过一句话，被弟弟黄家强原样转述给 BBC：「香港只有娱乐圈，没有乐坛。」<sup><a href="#s3">[3]</a></sup>这句话几乎解释了 Beyond 的一生——为什么自资出卡带、为什么要去日本、为什么在一首写给自己的歌里唱「原谅我这一生不羁放纵爱自由」。</p>
+
+  <!-- ================= 档案 ================= -->
+  <section id="profile">
+    <h2><span class="k">档案</span>乐队速览</h2>
+    <div class="rule"></div>
+    <div class="panel">
+      <dl class="fact">
+        <dt>成立</dt><dd>1983 年，香港（为参加《吉他杂志》举办的比赛而正式组军）<sup><a href="#s1">[1]</a><a href="#s2">[2]</a></sup></dd>
+        <dt>解散</dt><dd>2005 年，举行「Beyond The Story Live 2005」告别演唱会后正式解散<sup><a href="#s2">[2]</a><a href="#s6">[6]</a></sup></dd>
+        <dt>经典时期</dt><dd>1988《秘密警察》破圈 → 1991 红馆五场「生命接触」→ 1992 赴日 → 1993 黄家驹离世<sup><a href="#s6">[6]</a></sup></dd>
+        <dt>灵魂人物</dt><dd>黄家驹：乐队前十年的曲、词、编、监、唱多出于其手<sup><a href="#s1">[1]</a></sup></dd>
+        <dt>厂牌轨迹</dt><dd>Kinn's Music（1987–88）→ 新艺宝（1988–91）→ 华纳（1992–93）→ 滚石（1994–99）<sup><a href="#s1">[1]</a><a href="#s2">[2]</a></sup></dd>
+        <dt>一句话</dt><dd>一支从地下自资卡带起步、把「原创乐队」四个字撑成华人世界共同语言的香港乐队</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= 历史 ================= -->
+  <section id="history">
+    <h2><span class="k">历史</span>从琴行到红馆，再到台场</h2>
+    <div class="rule"></div>
+
+    <h3>一九八〇年代初 · 地下</h3>
+    <p>黄家驹与叶世荣经琴行老板介绍相识（中文维基记为 1980 年 8 月经土瓜湾嘉林琴行老板介绍<sup><a href="#s1">[1]</a></sup>；快懂百科则记 1981 年经 Tom Lee 琴行老板介绍——两说并存，此处如实记录<sup><a href="#s6">[6]</a></sup>）。1983 年，为参加《吉他杂志》举办的比赛，Beyond 正式组成；队名出自创队主音吉他手邓炜谦，意指「超越自己」，而非超越他人<sup><a href="#s1">[1]</a></sup><sup><a href="#s2">[2]</a></sup>。</p>
+    <p>早期人员流动频繁：邓炜谦、李荣潮 1983 年底相继离队，关宝璇、陈时安先后短暂在籍。1984 年黄家驹的胞弟黄家强补入贝斯，1985 年原本为乐队设计海报的美术生黄贯中接替离队的陈时安弹主音吉他——四人阵容就此成形<sup><a href="#s1">[1]</a></sup><sup><a href="#s2">[2]</a></sup>。</p>
+
+    <figure class="half">
+      <img src="assets/beyond_cover_1986_goodbye.jpg" alt="《再见理想》卡带封面：巷弄中的孩童">
+      <figcaption><b>《再見理想》卡带封面（1986）</b>——包装、设计、录制、配唱全部自己动手，封面由黄贯中操刀。<b>图：Cover Art Archive / MusicBrainz</b>，版权归原权利人</figcaption>
+    </figure>
+
+    <p>1985 年，他们在坚道明爱中心自资举办《永远等待演唱会》，演出亏损，却让他们被经理人陈健添看中；据英文维基转述，那次演出筹得约 1.6 万港元，随后 band 房里只剩 1000 元<sup><a href="#s1">[1]</a></sup><sup><a href="#s2">[2]</a></sup>。1986 年，五人阵容（键盘兼吉他刘志远已加入）自资录制卡带《再见理想》；同年 8 月赴台北参加首届亚太流行音乐节<sup><a href="#s1">[1]</a></sup><sup><a href="#s6">[6]</a></sup>。</p>
+
+    <h3>一九八七 – 一九八九 · 破圈</h3>
+    <p>1987 年首张粤语专辑《亞拉伯跳舞女郎》试图在摇滚与商业之间找路，销量并不理想<sup><a href="#s6">[6]</a></sup>。转折出现在 1988 年：《秘密警察》卖出十万张（双白金），〈大地〉〈喜欢你〉两首歌让 Beyond 从半地下乐队变成主流乐队——代价是被部分老乐迷骂作「摇滚叛徒」<sup><a href="#s6">[6]</a></sup>。同年 10 月，他们去北京首都体育馆演了两场<sup><a href="#s6">[6]</a></sup>。</p>
+
+    <figure class="half">
+      <img src="assets/beyond_cover_1988_secret.jpg" alt="《秘密警察》专辑封面">
+      <figcaption><b>《秘密警察》（1988）</b>——〈大地〉〈喜欢你〉都在这张里。<b>图：Cover Art Archive / MusicBrainz</b>，版权归原权利人</figcaption>
+    </figure>
+
+    <h3>一九八九 – 一九九一 · 巅峰</h3>
+    <p>1989 年《Beyond IV》里写给母亲的〈真的爱你〉再夺十大中文金曲与十大劲歌金曲；1990 年《命運派對》达三白金，〈光輝歲月〉是黄家驹致敬南非领导人曼德拉的作品<sup><a href="#s6">[6]</a></sup><sup><a href="#s3">[3]</a></sup>。1991 年，关怀第三世界的〈AMANI〉获奖，9 月在红磡香港体育馆连开五场「生命接触」演唱会——BBC 中文回顾：1991 年的 Beyond 靠〈Amani〉与影视主题曲持续走红，但唱片销量与谭咏麟、张学友等一线歌手仍有差距<sup><a href="#s3">[3]</a></sup><sup><a href="#s6">[6]</a></sup>。</p>
+
+    <div class="row">
+      <figure>
+        <img src="assets/beyond_cover_1990_fate.jpg" alt="《命运派对》专辑封面">
+        <figcaption><b>《命運派對》（1990）</b><br>图：Cover Art Archive / MusicBrainz</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/beyond_coliseum.jpg" alt="香港体育馆（红磡）外观">
+        <figcaption><b>香港體育館（紅磡）</b>——1991 年「生命接触」连开五场的圣地（图为 2018 年）<br>图：Wikimedia Commons · Ceeseven · CC BY-SA 4.0</figcaption>
+      </figure>
+    </div>
+
+    <h3>一九九二 – 一九九三 · 远走</h3>
+    <p>1992 年初签约日本 Amuse 经纪公司、唱片则交华纳发行，Beyond 把重心移到日本<sup><a href="#s6">[6]</a></sup><sup><a href="#s3">[3]</a></sup>。黄家强后来对 BBC 说：「那时我们觉得在香港很气馁，才会去日本。到了日本之后，原来我们遇到的压力不比在香港小。」在日本，他们要适应对方制作标准的严谨——家驹在电话里对好友刘宏博只说了四个字：在日本很辛苦<sup><a href="#s3">[3]</a></sup>。</p>
+    <p>1992 年的《繼續革命》与 9 月的首张日语专辑《超越》，形象从亲切转为冷酷；1993 年 5 月，粤语专辑《樂與怒》发行——这是四人阵容的最后一张录音室专辑<sup><a href="#s6">[6]</a></sup><sup><a href="#s7">[7]</a></sup>。</p>
+
+    <figure class="half">
+      <img src="assets/beyond_cover_1992_continue.jpg" alt="《继续革命》专辑封面">
+      <figcaption><b>《繼續革命》（1992）</b>——赴日后的第一张粤语大碟。<b>图：Cover Art Archive / MusicBrainz</b>，版权归原权利人</figcaption>
+    </figure>
+
+    <h3>一九九三年六月二十四日</h3>
+    <p>日文单曲发行的前一天凌晨，Beyond 在东京富士电视台录制游戏节目《ウッチャンナンチャンのやるならやらねば!》。黄家驹从两米多高的舞台上跌落，头部着地，陷入昏迷<sup><a href="#s2">[2]</a></sup><sup><a href="#s3">[3]</a></sup>。黄家强记得：「我们另外几个人被主持人带到舞台一边，然后出事了，我们才冲过去——当时他已经跌下去了。」</p>
+    <p>6 月 30 日下午，昏迷六天的黄家驹在东京的医院去世，年仅 31 岁<sup><a href="#s2">[2]</a></sup><sup><a href="#s3">[3]</a></sup>。临时助理李家杰奉命回香港买药，一落地就接到电话——「我挂了电话打开收音机，那时各个电台已经都在播 Beyond 的歌了——刚好在播《海阔天空》。」</p>
+
+    <figure>
+      <img src="assets/beyond_fujitv.jpg" alt="东京台场富士电视台总部大楼">
+      <figcaption><b>東京 · 台場，富士電視台總部</b>——1993 年 6 月 24 日，黄家驹在此录制节目时坠台（图为近年拍摄）。<b>图：Wikimedia Commons · Balon Greyjoy · CC0</b></figcaption>
+    </figure>
+
+    <h3>一九九四 – 二〇〇五 · 三人与散场</h3>
+    <p>1994 年签约滚石，《二樓後座》是三人的第一张专辑，此后乐风转向另类。1999 年宣布暂时解散，2003 年为成立二十周年与家驹逝世十周年重组巡演，2005 年举行「Beyond The Story Live 2005」世界巡回告别演唱会后正式解散，三人各自发展<sup><a href="#s6">[6]</a></sup><sup><a href="#s2">[2]</a></sup>。</p>
+  </section>
+
+  <!-- ================= 成员 ================= -->
+  <section id="members">
+    <h2><span class="k">成员</span>谁在队里</h2>
+    <div class="rule"></div>
+    <table>
+      <tr><th>成员</th><th>分工</th><th>在籍</th><th>备注</th></tr>
+      <tr><td><b>黄家驹</b> Ka Kui（1962–1993）</td><td>主唱 · 节奏吉他</td><td class="yr">1983–1993</td><td>创作核心，乐队的领袖；1993 年意外逝世<sup><a href="#s2">[2]</a></sup></td></tr>
+      <tr><td><b>黄家强</b> Steve</td><td>贝斯 · 主唱</td><td class="yr">1984–1999 / 2003–05</td><td>黄家驹胞弟<sup><a href="#s1">[1]</a></sup></td></tr>
+      <tr><td><b>黄贯中</b> Paul</td><td>主音吉他 · 主唱</td><td class="yr">1985–1999 / 2003–05</td><td>原为乐队设计海报，接替离队的陈时安<sup><a href="#s1">[1]</a></sup></td></tr>
+      <tr><td><b>叶世荣</b> Wing</td><td>鼓 · 打击乐 · 和音</td><td class="yr">1983–1999 / 2003–05</td><td>创队成员，与家驹同受 Pink Floyd 影响<sup><a href="#s1">[1]</a></sup><sup><a href="#s2">[2]</a></sup></td></tr>
+      <tr><td>刘志远</td><td>吉他 · 键琴</td><td class="yr">1986–1988</td><td>1988 年 4 月 30 日退出，此后乐队固定四人<sup><a href="#s1">[1]</a></sup></td></tr>
+      <tr><td>早期成员</td><td>邓炜谦（主音吉他，队名取名者）· 李荣潮（贝斯）· 关宝璇 · 陈时安</td><td class="yr">1983–1985</td><td>均在队约一至两年<sup><a href="#s1">[1]</a></sup></td></tr>
+    </table>
+    <figure class="half">
+      <img src="assets/beyond_cover_1993_rocknroll.jpg" alt="《乐与怒》封面：四子合影">
+      <figcaption><b>《樂與怒》（1993）封面的四人 Beyond</b>——黄家驹、黄家强、黄贯中、叶世荣唯一一次「全体入画」的绝响年代。<b>图：Cover Art Archive / MusicBrainz</b>，版权归原权利人</figcaption>
+    </figure>
+  </section>
+
+  <!-- ================= 经典赏析 ================= -->
+  <section id="song">
+    <h2><span class="k">赏析</span>本期最值得听的一首</h2>
+    <div class="rule"></div>
+
+    <div class="song">
+      <div class="t">海闊天空 <span>·</span> 1993</div>
+      <p class="muted" style="margin-top:4px">收錄於《樂與怒》｜粤语 ｜ 5 分 24 秒</p>
+
+      <dl class="fact" style="margin-top:18px">
+        <dt>词曲 / 主唱</dt><dd>黄家驹<sup><a href="#s4">[4]</a></sup></dd>
+        <dt>编曲 / 制作</dt><dd>Beyond、梁邦彦<sup><a href="#s4">[4]</a></sup></dd>
+        <dt>录制</dt><dd>1993 年 4 月，东京富士录音室<sup><a href="#s4">[4]</a></sup></dd>
+        <dt>风格</dt><dd>流行摇滚 / 艺术摇滚<sup><a href="#s4">[4]</a></sup></dd>
+        <dt>获奖</dt><dd>1993 年度十大中文金曲；叱咤乐坛流行榜「我最喜爱的（本地）创作歌曲」奖项（两种记载并存）<sup><a href="#s4">[4]</a></sup><sup><a href="#s5">[5]</a></sup></dd>
+      </dl>
+
+      <div class="lyric">「原谅我这一生不羁放纵爱自由<br>也会怕有一天会跌倒」<small>歌词：黄家驹〈海闊天空〉1993 · 转引自 BBC 中文<sup><a href="#s3" style="color:inherit">[3]</a></sup></small></div>
+
+      <h3>它不是吉他歌，是钢琴歌</h3>
+      <p>Beyond 的音乐向来以吉他为主，但〈海阔天空〉由钢琴带入、最后在弦乐的伴奏中结束——黄家驹的好友刘宏博 1993 年 5 月在家里第一次听到未发表的 demo 时，被这一点震撼了。这首歌原名就叫<b>《Piano Song》</b>，最早由黄家驹用吉他自弹自唱的那版 demo 后来丢失<sup><a href="#s3">[3]</a></sup>。</p>
+      <p>负责录音制作的是有古典音乐背景的韩裔日籍制作人梁邦彦。他原本只负责钢琴部分，后来进一步完成了开场和间奏的钢琴演奏，并请来 30 多位管弦乐手组成桑野圣乐团进棚——那是 Beyond 第一次用真正的弦乐团录歌，而不是香港惯用的电子乐器模拟<sup><a href="#s3">[3]</a></sup><sup><a href="#s5">[5]</a></sup>。乐队一致商定用弦乐增加节奏感和力量感，梁邦彦在邮件里对 BBC 说：「能够激发出他们最大的魅力，这是我身为音乐制作人的工作。」</p>
+
+      <h3>歌词：写给自己的十年</h3>
+      <p>1993 年正值 Beyond 成立十周年。第一句「今天我 寒夜里看雪飘过」，那场雪就是日本的雪——BBC 中文点明：〈海阔天空〉讲的是「为了理想，离开一个地方」的态度<sup><a href="#s3">[3]</a></sup>。叶世荣说，当时听这首歌「没那么悲伤，而是有点励志」；黄贯中的版本是「有一点灰心，但同时也有希望」<sup><a href="#s3">[3]</a></sup>。</p>
+      <div class="lyric">「多少次 迎着冷眼与嘲笑<br>从没有放弃过心中的理想」<small>歌词：黄家驹〈海闊天空〉1993 · 转引自 BBC 中文<sup><a href="#s3" style="color:inherit">[3]</a></sup></small></div>
+      <p>最狠的一句其实是写给自己的：「背弃了理想 谁人都可以 哪会怕有一天只你共我」——先承认人人都可以背弃理想，再说哪怕全世界只剩你和我。这种先退一步再站住的写法，让它不像口号，倒像赌咒。</p>
+
+      <h3>一个被证实的「Oh no」</h3>
+      <p>黄家强在香港电台《不死传奇》节目里回忆：家驹原本把那一句写成「也会怕有一天会跌倒 <b>Oh yeah</b>」，家强觉得不合逻辑——跌倒的人不会喊 yeah——于是改成了 <b>Oh no</b>。谁也没想到，编完这首歌不到两个月，他真的从高台上跌了下去<sup><a href="#s4">[4]</a></sup>。要说明的是：这是家人事后的叙述，把它当成巧合即可；但正是这个巧合，让整首歌在乐迷心中被钉在了「谶语」的位置上。</p>
+
+      <h3>它为什么成立：先冷场，后封神</h3>
+      <p>〈海阔天空〉并不是《樂與怒》的第一主打——唱片公司先推的是黄贯中填词、以「爸爸」「妈妈」隐喻英国与中国的〈爸爸媽媽〉<sup><a href="#s3">[3]</a></sup>。5 分 24 秒的〈海阔天空〉对当时的电台来说太长，即使剪成 4 分钟版本仍不奏效；它在排行榜成绩普通，从来不是冠军歌，《樂與怒》推出三周就被挤出销量榜前十，同榜热映的是草蜢、黎明、张学友和刘德华<sup><a href="#s3">[3]</a></sup>。</p>
+      <p>然后是 6 月 30 日。香港各家电台不约而同播起这首歌，每句歌词都像有了寓意。据华纳高层黄柏高与经理人陈健添回忆：《樂與怒》首批出货两万余张之后几乎没有唱片店追加，在黄家驹去世后的三四个月里，销量冲到了 30 万张<sup><a href="#s3">[3]</a></sup>。黄家驹在世时，四人阵容的 Beyond 只在现场表演过两次〈海阔天空〉——「很无奈，这首歌大部分时间都是三个人玩，」黄贯中说，「这首歌原本是有他在的。」<sup><a href="#s3">[3]</a></sup></p>
+      <p>再往后，它脱离了纪念歌的范畴：2008 年汶川地震后刘德华填国语词成了〈承诺〉，北京奥运会刘翔退赛时场内响起的就是它，2013、2015 年广州恒大两夺亚冠时天河体育场都在唱<sup><a href="#s3">[3]</a></sup>。2022 年 4 月 12 日，滚石唱片 2011 年上传的官方 MV 成为 YouTube 上<b>第一支点击破亿的粤语歌曲</b><sup><a href="#s7">[7]</a></sup><sup><a href="#s8">[8]</a></sup>。香港电台 DJ 梁兆辉的说法最贴切：「它好像变成了另外一首《狮子山下》。」<sup><a href="#s3">[3]</a></sup></p>
+
+      <figure>
+        <img src="assets/beyond_kk_guitar1.jpg" alt="黄家驹的木吉他，香港文化博物馆展品">
+        <figcaption><b>黄家驹的木吉他</b>——2021 年香港文化博物馆「香港流行文化 60+」特展展品，由黄家强捐赠。<b>图：Wikimedia Commons · Rroame LaOcM · CC BY-SA 4.0</b></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= 延伸 ================= -->
+  <section id="more">
+    <h2><span class="k">延伸</span>听完这首，接着听</h2>
+    <div class="rule"></div>
+    <div class="recs">
+      <div class="rec">
+        <img src="assets/beyond_mandela.jpg" alt="纳尔逊·曼德拉" style="width:110px;float:right;margin:0 0 8px 12px;border-radius:3px">
+        <div class="n">光輝歲月<span class="y">1990 ·《命運派對》</span></div>
+        <p>黄家驹致敬曼德拉的作品，一句「风雨中抱紧自由」——九十年代的香港乐队，把目光放到了世界的另一头<sup><a href="#s6">[6]</a></sup><sup><a href="#s3">[3]</a></sup>。<span class="muted" style="font-size:12px">配图：曼德拉，Wikimedia Commons · CC BY 2.0</span></p>
+      </div>
+      <div class="rec">
+        <div class="n">喜歡妳<span class="y">1988 ·《秘密警察》</span></div>
+        <p>为音乐放下爱情的直白情歌，黄家驹词曲一手包办；G.E.M. 的翻唱版是 YouTube 点击第二高的广东歌 MV，翻唱热度从未消退<sup><a href="#s6">[6]</a></sup><sup><a href="#s7">[7]</a></sup>。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 视频 ================= -->
+  <section id="video">
+    <h2><span class="k">短片</span>与〈海阔天空〉等长的资料短片</h2>
+    <div class="rule"></div>
+    <p class="muted">全片 5 分 24 秒，与〈海闊天空〉（5:24）等长，由真实史料图片 Ken Burns 式运镜构成。<b>不含音频</b>——请自行播放这首歌同步观看。</p>
+    <div class="video-box">
+      <video controls preload="metadata" src="02-beyond-film.mp4"></video>
+    </div>
+    <div class="note">▶ 建议打开方式：播放 Beyond〈海闊天空〉（专辑《樂與怒》版本，5:24），同时播放本片。本片与歌曲等长，字幕为解说词，非歌词时间轴。</div>
+    <div class="warn">说明：本期全部画面均为真实史料图片（乐队照片 / 专辑封面 / 展品 / 地标实景），<b>未使用任何 AI 生成图像或影像</b>；本期未另配 AI 氛围短片。</div>
+  </section>
+
+  <!-- ================= 来源 ================= -->
+  <section id="sources">
+    <h2><span class="k">来源</span>资料来源</h2>
+    <div class="rule"></div>
+    <ol class="src">
+      <li id="s1">中文维基百科〈Beyond〉：<a href="https://zh.wikipedia.org/wiki/Beyond">zh.wikipedia.org/wiki/Beyond</a></li>
+      <li id="s2">Wikipedia (English) “Beyond (band)”：<a href="https://en.wikipedia.org/wiki/Beyond_(band)">en.wikipedia.org/wiki/Beyond_(band)</a></li>
+      <li id="s3">BBC 中文 · 雷旋〈《海阔天空》25 年：超越时代的黄家驹绝唱〉（2018-06-30，含黄家强、黄贯中、叶世荣、刘宏博、黄柏高、陈健添、梁邦彦等受访/书面回复）：<a href="https://www.bbc.com/zhongwen/simp/chinese-news-44654158">bbc.com/zhongwen/simp/chinese-news-44654158</a></li>
+      <li id="s4">中文维基百科〈海闊天空 (Beyond歌曲)〉：<a href="https://zh.wikipedia.org/wiki/%E6%B5%B7%E9%97%8A%E5%A4%A9%E7%A9%BA_(Beyond%E6%AD%8C%E6%9B%B2)">zh.wikipedia.org/wiki/海闊天空_(Beyond歌曲)</a></li>
+      <li id="s5">快懂百科〈海阔天空〉（词曲、编曲、钢琴与弦乐演奏者、奖项、发行日期之另一说）：<a href="https://www.baike.com/wikiid/7606191801674820021">baike.com/wikiid/7606191801674820021</a></li>
+      <li id="s6">快懂百科〈Beyond〉（乐队大事记、专辑销量、北京首体与红馆场次）：<a href="https://www.baike.com/wikiid/7210977765876072500">baike.com/wikiid/7210977765876072500</a></li>
+      <li id="s7">unwire.hk〈《海闊天空》YouTube 突破 1 億次點擊 成第一首點擊過億廣東歌〉（2022-04-14）：<a href="https://unwire.hk/2022/04/14/youtube-6/news">unwire.hk/2022/04/14/youtube-6/news</a></li>
+      <li id="s8">联合早报〈Beyond《海阔天空》 创 YouTube 广东歌点击量纪录〉（2022-04-16）：<a href="https://www.zaobao.com.sg/entertainment/story20220416-1263235">zaobao.com.sg/entertainment/story20220416-1263235</a></li>
+      <li id="s9">MusicBrainz · Beyond（Hong Kong band）艺人页与《樂與怒》release group：<a href="https://musicbrainz.org/artist/d84d02ad-d74c-4227-8073-6f13a039cfac">musicbrainz.org/artist/d84d02ad-d74c-4227-8073-6f13a039cfac</a></li>
+    </ol>
+
+    <h3 style="margin-top:34px">图片来源（版权均归原权利人；非商用个人阅读）</h3>
+    <div class="credits">
+      <p><b>专辑封面 ×6</b>（再見理想 1986 / 秘密警察 1988 / 命運派對 1990 / 猶豫 1991 / 繼續革命 1992 / 樂與怒 1993 / THIS IS LOVE I 1993 / 亞拉伯跳舞女郎 1987）——Cover Art Archive（MusicBrainz），如：<a href="https://musicbrainz.org/release-group/4f019b75-7e4f-3428-a2a7-0091661b201e">musicbrainz.org/release-group/4f019b75…</a></p>
+      <p><b>黄家驹的木吉他 ×2</b>——Wikimedia Commons〈HKHM 沙田 香港文化博物館 Hong Kong Pop 60+ Exhibition August 2021 SS2 187 / 188〉，摄影 Rroame LaOcM，CC BY-SA 4.0；2021-08-11 摄于香港文化博物馆「香港流行文化 60+」展览，展品由黄家强捐赠</p>
+      <p><b>香港體育館</b>——Commons〈Hong Kong Coliseum in 2018.jpg〉，Ceeseven，CC BY-SA 4.0</p>
+      <p><b>富士電視台總部（台場）</b>——Commons〈20190322 Odaiba Fuji Television Network building.jpg〉，Balon Greyjoy，CC0</p>
+      <p><b>香港夜景</b>——Commons〈Hong Kong Night Skyline.jpg〉，Base64（CarolSpears 修图），CC BY-SA 3.0</p>
+      <p><b>東京雪夜（上野）</b>——Commons〈Street with snow in Ueno 2013-01-14 02.jpg〉，naosuke ii，CC BY 2.0</p>
+      <p><b>納爾遜·曼德拉肖像</b>（延伸阅读配图）——Commons〈Nelson Mandela-2008.jpg〉，South Africa The Good News，CC BY 2.0</p>
+    </div>
+
+    <h3 style="margin-top:30px">来源分歧，如实记录</h3>
+    <div class="warn">
+      ① 家驹与世荣结识的琴行与年份：中文维基记「1980 年 8 月 · 土瓜灣嘉林琴行」，快懂百科记「1981 年 · Tom Lee 琴行」，两说并存<sup><a href="#s1">[1]</a><a href="#s6">[6]</a></sup>。
+      ② 《樂與怒》发行日期：中文维基记 5 月 14 日，快懂百科记 5 月 26 日，MusicBrainz 只记 1993 年 5 月<sup><a href="#s1">[1]</a><a href="#s5">[5]</a></sup><sup><a href="#s9">[9]</a></sup>。
+      ③ 叱咤奖项名称：「我最喜爱的创作歌曲大奖」与「我最喜爱的本地创作歌曲大奖」两种记载并存<sup><a href="#s4">[4]</a><a href="#s5">[5]</a></sup>。
+    </div>
+  </section>
+
+  <footer>
+    每日一队 · 世界乐队巡游 ｜ 第 02 站 · 中国香港 · Beyond ｜ 上一站：日本 · はっぴいえんど（Happy End）<br>
+    本页为非商用个人阅读笔记；文字可溯源，图片版权归原权利人；未使用 AI 生成影像。
+  </footer>
+
+<nav class="pager">
+  <a href="01-happy-end.html"><span class="dir">Prev · #01</span><span class="ttl">はっぴいえんど</span><span class="sub">日本 · 东京 · 1969–1972</span></a>
+  <span class="void next"><span class="dir">Latest</span><span class="ttl">下一站待出发</span></span>
+</nav>
+</div>
+</body>
+</html>
