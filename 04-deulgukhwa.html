@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>给我一首歌的时间 04 · 韩国 — 野菊花（들국화）</title>
+<style>
+  :root{
+    --bg:#12100e; --panel:#1b1815; --line:#342c24; --ink:#ece7dd; --ink2:#a49b8d;
+    --gold:#d8a24a; --blue:#c08a5a; --serif:"Songti SC","Noto Serif CJK SC",serif;
+    --sans:"Hiragino Sans GB","PingFang SC",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.9;font-size:17px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px 90px}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(216,162,74,.35)}
+  a:hover{border-bottom-color:var(--gold)}
+  sup{font-size:.72em;line-height:0}
+  sup a{border:none;color:var(--gold);opacity:.9}
+
+  .stop{display:flex;align-items:center;gap:14px;margin:44px 0 18px;color:var(--ink2);font-size:14px;letter-spacing:.12em}
+  .stop .no{font-family:var(--serif);border:1px solid var(--line);padding:4px 12px;border-radius:3px}
+  .stop .route{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  h1{font-family:var(--serif);font-size:54px;line-height:1.25;font-weight:700;letter-spacing:.02em}
+  h1 .en{display:block;font-size:24px;color:var(--blue);letter-spacing:.20em;margin-top:8px;font-weight:600}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin:22px 0 0;color:var(--ink2);font-size:14.5px}
+  .meta b{color:var(--ink);font-weight:600}
+  .lede{font-family:var(--serif);font-size:20px;color:#ded8cd;border-left:3px solid var(--gold);padding:6px 0 6px 20px;margin:34px 0 10px;line-height:2}
+
+  section{margin-top:64px}
+  h2{font-family:var(--serif);font-size:27px;font-weight:700;margin-bottom:6px;display:flex;align-items:baseline;gap:14px}
+  h2 .k{color:var(--gold);font-size:16px;letter-spacing:.18em;font-family:var(--sans);font-weight:600}
+  .rule{height:1px;background:var(--line);margin:14px 0 26px}
+  h3{font-size:18.5px;margin:30px 0 8px;color:var(--ink)}
+  p{margin:12px 0;color:#d8d2c7}
+  .muted{color:var(--ink2);font-size:14.5px}
+
+  figure{margin:26px 0}
+  figure img{width:100%;display:block;border-radius:4px}
+  figure.half{max-width:520px;margin-left:auto;margin-right:auto}
+  figcaption{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.7}
+  figcaption b{color:#c3baab;font-weight:600}
+  .row{display:flex;gap:16px;flex-wrap:wrap}
+  .row figure{flex:1 1 260px;margin:20px 0 0}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px 24px;margin:22px 0}
+  .fact{display:grid;grid-template-columns:120px 1fr;gap:6px 18px;font-size:15.5px}
+  .fact dt{color:var(--ink2)}
+  .fact dd{color:var(--ink)}
+
+  table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--ink2);font-weight:600;font-size:13.5px;letter-spacing:.06em}
+  td.yr{color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+  .tl{list-style:none;margin:18px 0}
+  .tl li{position:relative;padding:0 0 22px 118px;font-size:15.5px}
+  .tl li::before{content:"";position:absolute;left:86px;top:11px;bottom:-2px;width:1px;background:var(--line)}
+  .tl li:last-child::before{display:none}
+  .tl .yr{position:absolute;left:0;top:1px;font-family:var(--serif);color:var(--gold);font-size:16px;letter-spacing:.03em}
+  .tl b{color:var(--ink)}
+
+  .song{background:linear-gradient(180deg,#191512,#141210);border:1px solid var(--line);border-radius:10px;padding:30px 30px 24px;margin-top:22px}
+  .song .t{font-family:var(--serif);font-size:34px;font-weight:700}
+  .song .t span{color:var(--gold)}
+  .lyric{font-family:var(--serif);color:#efece4;font-size:19px;line-height:2.05;border-left:3px solid var(--gold);padding-left:20px;margin:24px 0}
+  .lyric .ko{display:block}
+  .lyric .zh{display:block;color:var(--ink2);font-size:16px;font-family:var(--sans);margin-top:2px}
+  .lyric small{display:block;font-family:var(--sans);font-size:13px;color:var(--ink2);margin-top:14px}
+  .recs{display:flex;gap:16px;flex-wrap:wrap}
+  .rec{flex:1 1 300px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+  .rec .n{font-family:var(--serif);font-size:21px;font-weight:700}
+  .rec .y{color:var(--gold);font-size:14px;margin-left:8px}
+  .rec p{font-size:14.5px;margin-top:8px;color:#ccc6ba}
+
+  .video-box{background:#000;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:20px 0}
+  video{width:100%;display:block;aspect-ratio:16/9;background:#000}
+  .note{background:rgba(216,162,74,.07);border:1px solid rgba(216,162,74,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#e3d3b6;margin:16px 0}
+  .warn{background:rgba(192,138,90,.07);border:1px solid rgba(192,138,90,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#dcc9b2;margin:16px 0}
+
+  ol.src{font-size:13.5px;color:var(--ink2);line-height:2;padding-left:24px}
+  ol.src li{margin:4px 0}
+  ol.src a{word-break:break-all}
+  .credits{font-size:13px;color:var(--ink2);line-height:2}
+  footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--line);color:var(--ink2);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="site-bar">
+    <a class="brand" href="index.html">给我一首歌的时间<em>The Length of a Song</em></a>
+    <a class="back" href="index.html">← 全部期数</a>
+  </div>
+
+  <div class="stop"><span class="no">第 04 站</span><span>亚洲 · 韩国 · 首尔</span><span class="route"></span><span>给我一首歌的时间</span></div>
+
+  <h1>野菊花<span class="en">들국화 · Deulgukhwa · 韩国摇滚 · 1983–1989</span></h1>
+  <div class="meta">
+    <span><b>1983</b> 成军（另有 1982 一说，见<a href="#diverge">来源分歧</a>）<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup></span>
+    <span>首尔 · 钟路</span>
+    <span>摇滚 / 民谣摇滚 / 软摇滚<sup><a href="#src1">[1]</a></sup></span>
+    <span>歌词语言：韩语</span>
+  </div>
+
+  <p class="lede">乐队的名字，来自键盘手嘴里嚼着的一块口香糖。<sup><a href="#src2">[2]</a></sup> 一九八五年，他们的第一张专辑在电视上几乎看不到的情况下卖了八十万张<sup><a href="#src1">[1]</a><a href="#src28">[28]</a></sup>——靠电台里的点播、一盒又一盒传着听的磁带，和一场场挤满人的小剧场。二十二年后，韩国一家报纸请乐评人评选本国流行音乐百大专辑，第一名还是这张。<sup><a href="#src1">[1]</a><a href="#src7">[7]</a></sup></p>
+
+  <!-- ================= 档案 ================= -->
+  <section id="profile">
+    <h2><span class="k">档案</span>乐队速览</h2>
+    <div class="rule"></div>
+    <div class="panel">
+      <dl class="fact">
+        <dt>名字</dt><dd>들국화（Deulgukhwa），字面意思是「野菊花」。名字取自键盘手许成旭当时嚼的口香糖品牌<sup><a href="#src2">[2]</a></sup></dd>
+        <dt>成军</dt><dd>首尔。英文维基记 1982 年 8 月<sup><a href="#src1">[1]</a></sup>，韩文维基记 1983 年 10 月<sup><a href="#src2">[2]</a></sup>，MusicBrainz 记 1983 年<sup><a href="#src3">[3]</a></sup></dd>
+        <dt>首演</dt><dd>钟路，皮卡迪利影院旁的世宗文化会馆（英文维基记作 1982 年 11 月）<sup><a href="#src1">[1]</a></sup></dd>
+        <dt>成军三人</dt><dd>全仁权（主唱）、崔圣园（贝斯）、许成旭（键盘）<sup><a href="#src2">[2]</a></sup></dd>
+        <dt>首专录音五人</dt><dd>上述三人 ＋ 赵德焕（吉他）、朱灿权（鼓，时为录音乐手）<sup><a href="#src2">[2]</a><a href="#src12">[12]</a><a href="#src31">[31]</a></sup>——这不是成军阵容，见<a href="#diverge">来源分歧</a>第 15 条</dd>
+        <dt>活动期</dt><dd>1983–1989，另有 1995–1999、2012–2013 两段重组<sup><a href="#src2">[2]</a></sup></dd>
+        <dt>称号</dt><dd>「韩国的披头士」<sup><a href="#src1">[1]</a><a href="#src6">[6]</a></sup></dd>
+        <dt>奖项</dt><dd>1986 金唱片奖专辑本赏<sup><a href="#src1">[1]</a></sup>；2021 第 18 届韩国大众音乐奖功劳奖<sup><a href="#src2">[2]</a></sup></dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= 历史 ================= -->
+  <section id="history">
+    <h2><span class="k">历史</span>一块口香糖，和一个没上电视的八十万张</h2>
+    <div class="rule"></div>
+
+    <div class="row">
+      <figure>
+        <img src="assets/dk_pagoda1985.jpg" alt="1985 年首尔钟路塔谷公园一带航拍">
+        <figcaption><b>1985 年的首尔钟路一带</b>（塔谷公园航拍，1985-05-21 摄）——他们成军与首演的地方就在这一带。图：首尔历史博物馆《세계는 서울로, 서울은 세계로: 1984–1988》，KOGL 第 1 类型，<a href="https://commons.wikimedia.org/wiki/File:%ED%8C%8C%EA%B3%A0%EB%8B%A4%EA%B3%B5%EC%9B%90.jpg">文件页</a></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/dk_bosingak1985.jpg" alt="1985 年钟路普信阁新钟搬运现场">
+        <figcaption><b>1985 年 8 月，钟路普信阁</b>——新钟搬运现场（1985-08-02 摄）。图：首尔历史博物馆，同上，KOGL 第 1 类型，<a href="https://commons.wikimedia.org/wiki/File:%EB%B3%B4%EC%8B%A0%EA%B0%81%EC%A2%85_%EC%83%88_%EC%A2%85_%EC%88%98%EC%86%A1_%ED%98%84%EC%9E%A5_%281985.08.02%29.jpg">文件页</a></figcaption>
+      </figure>
+    </div>
+
+    <p>一九八〇年代的韩国，主流流行音乐是软绵绵的抒情歌与 Trot，电视是最大的出口，而出口的入口由审查把着。<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup> 野菊花走的是另一条路：电台、现场，和磁带。</p>
+
+    <p>他们的第一张专辑，<b>在电视上几乎看不到</b>——主流节目不接受这种嘶吼般的唱法，他们自己也不肯上（「被禁」与「主动回避出演」两说并存，见<a href="#diverge">来源分歧</a>第 14 条）<sup><a href="#src6">[6]</a><a href="#src28">[28]</a><a href="#src29">[29]</a></sup>，却卖了八十万张<sup><a href="#src1">[1]</a></sup>。把它送到几十万人耳朵里的，是电台里一遍遍的点播、一场场坐满的小剧场，和一盒又一盒转录来转录去的磁带。韩文维基把这件事写成一句话：韩国第一次有人证明了地下音乐的可能性。<sup><a href="#src2">[2]</a></sup></p>
+
+    <h3>时间线</h3>
+    <ul class="tl">
+      <li><span class="yr">1979</span>主唱全仁权先以另一支乐队出道：民谣组合 <b>따로 또 같이</b>（意为「各自，又在一起」）的主唱兼吉他手，同年出版专辑《맴도는 얼굴》；他对自己在其中的表现极不满意，后来回忆说曾想溜进录音棚放火、烧掉母带<sup><a href="#src24">[24]</a><a href="#src25">[25]</a></sup></li>
+      <li><span class="yr">1983.10</span>全仁权（主唱）、许成旭（键盘）、崔圣园（贝斯）三人成军；队名来自许成旭咀嚼的口香糖<sup><a href="#src2">[2]</a></sup>（成军年份另有 1982／1985 两说，见<a href="#diverge">来源分歧</a>第 1 条）</li>
+      <li><span class="yr">1983.11</span>以「野菊花」之名的<b>第一场演出</b>：首尔钟路 3 街的 SM（韩文记作 종로 3가 SM），队名从这一场起正式启用<sup><a href="#src27">[27]</a><a href="#src26">[26]</a></sup>；另有资料记作「钟路皮卡迪利剧院旁的 SM」，见<a href="#diverge">来源分歧</a>第 1 条</li>
+      <li><span class="yr">1985</span>五个人凑齐，录下首张专辑《행진》——但这是<b>录音阵容</b>，不是成军阵容：吉他赵德焕于此前后加入，鼓手朱灿权是以<b>录音乐手（session）</b>身份参与，1986 年第二张专辑起才成为正式成员<sup><a href="#src12">[12]</a><a href="#src27">[27]</a></sup>（首专吉他手另有崔九熙、孙振泰一说，见<a href="#diverge">来源分歧</a>第 8、15 条）</li>
+      <li><span class="yr">1985.09</span>首张专辑出版，收录〈那就是我的世界〉〈행진〉〈매일 그대와〉等；全辑走红<sup><a href="#src2">[2]</a><a href="#src3">[3]</a></sup></li>
+      <li><span class="yr">1986</span>获金唱片奖专辑本赏<sup><a href="#src1">[1]</a></sup>；第二张专辑《너랑 나랑》11 月出版<sup><a href="#src2">[2]</a><a href="#src3">[3]</a></sup></li>
+      <li><span class="yr">1987/89</span>因成员音乐理念分歧宣布解散（年份两处记载不一，见<a href="#diverge">来源分歧</a>）<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup></li>
+      <li><span class="yr">1995.04</span>全仁权率新阵容重组，出版第三张专辑《우리》<sup><a href="#src2">[2]</a><a href="#src3">[3]</a></sup></li>
+      <li><span class="yr">1997/98</span>键盘手许成旭在加拿大因车祸去世（年份两处记载不一）；乐队以此为契机重启活动<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup></li>
+      <li><span class="yr">2000</span>再度解散<sup><a href="#src2">[2]</a></sup></li>
+      <li><span class="yr">1997–2008</span>主唱全仁权因毒品三度被捕（1997／1999／2007），2007 年 12 月被判有期徒刑一年，2008 年 9 月刑满出狱；此后入疗养院戒断，2011 年 8 月出院<sup><a href="#src33">[33]</a><a href="#src34">[34]</a></sup></li>
+      
+      <li><span class="yr">2007.08</span>《京乡新闻》评选「韩国大众音乐 100 大专辑」，首张专辑列第一位<sup><a href="#src1">[1]</a><a href="#src7">[7]</a></sup></li>
+      <li><span class="yr">2012</span>原班三人重组，全年巡演<sup><a href="#src1">[1]</a><a href="#src8">[8]</a></sup></li>
+      <li><span class="yr">2013.10.20</span>鼓手朱灿权突然倒下送医不治，享年 58；死因至今未查明<sup><a href="#src12">[12]</a><a href="#src13">[13]</a></sup></li>
+      <li><span class="yr">2013.12.06</span>同名专辑《들국화》出版，成为朱灿权的遗作<sup><a href="#src1">[1]</a><a href="#src3">[3]</a></sup></li>
+      <li><span class="yr">2014.08.20</span>全仁权在记者会上表示不再重组<sup><a href="#src2">[2]</a></sup></li>
+      <li><span class="yr">2016.11.14</span>创始吉他手赵德焕因十二指肠癌去世<sup><a href="#src14">[14]</a></sup></li>
+      <li><span class="yr">2018.02</span>全仁权在平昌冬奥会开幕式上演唱约翰·列侬的《Imagine》<sup><a href="#src9">[9]</a></sup></li>
+      <li><span class="yr">2021</span>获第 18 届韩国大众音乐奖功劳奖<sup><a href="#src2">[2]</a></sup></li>
+    </ul>
+
+    <div class="row">
+      <figure>
+        <img src="assets/cover_1st.jpg" alt="首张专辑封面">
+        <figcaption><b>首张专辑</b>（1985.09）。图：Cover Art Archive（MusicBrainz release-group <a href="https://musicbrainz.org/release-group/57292ee6-e402-4696-9d27-bdc87f1405e2">57292ee6</a>），版权归原权利人。</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/cover_2nd.jpg" alt="第二张专辑封面">
+        <figcaption><b>第二张专辑</b>（1986.11）。图：Cover Art Archive（<a href="https://musicbrainz.org/release-group/d2fbf4e0-0d85-4094-89af-c8db02f4d793">d2fbf4e0</a>），版权归原权利人。</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/cover_2013.jpg" alt="2013 年同名专辑封面">
+        <figcaption><b>《들국화》</b>（2013.12.06），朱灿权遗作。图：Cover Art Archive（<a href="https://musicbrainz.org/release-group/20e2e6f2-4c97-421d-a78e-5f2d133f6d54">20e2e6f2</a>），版权归原权利人。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= 成员 ================= -->
+  <section id="members">
+    <h2><span class="k">成员</span>五个名字，和后来凑不齐的人</h2>
+    <div class="rule"></div>
+
+    <div class="row">
+      <figure>
+        <img src="assets/dk_jeon.jpg" alt="全仁权 2019 年">
+        <figcaption><b>全仁权（전인권 / Jeon In-kwon）</b>，主唱。图中为 <b>2019 年</b>，非 1980 年代旧照。图：Wikimedia Commons / Trainholic，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Jeon_In_Gwon_2019.jpg">文件页</a></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/dk_jeon_concert.jpg" alt="全仁权 2003 年演出">
+        <figcaption><b>全仁权，2003 年 Tele Concert 演出</b>。这一年乐队并不在活动期。图：Wikimedia Commons / Kwanga，CC BY-SA 2.0 KR，<a href="https://commons.wikimedia.org/wiki/File:Jun_In-gwon-Tele_Concert.png">文件页</a></figcaption>
+      </figure>
+    </div>
+
+    <table>
+      <thead><tr><th>姓名</th><th>位置</th><th>在队情况</th></tr></thead>
+      <tbody>
+        <tr><td>全仁权 <span class="muted">전인권 / Jeon In-kwon</span></td><td>主唱</td><td>核心成员，1954 年生于汉城<sup><a href="#src2">[2]</a><a href="#src22">[22]</a></sup>。从小想当画家，高中只读了一年便辍学，跟着二哥学会弹吉他<sup><a href="#src22">[22]</a></sup>；1979 年先以民谣组合 <b>따로 또 같이</b>（各自又在一起）主唱兼吉他手身份出道、出版专辑《맴도는 얼굴》<sup><a href="#src23">[23]</a><a href="#src24">[24]</a><a href="#src25">[25]</a></sup>；1987 年起因毒品先后五次被处罚<sup><a href="#src33">[33]</a></sup>，其中 1997／1999／2007 三度被捕，2007 年 12 月被判有期徒刑一年、2008 年 9 月刑满出狱<sup><a href="#src34">[34]</a><a href="#src35">[35]</a></sup>；2010–2011 年入全南一家疗养院戒断 1 年 6 个月，出院后戒毒戒酒，2012 年重组时受访称已不再碰毒品<sup><a href="#src33">[33]</a></sup></td></tr>
+        <tr><td>崔圣园 <span class="muted">최성원 / Choi Seong-won</span></td><td>贝斯</td><td>核心成员，〈那就是我的世界〉词曲作者<sup><a href="#src4">[4]</a><a href="#src5">[5]</a></sup></td></tr>
+        <tr><td>许成旭 <span class="muted">허성욱 / Heo Seong-wook</span></td><td>键盘</td><td>创队三人之一，1997/98 年因车祸去世<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup></td></tr>
+        <tr><td>赵德焕 <span class="muted">조덕환 / Jo Deok-hwan</span></td><td>吉他</td><td>非成军三人之一，入队年份有 1983／1985 两说（韩文维基本人条目称其为「<b>创团成员之一</b>」<sup><a href="#src31">[31]</a></sup>）；首专中的〈아침이 밝아올 때까지〉〈세계로 가는 기차〉出自他手<sup><a href="#src31">[31]</a><a href="#src16">[16]</a></sup>。2016 年因十二指肠癌去世<sup><a href="#src14">[14]</a></sup></td></tr>
+        <tr><td>朱灿权 <span class="muted">주찬권 / Joo Chan-kwon</span></td><td>鼓</td><td><b>最晚到的一位</b>：1983 年乐队成军时他还在「申重铉与三个旅人」（신중현과 세 나그네）<sup><a href="#src12">[12]</a></sup>；1985 年首张专辑只以<b>录音乐手</b>身份参与，1986 年第二张专辑《너랑 나랑》起才正式入队<sup><a href="#src12">[12]</a><a href="#src1">[1]</a></sup>；2013 年突然离世，死因未查明<sup><a href="#src12">[12]</a></sup></td></tr>
+        <tr><td>崔九熙 <span class="muted">최구희 / Choi Goo-hee</span></td><td>吉他</td><td>1986 年第二张专辑时期<sup><a href="#src1">[1]</a></sup></td></tr>
+        <tr><td>孙振泰 <span class="muted">손진태 / Son Jin-tae</span></td><td>吉他</td><td>1986 年加入<sup><a href="#src1">[1]</a></sup></td></tr>
+      </tbody>
+    </table>
+
+    <p class="muted">注：仅两人有可核实的汉字表记——<b>全仁權</b>（1992-01-31《东亚日报》标题「대마초흡연 구속수감 가수全仁權(전인권) 보석허가」，经韩文维基引用<sup><a href="#src12">[12]</a></sup>；英文维基 Jeon In-kwon 条目 Hanja 字段<sup><a href="#src9">[9]</a></sup>）、<b>崔聖園</b>（韩文维基 최성원 (음악가) 条目正文首句<sup><a href="#src15">[15]</a></sup>）。其余三人的汉字名未见于可靠来源，表中所列为<b>音译</b>，正式写法以韩文原名与罗马字为准。</p>
+  </section>
+
+  <!-- ================= 经典歌曲 ================= -->
+  <section id="song">
+    <h2><span class="k">经典</span>本期歌曲：〈那就是我的世界〉</h2>
+    <div class="rule"></div>
+
+    <div class="song">
+      <div class="t">那就是我的世界 <span>그것만이 내 세상</span></div>
+      <p class="muted" style="margin-top:6px">1985 年 · 首张专辑 · 词曲：崔圣园 · 演唱：全仁权<sup><a href="#src4">[4]</a><a href="#src5">[5]</a></sup> · 时长 5:29（MusicBrainz 记 329.3 秒<sup><a href="#src3">[3]</a></sup>／网易云记 330.8 秒<sup><a href="#src5">[5]</a></sup>）</p>
+
+      <h3 style="margin-top:24px">为什么是这一首</h3>
+      <p><b>一、它写的是「被说是天真的人」。</b>歌词开头就是别人的评价：「你说我不太懂这个世界／用稍许担心的眼神／用略带抱歉的笑容」。副歌回答：那些哭过笑过的梦，「那就是我的世界」。<sup><a href="#src4">[4]</a></sup> 在军政府年代的韩国，这句「我不后悔」被年轻人当成自己的话来唱。<sup><a href="#src1">[1]</a><a href="#src6">[6]</a></sup></p>
+      <p><b>二、词曲出自贝斯手，嗓子出自主唱。</b>崔圣园写词写曲，全仁权编曲并主唱<sup><a href="#src4">[4]</a></sup>——一个写，一个喊。</p>
+      <p><b>三、它所在的专辑，是后来评选里的第一名。</b>2007 年《京乡新闻》的韩国大众音乐百大专辑评选，首张专辑列第一<sup><a href="#src1">[1]</a><a href="#src7">[7]</a></sup>。</p>
+      <p><b>四、它比乐队出道得更早。</b>首张专辑出版的前一年，〈那就是我的世界〉已经收在合辑《우리 노래 전시회 I》里，当时由全仁权演唱<sup><a href="#src16">[16]</a></sup>——崔圣园写它时还在服役，写的是「当兵时、或退伍那一刻的心情」<sup><a href="#src16">[16]</a></sup>。</p>
+      <p><b>五、它活过了乐队本身。</b>乐队最后一次重组以鼓手去世告终，2014 年主唱宣布不再重组<sup><a href="#src2">[2]</a></sup>；但这首歌至今仍在韩国电台里播。<sup><a href="#src6">[6]</a></sup></p>
+      <p class="muted" style="margin-top:14px">需要说明的是：韩国并没有一份「野菊花最有名的歌」的权威排名，韩文维基的代表曲一栏并列了七首<sup><a href="#src16">[16]</a></sup>。选这一首，是栏目的编辑判断，理由在上面；详情见<a href="#diverge">来源分歧</a>第 10 条。</p>
+
+      <h3>歌词（节选）</h3>
+      <div class="lyric">
+        <span class="ko">세상을 너무나 모른다고 나보고 그대는 얘기하지</span>
+        <span class="zh">你不太懂这个世界，你看着我这样说着</span>
+        <span class="ko">조금은 걱정된 눈빛으로 조금은 미안한 웃음으로</span>
+        <span class="zh">用稍许担心的眼神，用略带抱歉的笑容</span>
+        <span class="ko">그래 아마 난 세상을 모르나봐 혼자 이렇게 먼 길을 떠났나봐</span>
+        <span class="zh">是啊，大概我是不懂这个世界，才会独自一人踏上远途</span>
+        <span class="ko">하지만 후횐 없지 울며 웃던 모든 꿈</span>
+        <span class="zh">但是不曾后悔，每个有笑有泪的梦</span>
+        <span class="ko">그것만이 내 세상</span>
+        <span class="zh">那便是我的世界</span>
+        <small>韩文原文与中译均取自网易云音乐<sup><a href="#src5">[5]</a></sup>，译者：网易云用户「英格利什_Ysq」，非官方译本。</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 延伸推荐 ================= -->
+  <section id="more">
+    <h2><span class="k">延伸</span>再听两首</h2>
+    <div class="rule"></div>
+    <div class="recs">
+      <div class="rec">
+        <div class="n">행진<span class="y">1985</span></div>
+        <p>与首张专辑同名的那首。整张专辑从第一首到最后一首都红了，这一首是其中的行军。<sup><a href="#src2">[2]</a></sup></p>
+      </div>
+      <div class="rec">
+        <div class="n">매일 그대와<span class="y">1985</span></div>
+        <p>同专辑中最温柔的一首，也是后来被翻唱最多的曲目之一。2015 年《请回答1988》的 OST Part 8 翻唱了它，原唱一栏写的就是野菊花。<sup><a href="#src2">[2]</a><a href="#src10">[10]</a><a href="#src17">[17]</a></sup></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 回声 ================= -->
+  <section id="echo">
+    <h2><span class="k">回声</span>三十年后，一部电视剧又把它们唱了一遍</h2>
+    <div class="rule"></div>
+    <div class="panel">
+      <p>2015 年，tvN 播出《请回答1988》。它沿用这个系列一贯的做法：把当年的老歌重新翻唱。其中两张单曲，都和这支乐队有关<sup><a href="#src17">[17]</a></sup>——</p>
+      <p>OST Part 8 〈매일 그대와〉（每日与你）：崔圣园词曲，<b>原唱栏写的是野菊花</b>，由 Girl's Day 素珍翻唱，2015 年 12 月 26 日发行<sup><a href="#src17">[17]</a><a href="#src19">[19]</a></sup>。</p>
+      <p>OST Part 2 〈걱정말아요 그대〉（你不要担心）：全仁权词曲，原唱栏写的是全仁权本人，由李笛翻唱，2015 年 11 月 7 日发行，次年拿到 Mnet 亚洲音乐奖最佳 OST<sup><a href="#src17">[17]</a><a href="#src18">[18]</a></sup>。</p>
+      <p>至于这期的主角〈那就是我的世界〉：韩流媒体 The Kraze 在 2018 年的乐队专题里直接称它是野菊花「最有名的歌」，并说它出现在《请回答1988》里<sup><a href="#src6">[6]</a></sup>——不过它并没有被做成该剧的 OST 单曲，剧里单独发行的翻唱版是上面那两首。「最有名」是这一家媒体的说法，不是榜单结论。</p>
+      <p>这里有一层要说清楚：<b>〈你不要担心〉并不是野菊花的歌</b>。它是全仁权 2004 年个人专辑《전인권과 안 싸우는 사람들》里的作品，写在他离婚之后、最困难的那段日子<sup><a href="#src18">[18]</a><a href="#src20">[20]</a></sup>；二〇一三年，野菊花把它重新录了一遍，收进那张以鼓手遗作告终的同名专辑<sup><a href="#src18">[18]</a><a href="#src21">[21]</a></sup>。乐队散了三十年，最后被一代人记住的方式，是主唱自己写的一句安慰。</p>
+      <p><b>那重录过一遍，为什么还算不上「野菊花的歌」？</b>看三件事——</p>
+      <p><b>一、词曲和首唱都不在乐队名下。</b>它是全仁权<b>个人第四张专辑</b>（2004-11-13）的主打歌，词、曲、唱都是他一个人；那年乐队已经散了十几年。韩文维基把他的个人正规专辑按 1988／1991／2003／2004 单独列成一条线，和野菊花的作品完全分开<sup><a href="#src20">[20]</a></sup>。</p>
+      <p><b>二、2013 年那张《들국화》是双 CD。</b>CD1 是新歌——鼓手遗作那批；CD2 是<b>旧作重录</b>，既重录了乐队自己的歌（행진、그것만이 내 세상、매일 그대와），也重录了主唱的 solo 曲（〈你不要担心〉，以及 2003 年个人专辑的同名曲 다시 이제부터）。〈你不要担心〉在 CD2<sup><a href="#src21">[21]</a></sup>。</p>
+      <p><b>三、剧里的原唱栏写的也是全仁权本人。</b>写「野菊花」的是另一首〈매일 그대와〉<sup><a href="#src17">[17]</a></sup>。</p>
+      <p>所以准确的说法是：<b>野菊花唱过它，但它不是野菊花的歌。</b>这两件事不矛盾，但混在一起说，就会把主唱后半生最重要的那首歌，记到一支只存在了几年的乐队头上。</p>
+    </div>
+  </section>
+
+  <!-- ================= 短片 ================= -->
+  <section id="film">
+    <h2><span class="k">短片</span>与这首歌等长的资料短片</h2>
+    <div class="rule"></div>
+    <div class="video-box">
+      <video controls preload="metadata" poster="assets/cover_1st.jpg">
+        <source src="04-deulgukhwa-film.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="muted">无声资料版，长度与〈那就是我的世界〉全曲一致。建议另开播放器同步播放这首歌。</p>
+  </section>
+
+  <!-- ================= 来源分歧 ================= -->
+  <section id="diverge">
+    <h2><span class="k">存疑</span>来源分歧（如实记录）</h2>
+    <div class="rule"></div>
+    <div class="warn">
+      <p><b>1 · 成军时间：三种说法，差的其实是「从哪一步算起」。</b>英文维基记 <b>1982 年 8 月</b>三人聚齐并在钟路首演<sup><a href="#src1">[1]</a></sup>；韩文维基正文记 <b>1983 年 10 月</b><sup><a href="#src2">[2]</a></sup>，MusicBrainz 记 1983 年<sup><a href="#src3">[3]</a></sup>；2025 年重制版 LP 的官方曲目说明写得更细——1982 年 8 月梨村洞「깨스등」首演起步，1983 年赵德焕加入，<b>1983 年 11 月钟路 3 街 SM 演出起才正式启用「들국화」这个队名</b><sup><a href="#src27">[27]</a></sup>；而韩文维基<b>首段又写「1985 年成立」</b>（按出唱片算），与同条目正文自相矛盾<sup><a href="#src2">[2]</a></sup>，英文维基 Jeon In-kwon 条目同样写 1985 年<sup><a href="#src23">[23]</a></sup>。<b>最有分量的一条是主唱本人的口径</b>：2025 年全仁权接受《每日经济》专访时说，<b>「以野菊花之名的第一场演出，是一九八三年在首尔钟路」</b><sup><a href="#src26">[26]</a></sup>。本页正文与片子都押 1983。</p>
+      <p><b>2 · 首张专辑发行日</b>：MusicBrainz 与 LyricFind 记 1985 年 9 月 10 日<sup><a href="#src3">[3]</a><a href="#src10">[10]</a></sup>，Shazam 记 9 月 1 日<sup><a href="#src11">[11]</a></sup>，韩文维基只写「1985 年 9 月」<sup><a href="#src2">[2]</a></sup>。另有二手来源写作 1986 年 9 月，与其余各说相差一年，本页不采用。</p>
+      <p><b>3 · 解散年份</b>：英文维基正文写「成军五年后，1989 年宣布解散」——这句话内部自相矛盾（若 1982 成军，五年后应为 1987）<sup><a href="#src1">[1]</a></sup>；韩文维基正文记 1987 年宣布解散，而信息框活动期写 1983–1989<sup><a href="#src2">[2]</a></sup>。</p>
+      <p><b>4 · 键盘手去世年份</b>：英文维基记 1998 年<sup><a href="#src1">[1]</a></sup>，韩文维基记 1997 年在加拿大车祸去世<sup><a href="#src2">[2]</a></sup>。</p>
+      <p><b>5 · 全仁权生日</b>：英文维基记 1954 年 9 月 4 日<sup><a href="#src9">[9]</a></sup>，韩文维基记 1954 年 9 月 30 日<sup><a href="#src2">[2]</a></sup>。</p>
+      <p><b>6 · 首张专辑的名称</b>：韩文维基专辑条目与英文维基均称《행진》（March）<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup>，MusicBrainz 的发行组标题则为《들국화》<sup><a href="#src3">[3]</a></sup>。</p>
+      <p><b>7 · 鼓手的死因</b>：韩文维基 주찬권 条目记为<b>心脏麻痹导致的猝死</b>（引 Newsis 2013-10-21）<sup><a href="#src12">[12]</a></sup>；TV Report 2023 年十周年回顾则写所属公司称「<b>死因不明</b>」，医院只推测心脏方面有问题，家属拒绝尸检<sup><a href="#src13">[13]</a></sup>。本页正文取较保守的「死因未查明」。<b>早期资料常见的「癌症」说法不成立</b>——死于癌症的是吉他手赵德焕（十二指肠癌，2016 年）。</p>
+      <p><b>8 · 鼓手何时正式入队</b>：韩文维基乐队条目记「1985 年吉他与鼓手加入」<sup><a href="#src2">[2]</a></sup>，同站鼓手本人条目却记「1985 年首张专辑时只是<b>录音乐手</b>，1986 年第二张专辑起才正式成为成员」<sup><a href="#src12">[12]</a></sup>；英文维基成员表把他的在队时间记为 1986–1989<sup><a href="#src1">[1]</a></sup>。</p>
+      <p><b>9 · 首张专辑的销量</b>：英文维基记 <b>80 万张</b><sup><a href="#src1">[1]</a></sup>；韩文维基《행진》专辑条目则写明「估计约 <b>180 万张</b>」，引《朝鲜日报》<sup><a href="#src16">[16]</a></sup>。两者相差一倍以上，本页正文沿用较常见的 80 万口径，并在此并列存疑。</p>
+      <p><b>10 · 哪一首才是「最有名的歌」，没有定论。</b>韩文维基的「代表曲」一栏并列七首（〈행진〉〈매일 그대와〉〈세계로 가는 기차〉〈그것만이 내 세상〉〈제발〉〈사노라면〉〈걱정 말아요 그대〉）<sup><a href="#src16">[16]</a></sup>；英文维基首段只点名 〈그것만이 내 세상〉 与 〈행진〉 两首<sup><a href="#src1">[1]</a></sup>；乐评人 황정은 在《서브》的评论里，把「〈그것만이 내 세상〉中全仁权的呐喊」与「〈매일 그대와〉中崔圣园的声音」并列为这张专辑的两个代表瞬间<sup><a href="#src16">[16]</a></sup>。<b>本页把〈那就是我的世界〉选作「本期歌曲」是编辑判断，不是任何榜单的结论</b>——唯一有权威的排名是发给专辑的（2007 年百大专辑第一），不是发给单曲的。</p>
+      <p><b>11 · 主唱的生年</b>：韩文维基与英文维基都记 <b>1954 年</b>（日期另有 9 月 4 日／9 月 30 日两说，见第 5 条）<sup><a href="#src2">[2]</a><a href="#src9">[9]</a></sup>；中文媒体（《南方人物周刊》2005 年报道及转引它的百科条目）记 <b>1952 年</b><sup><a href="#src22">[22]</a></sup>。本页正文取 1954。</p>
+      <p><b>12 · 「十九岁听到 Beatles 的《Imagine》」这个说法里的歌名错了。</b>中文报道原文写「Beatles 的《IMAGINE》」<sup><a href="#src22">[22]</a></sup>，但《Imagine》是<b>约翰·列侬 1971 年的个人作品</b>，不是披头士的歌；同一句的后半段「决定要当一个约翰·列侬那样的歌手」也指向列侬本人。本片采用「约翰·列侬的《Imagine》」。（附一条旁证：2018 年平昌冬奥会开幕式上，全仁权正是与三位后辈合唱了列侬的《Imagine》<sup><a href="#src23">[23]</a></sup>。）</p>
+      <p><b>13 · 主唱在野菊花之前的那支乐队叫什么。</b>韩文维基 전인권 条目记为现代民谣组合 <b>따로 또 같이</b>——「1979 年以该组合的<b>主唱兼吉他手</b>正式出道」，同年出版首张专辑《맴도는 얼굴》，又在同一年发行个人唱片、以独唱歌手身份「第二次出道」<sup><a href="#src24">[24]</a></sup>。2025 年重制版 LP 的官方说明则只写他「参与了李周元领衔的『따로 또 같이』首张专辑」之后转为 solo<sup><a href="#src27">[27]</a></sup>——「作为成员出道」与「参与录音」两说并存。专辑本身有实物可考：《맴도는 얼굴》，Jigu Records，编号 JLS-1201442，1979 年<sup><a href="#src25">[25]</a></sup>。片中解说用中文意译「各自又在一起」，不念韩文原名。</p>
+      <p><b>14 · 「电台一首都没播」这个说法站不住，它是英文维基的过度翻译。</b>英文维基写「Despite the album <b>not being played on radios</b>」<sup><a href="#src1">[1]</a></sup>；而韩文维基的原始表述是「이들의 음악은 당시 주 대중음악 유통 경로인 <b>방송</b>이 아닌 앨범과 라이브 공연을 통해 알려지며」<sup><a href="#src2">[2]</a></sup>——韩文的「방송」是笼统的「放送」，指当时主流的音乐节目渠道（主要是电视），<b>并没有点名电台</b>。可查到的旁证都指向同一个方向：<b>电视这一头受阻，电台与现场才是推手</b>——Bugs 音乐平台的 K-POP Archive 艺人简介写他们「주류 가요를 거부하고 <b>방송 출연을 기피하며</b>, 라이브 무대만을 고집」（拒绝主流歌谣、回避放送出演，只坚持现场舞台）<sup><a href="#src28">[28]</a></sup>；英文乐评媒体则称他们的部分歌曲因歌词性质被禁，但这挡不住乐迷去看演出、买磁带<sup><a href="#src6">[6]</a><a href="#src29">[29]</a></sup>。本页与片子据此改写为「电视受阻、电台＋小剧场＋磁带推动」。<br>⚠️ <b>待补</b>：截至目前，我<b>没有检索到「电台点播」这一机制的韩文一手出处</b>（节目名／DJ／点播数据）。这条是按用户核查与上述旁证采用的，属推理性表述；一旦找到一手出处会补进来源表。另注：中文媒体常见的「野菊花症候群」一说，在韩文资料里检索不到对应表述，本页不采用。</p>
+      <p><b>15 · 「五个人」是首张专辑的录音阵容，不是 1983 年成军的阵容。</b>成军的只有三个人——全仁权、崔圣园、许成旭<sup><a href="#src2">[2]</a></sup>。另外两人的情况不同：<br><b>· 吉他赵德焕</b>：韩文维基本人条目称他是「들국화의 <b>창단 구성원</b> 중 한 사람」（创团成员之一）<sup><a href="#src31">[31]</a></sup>，2025 年重制版 LP 官方说明则记为 <b>1983 年加入</b><sup><a href="#src27">[27]</a></sup>，英文维基只写「首专前加入」<sup><a href="#src1">[1]</a></sup>——三种说法都不把他算进最初三人，但都指向「很早就进来了」。<br><b>· 鼓手朱灿权</b>：他本人条目的说法最具体——1983 年乐队成军时他还在「申重铉与三个旅人」活动，<b>1985 年首张专辑是以录音乐手身份参与</b>（原文「…1985년 1집 《행진》에 <b>세션으로 참여</b>한 뒤 1986년…2집 《너랑 나랑》 때부터 <b>본격적인 멤버로 합류</b>했다」）<sup><a href="#src12">[12]</a></sup>。旁证一致：《서브》杂志乐评把「<b>최구희、주찬권、이원재 等当时最好的 session 乐手</b>」与全仁权、崔圣园、许成旭、赵德焕分列叙述<sup><a href="#src32">[32]</a></sup>；英文维基成员表也把他的在队时间记为 1986–1989<sup><a href="#src1">[1]</a></sup>。<br>因此本页正文与片子一律用「<b>录下第一张专辑的，是这五个人</b>」，不写「1985 年五人组同台」——后者没有来源支持。</p>
+      <p><b>16 · 首张专辑的吉他手到底是谁，来源互相打架。</b>韩文维基乐队条目写「1985 年吉他崔九熙与孙振泰、鼓手朱灿权加入」<sup><a href="#src2">[2]</a></sup>；英文维基却把 1985 年的乐队照片注明为「从左至右：许成旭、崔圣园、全仁权、<b>赵德焕</b>」四人<sup><a href="#src1">[1]</a></sup>；韩文维基赵德焕条目又称他是创团成员、并写首专中〈아침이 밝아올 때까지〉〈세계로 가는 기차〉出自他手<sup><a href="#src31">[31]</a></sup>。三说无法调和，本页采用「赵德焕参与首专」这一说，并列存疑。</p>
+    </div>
+  </section>
+
+  <!-- ================= 资料来源 ================= -->
+  <section id="src">
+    <h2><span class="k">出处</span>资料来源</h2>
+    <div class="rule"></div>
+    <ol class="src">
+      <li id="src1">英文维基百科 <a href="https://en.wikipedia.org/wiki/Deulgukhwa">Deulgukhwa</a>（成军、销量、奖项、成员变动与去世年份）</li>
+      <li id="src2">韩文维基百科 <a href="https://ko.wikipedia.org/wiki/%EB%93%A4%EA%B5%AD%ED%99%94_(%EB%B0%B4%EB%93%9C)">들국화 (밴드)</a>（成军、队名由来、专辑年表、重组、2021 功劳奖）</li>
+      <li id="src3">MusicBrainz <a href="https://musicbrainz.org/artist/79bbef91-63cc-4fbc-9922-702092508327">들국화</a> 与各 <a href="https://musicbrainz.org/release-group/57292ee6-e402-4696-9d27-bdc87f1405e2">release-group</a>（发行日期、曲目时长）</li>
+      <li id="src4">Shazam 曲目页 <a href="https://www.shazam.com/song/1804595888/%EA%B7%B8%EA%B2%83%EB%A7%8C%EC%9D%B4-%EB%82%B4-%EC%84%B8%EC%83%81">그것만이 내 세상</a>（词曲署名：Choi Seong-won）</li>
+      <li id="src5">网易云音乐 <a href="https://music.163.com/#/song?id=5417188">그것만이 내 세상</a>（曲长 330.8 秒；韩文歌词与中译，译者「英格利什_Ysq」）</li>
+      <li id="src6">The Kraze <a href="https://thekrazemag.com/latest-updates/2018/10/16/band-of-the-week-deulgukhwa">Band of the Week: Deulgukhwa</a>（2018，乐队史与「韩国的披头士」称号）</li>
+      <li id="src7">《京乡新闻》2007 年「韩国大众音乐 100 大专辑」评选（经英文维基引用：Park Jae-chan, 2007-08-23，<a href="https://en.wikipedia.org/wiki/Deulgukhwa#cite_note-19">转引</a>）</li>
+      <li id="src8">Soompi <a href="https://www.soompi.com/?p=555191">Rock Legends Deulgukhwa Release Teaser for Comeback After 27 Years</a>（2012–2013 重组）</li>
+      <li id="src9">英文维基百科 <a href="https://en.wikipedia.org/wiki/Jeon_In-kwon">Jeon In-kwon</a>（平昌冬奥开幕式演唱《Imagine》、生日）</li>
+      <li id="src10">LyricFind <a href="https://lyrics.lyricfind.com/artists/deul-guk-hwa">Deul Guk Hwa</a>（首专发行日 1985-09-10、曲目表）</li>
+      <li id="src11">Shazam 专辑页（发行日 1985-09-01，与其余来源相差 9 天，见<a href="#diverge">来源分歧</a>第 2 条）</li>
+      <li id="src12">韩文维基百科 <a href="https://ko.wikipedia.org/wiki/%EC%A3%BC%EC%B0%AC%EA%B6%8C">주찬권</a>（生卒、死因、入队经过；含《东亚日报》1992-01-31 标题中的汉字「全仁權」转引）</li>
+      <li id="src13">TV Report <a href="https://tvreport.co.kr/photo/article/764852">「들국화」 故 주찬권, 벌써 10주기</a>（2023，死因不明、医院推测心脏问题、家属不做尸检）</li>
+      <li id="src14">TV Report <a href="https://tvreport.co.kr/star/article/563314">들국화 기타리스트 조덕환 별세</a>（2016-11-14，십이지장암／十二指肠癌）；另见 Korea JoongAng Daily <a href="https://www.koreajoongangdaily.com/korea/guitar-legend-jo-deokhwan-dead-at-64/10662437">Guitar legend Jo Deok-hwan dead at 64</a></li>
+      <li id="src15">韩文维基百科 <a href="https://ko.wikipedia.org/wiki/%EC%B5%9C%EC%84%B1%EC%9B%90_(%EC%9D%8C%EC%95%85%EA%B0%80)">최성원 (음악가)</a>（汉字表记崔聖園、生年、贝斯／主唱、〈那就是我的世界〉词曲）</li>
+      <li id="src16">韩文维基百科 <a href="https://ko.wikipedia.org/wiki/%ED%96%89%EC%A7%84_(%EC%9D%8C%EB%B0%98)">행진 (음반)</a>（首张专辑条目：1985-09-10 发行、曲目表与词曲署名、45 名选定委员 207 分列百大专辑第一、约 180 万张销量引《朝鲜日报》、《서브》乐评 황정은 的评述、〈那就是我的世界〉早一年已收入合辑《우리 노래 전시회 I》）</li>
+      <li id="src17">英文维基百科 <a href="https://en.wikipedia.org/wiki/Reply_1988">Reply 1988</a>（OST 表：Part 2 〈걱정말아요 그대〉词曲与原唱均为 Jeon In-gwon、由 Lee Juck 翻唱；Part 8 〈매일 그대와〉词曲 Choi Sung-won、原唱 Deulgukhwa、由 Sojin 翻唱）</li>
+      <li id="src18">中文百科「<a href="https://baike.baidu.com/item/%E4%BD%A0%E4%B8%8D%E8%A6%81%E6%8B%85%E5%BF%83/19190606">你不要担心</a>」条目（2004-11-13 全仁权个人第四张专辑《전인권과 안 싸우는 사람들》收录并原唱、2013-12-06 野菊花重录版收进同名专辑、2015 李笛翻唱版成为《请回答1988》插曲、2016 年获 Mnet 亚洲音乐奖最佳 OST）</li>
+      <li id="src19">《请回答1988》原声导演版合辑曲目表（含 〈매일 그대와〉，演唱者素珍；另见酷狗「电视剧原声 · 请回答1988」歌单中的野菊花原唱版本）</li>
+      <li id="src20">韩文维基百科 <a href="https://ko.wikipedia.org/wiki/%EC%A0%84%EC%9D%B8%EA%B6%8C">전인권</a>（个人正规专辑序列：1988 一辑、1991 二辑、2003 三辑《다시 이제부터》、2004 四辑《전인권과 안 싸우는 사람들》；条目正文记 2004 年四辑主打歌为〈걱정말아요 그대〉）</li>
+      <li id="src21">2013 年同名专辑《들국화》双 CD 曲目表（CD1 七首新歌；CD2 十二首重录，含 행진、그것만이 내 세상、매일 그대와、걱정말아요 그대、다시 이제부터）——见 <a href="https://kpopexplorer.net/album-deulgukhwa-deulgukhwa">kpopexplorer 专辑页</a>与 <a href="https://www.shazam.com/pt-br/album/777394618/deulgukhwa">Shazam 专辑页</a>（唱片目录与歌曲时长）</li>
+      <li id="src22">《南方人物周刊》2005-05-12 <a href="https://business.sohu.com/20050512/n225540547.shtml">《全仁权：韩国"崔健"》</a>（早年经历：生于汉城、三兄弟中最小、想当画家、高中只读一年即辍学、跟二哥学吉他、19 岁听到《Imagine》后决心当歌手、1972 年起在酒吧演唱；该文记生年为 1952，与维基的 1954 不符，见<a href="#diverge">来源分歧</a>第 11 条）</li>
+      <li id="src23">英文维基百科 <a href="https://en.wikipedia.org/wiki/Jeon_In-kwon">Jeon In-kwon</a>（1954-09-04 生于首尔；1979 年作为民谣摇滚乐队「따로 또 같이 / Apart and Together」主唱发行首张专辑《맴도는 얼굴》；「我想溜进录音棚放一把火，烧掉母带」原话；2018 年平昌冬奥会开幕式与 Ha Hyun-woo、Lee Eun-mi、Ahn Ji-young 合唱约翰·列侬《Imagine》）</li>
+      <li id="src24">韩文维基百科 <a href="https://ko.wikipedia.org/wiki/%EC%A0%84%EC%9D%B8%EA%B6%8C">전인권</a>「경력」原文：1979 年以现代民谣组合「따로 또 같이」的<b>主唱兼吉他手</b>正式出道；专辑不合他的性情，他回忆「想过溜进录音棚放火，毁掉母带」；同年发行个人唱片，以独唱歌手身份第二次出道</li>
+      <li id="src25">Discogs 唱片目录：<a href="https://www.discogs.com/release/18733153-%EB%94%B0%EB%A1%9C-%EB%98%90-%EA%B0%99%EC%9D%B4-%EB%A7%B4%EB%8F%84%EB%8A%94-%EC%96%BC%EA%B5%B4">따로 또 같이《맴도는 얼굴》</a>（Jigu Records，JLS-1201442，1979；A/B 面各五首）</li>
+      <li id="src26"><a href="https://www.mk.co.kr/en/economy/11422024">《每日经济》2025 年全仁权专访</a>（首张专辑四十周年）：「The first stage under the name Deulgukhwa was in Jongno, Seoul in <b>1983</b>」——出自主唱本人口径</li>
+      <li id="src27">2025 年重制版 LP《[BEST]》官方曲目说明（<a href="https://www.kpopalbums.com/en-cz/products/deulgukhwa-best-2025-remastered-lp">kpopalbums</a>）：全仁权参与李周元领衔的「따로 또 같이」首专后转 solo；野菊花的正式起步为 1982 年 8 月梨村洞演出，1983 年赵德焕加入，1983 年 11 月钟路 3 街 SM 演出起正式使用「들국화」队名</li>
+      <li id="src28">Bugs 音乐平台「1985년 베스트 가요 콜렉션」专辑页所附 <b>K-POP Archive 艺人简介</b>（<a href="https://music.bugs.co.kr/musicpd/albumview/6831">链接</a>）：「한편으론 주류 가요를 거부하고 <b>방송 출연을 기피하며</b>, 라이브 무대만을 고집하기도 했다」——拒绝主流歌谣、回避放送出演、只坚持现场舞台</li>
+      <li id="src29">TheKMeal <a href="https://thekmeal.com/time-capsule-deulgukhwa-its-only-my-world">[Time Capsule] Deulgukhwa – It's only my world</a>：「Some of their songs were actually banned from distribution, because of the nature of their lyrics.」（部分歌曲因歌词性质被禁止发行）</li>
+      <li id="src30">中文百科／音乐站的「全仁权」词条（<a href="https://www.91flac.com/singer/346261/desc">91flac</a>、<a href="https://www.baike.com/wikiid/8067334335932106097">快懂百科</a> 同源）：1972 年起在酒吧演唱；「父亲去世后，他倾尽所有家产放手一搏，走遍韩国的酒吧、饭店和夜总会进行演出」；至今大小演出近三千场。<b>这几条均只见于中文媒体，未找到韩文佐证</b>，片子采用时已压缩为一句（生年 1952、Beatels《IMAGINE》等同源说法的处理见分歧 11、12）</li>
+      <li id="src31">韩文维基百科 <a href="https://ko.wikipedia.org/wiki/%EC%A1%B0%EB%8D%95%ED%99%98">조덕환</a>：原文「들국화의 <b>창단 구성원</b> 중 한 사람이자 기타 주자였으나, 나중에 음악적 차이로 이 밴드를 떠난다」（创团成员之一、吉他手，后因音乐分歧离队）；并记〈아침이 밝아올 때까지〉〈세계로 가는 기차〉为其作曲</li>
+      <li id="src32">韩文维基百科 <a href="https://ko.wikipedia.org/wiki/%ED%96%89%EC%A7%84_(%EC%9D%8C%EB%B0%98)">행진 (음반)</a> 所引《서브》杂志乐评（황정은）：在列举全仁权、崔圣园、许成旭、赵德焕之后，另列「<b>최구희, 주찬권, 이원재 등 당시 최고의 세션맨</b>」（崔九熙、朱灿权、李元载等当时最好的 session 乐手）——与朱灿权本人条目「1985 年首专以 session 身份参与、1986 年二辑起正式入队」相互印证</li>
+    <li id="src33">韩文维基百科 <a href="https://ko.wikipedia.org/wiki/%EC%A0%84%EC%9D%B8%EA%B6%8C">전인권</a> 条目「경력」「마약 사건과 재활」章：1987 年 10 月与金贤植、许成旭等吸大麻被拘捕起，「<b>마약 복용으로 처벌받은 횟수만 5차례</b>」（因吸毒受处罚达 5 次）；1997 年 5 月、1999 年 5 月、2007 年 8 月三次因甲基苯丙胺（필로폰）被拘捕；2010 年初吗啡类处方药成瘾，被家人送入全南疗养院 1 年 6 个月，2011 年 8 月出院后戒断，2012 年受访称已不再碰毒品、烟酒皆断</li>
+      <li id="src34">연합뉴스 2008-03-14「<b>'마약복용' 전인권씨, 항소심도 징역 1년</b>」（转引自 전인권 条目注 7）：2007 年 12 月一审判处有期徒刑一年、追征金约 54 万韩元，2008 年 3 月 14 日二审维持原判</li>
+      <li id="src35">스포츠칸 2007-12-07「<b>'마약' 전인권 징역 1년 선고</b>」；맥스무비 2009-03-14 报道其 2008 年 9 月刑满出狱，称在单人牢房 10 个月间作曲 40 余首（均转引自 전인권 条目注 6、8）</li>
+    </ol>
+  </section>
+
+  <!-- ================= 图片来源 ================= -->
+  <section id="img">
+    <h2><span class="k">图片</span>图片来源</h2>
+    <div class="rule"></div>
+    <p class="credits">
+      <b>人物</b>：전인권（全仁权）2019 年演出照 —— <a href="https://commons.wikimedia.org/wiki/File:Jeon_In_Gwon_2019.jpg">File:Jeon In Gwon 2019.jpg</a>，Trainholic 摄，2019-03-17，CC BY-SA 4.0。<br>
+      <b>人物</b>：全仁权 2003 年 Tele Concert 演出 —— <a href="https://commons.wikimedia.org/wiki/File:Jun_In-gwon-Tele_Concert.png">File:Jun In-gwon-Tele Concert.png</a>，Kwanga 摄，2003-06-17，CC BY-SA 2.0 KR。<br>
+      <b>街景</b>：1985 年首尔钟路——塔谷公园一带航拍（1985-05-21）—— <a href="https://commons.wikimedia.org/wiki/File:%ED%8C%8C%EA%B3%A0%EB%8B%A4%EA%B3%B5%EC%9B%90.jpg">File:파고다공원.jpg</a>，首尔历史博物馆《세계는 서울로, 서울은 세계로: 1984–1988》，KOGL 第 1 类型（开放政府许可）。<br>
+      <b>街景</b>：1985 年首尔钟路——普信阁新钟搬运现场（1985-08-02）—— <a href="https://commons.wikimedia.org/wiki/File:%EB%B3%B4%EC%8B%A0%EA%B0%81%EC%A2%85_%EC%83%88_%EC%A2%85_%EC%88%98%EC%86%A1_%ED%98%84%EC%9E%A5_%281985.08.02%29.jpg">File:보신각종 새 종 수송 현장 (1985.08.02).jpg</a>，首尔历史博物馆，同上，KOGL 第 1 类型。<br>
+      <b>全景</b>：1984 年首尔都心俯瞰（南山，1984-04-20；本片「主唱」段画面）—— <a href="https://commons.wikimedia.org/wiki/File:%EB%82%A8%EC%82%B0%EC%97%90%EC%84%9C_%EB%82%B4%EB%A0%A4%EB%8B%A4_%EB%B3%B8_1984%EB%85%84_%EC%84%9C%EC%9A%B8%EB%8F%84%EC%8B%AC_%EC%A0%84%EA%B2%BD.jpg">File:남산에서 내려다 본 1984년 서울도심 전경.jpg</a>，首尔特别市，KOGL 第 1 类型。<br>
+      <b>示意照片</b>：盒式录音机 —— <a href="https://commons.wikimedia.org/wiki/File:Tensai_CRE-113_cassette_recorder_(55356953103).jpg">File:Tensai CRE-113 cassette recorder</a>，Kecko 摄，2026-06-24 于瑞士，CC BY 4.0。<b>这是示意性配图，不是当年韩国磁带的实物照片。</b><br>
+      <b>专辑封面</b>（4 张）：Cover Art Archive，对应 MusicBrainz release-group <a href="https://musicbrainz.org/release-group/57292ee6-e402-4696-9d27-bdc87f1405e2">57292ee6</a>（1985 首专）、<a href="https://musicbrainz.org/release-group/d2fbf4e0-0d85-4094-89af-c8db02f4d793">d2fbf4e0</a>（1986 二专）、<a href="https://musicbrainz.org/release-group/07afedd0-8259-4a3a-a06b-32888e7ffa3a">07afedd0</a>（1995 精选）、<a href="https://musicbrainz.org/release-group/20e2e6f2-4c97-421d-a78e-5f2d133f6d54">20e2e6f2</a>（2013 同名专辑）；版权归原权利人。
+    </p>
+  </section>
+
+  <footer>
+    给我一首歌的时间 · 第 04 站 · 亚洲 · 韩国<br>
+    素材均为真实图像，非商用阅读用途；每张图均标注来源。本页未使用 AI 生成影像。
+  </footer>
+<nav class="pager">
+  <a href="02-beyond.html"><span class="dir">Prev · #02</span><span class="ttl">Beyond</span><span class="sub">中国香港 · 1983–2005</span></a>
+  <span class="void next"><span class="dir">Latest</span><span class="ttl">下一站待出发</span></span>
+</nav>
+</div>
+</body>
+</html>

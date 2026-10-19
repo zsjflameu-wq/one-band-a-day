@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>给我一首歌的时间 03 · 中国台湾 — 生祥乐队</title>
+<style>
+  :root{
+    --bg:#101309; --panel:#181c10; --line:#2a3018; --ink:#e9e7dc; --ink2:#a3a094;
+    --gold:#d9c15a; --green:#8fae67; --serif:"Songti SC","Noto Serif CJK SC",serif;
+    --sans:"Hiragino Sans GB","PingFang SC",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.9;font-size:17px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px 90px}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(217,193,90,.35)}
+  a:hover{border-bottom-color:var(--gold)}
+  sup{font-size:.72em;line-height:0}
+  sup a{border:none;color:var(--gold);opacity:.9}
+
+  .stop{display:flex;align-items:center;gap:14px;margin:44px 0 18px;color:var(--ink2);font-size:14px;letter-spacing:.12em}
+  .stop .no{font-family:var(--serif);border:1px solid var(--line);padding:4px 12px;border-radius:3px}
+  .stop .route{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  h1{font-family:var(--serif);font-size:56px;line-height:1.25;font-weight:700;letter-spacing:.02em}
+  h1 .en{display:block;font-size:26px;color:var(--green);letter-spacing:.26em;margin-top:8px;font-weight:600}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin:22px 0 0;color:var(--ink2);font-size:14.5px}
+  .meta b{color:var(--ink);font-weight:600}
+  .lede{font-family:var(--serif);font-size:20px;color:#d3d2c4;border-left:3px solid var(--gold);padding:6px 0 6px 20px;margin:34px 0 10px;line-height:2}
+
+  section{margin-top:64px}
+  h2{font-family:var(--serif);font-size:27px;font-weight:700;margin-bottom:6px;display:flex;align-items:baseline;gap:14px}
+  h2 .k{color:var(--gold);font-size:16px;letter-spacing:.18em;font-family:var(--sans);font-weight:600}
+  .rule{height:1px;background:var(--line);margin:14px 0 26px}
+  h3{font-size:18.5px;margin:30px 0 8px;color:var(--ink)}
+  p{margin:12px 0;color:#d8d6ca}
+  .muted{color:var(--ink2);font-size:14.5px}
+
+  figure{margin:26px 0}
+  figure img{width:100%;display:block;border-radius:4px}
+  figure.half{max-width:520px;margin-left:auto;margin-right:auto}
+  figcaption{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.7}
+  figcaption b{color:#bdbaae;font-weight:600}
+  .row{display:flex;gap:16px;flex-wrap:wrap}
+  .row figure{flex:1 1 260px;margin:20px 0 0}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px 24px;margin:22px 0}
+  .fact{display:grid;grid-template-columns:120px 1fr;gap:6px 18px;font-size:15.5px}
+  .fact dt{color:var(--ink2)}
+  .fact dd{color:var(--ink)}
+
+  table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--ink2);font-weight:600;font-size:13.5px;letter-spacing:.06em}
+  td.yr{color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+  .tl{list-style:none;margin:18px 0}
+  .tl li{position:relative;padding:0 0 22px 118px;font-size:15.5px}
+  .tl li::before{content:"";position:absolute;left:86px;top:11px;bottom:-2px;width:1px;background:var(--line)}
+  .tl li:last-child::before{display:none}
+  .tl .yr{position:absolute;left:0;top:1px;font-family:var(--serif);color:var(--gold);font-size:16px;letter-spacing:.03em}
+  .tl b{color:var(--ink)}
+
+  .song{background:linear-gradient(180deg,#1a1e10,#141810);border:1px solid var(--line);border-radius:10px;padding:30px 30px 24px;margin-top:22px}
+  .song .t{font-family:var(--serif);font-size:34px;font-weight:700}
+  .song .t span{color:var(--gold)}
+  .lyric{font-family:var(--serif);color:#eceade;font-size:20px;line-height:2.1;border-left:3px solid var(--gold);padding-left:20px;margin:26px 0}
+  .lyric small{display:block;font-family:var(--sans);font-size:13px;color:var(--ink2);margin-top:6px}
+  .recs{display:flex;gap:16px;flex-wrap:wrap}
+  .rec{flex:1 1 300px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+  .rec .n{font-family:var(--serif);font-size:21px;font-weight:700}
+  .rec .y{color:var(--gold);font-size:14px;margin-left:8px}
+  .rec p{font-size:14.5px;margin-top:8px;color:#cbc9bd}
+
+  .video-box{background:#000;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:20px 0}
+  video{width:100%;display:block;aspect-ratio:16/9;background:#000}
+  .note{background:rgba(217,193,90,.07);border:1px solid rgba(217,193,90,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#d8cfb2;margin:16px 0}
+  .warn{background:rgba(143,174,103,.07);border:1px solid rgba(143,174,103,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#c2d4ac;margin:16px 0}
+
+  ol.src{font-size:13.5px;color:var(--ink2);line-height:2;padding-left:24px}
+  ol.src li{margin:4px 0}
+  ol.src a{word-break:break-all}
+  .credits{font-size:13px;color:var(--ink2);line-height:2}
+  footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--line);color:var(--ink2);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="site-bar">
+    <a class="brand" href="index.html">给我一首歌的时间<em>The Length of a Song</em></a>
+    <a class="back" href="index.html">← 全部期数</a>
+  </div>
+
+  <div class="stop"><span class="no">第 03 站</span><span>亚洲 · 中国台湾 · 高雄美浓</span><span class="route"></span><span>给我一首歌的时间</span></div>
+
+  <h1>生祥乐队<span class="en">SHENG-XIANG &amp; BAND · 前身「交工乐队」1998–2003</span></h1>
+  <div class="meta">
+    <span><b>1994</b>–今（前身「观子音乐坑」）</span>
+    <span>高雄 · 美浓（客家庄）</span>
+    <span>客语民谣 / 摇滚 / 运动音乐<sup><a href="#src5">[5]</a></sup></span>
+  </div>
+
+  <p class="lede">2002 年金曲奖颁奖台上，林生祥的得奖感言是：「如果交工乐队是一支麦克风，我们希望递到农民、工人面前，把我们看到的事情、听到的故事，告诉我们的社会……感谢土地伯公！」<sup><a href="#src9">[9]</a></sup>这支从美浓反水库运动里长出来的乐队，把一支麦克风递给了离乡与还乡的人。</p>
+
+  <!-- ================= 档案 ================= -->
+  <section id="profile">
+    <h2><span class="k">档案</span>乐队速览</h2>
+    <div class="rule"></div>
+    <div class="panel">
+      <dl class="fact">
+        <dt>前身</dt><dd>「观子音乐坑」：1994 年，就读淡江大学的美浓青年林生祥与友人合组，以环保议题与客家文化为创作主轴<sup><a href="#src8">[8]</a></sup></dd>
+        <dt>交工乐队</dt><dd>1998 年为投入美浓反水库运动而组成（一说正式成立于 1999 年 1 月 8 日，见<a href="#diverge">来源分歧</a>）<sup><a href="#src8">[8]</a><a href="#src3">[3]</a></sup></dd>
+        <dt>解散 / 延续</dt><dd>2003 年 9 月 1 日交工乐队宣布解散；林生祥与笔手钟永丰另组「生祥与瓦窑坑3」，其余成员成立「好客乐队」<sup><a href="#src3">[3]</a><a href="#src10">[10]</a></sup></dd>
+        <dt>更名</dt><dd>2012 年 7 月，「生祥与乐团」更名为「生祥乐队」——原因是林生祥的乒乓球友算了笔画，认为这个名字「大吉」<sup><a href="#src1">[1]</a><a href="#src6">[6]</a></sup></dd>
+        <dt>灵魂搭档</dt><dd>林生祥（曲、唱、六弦月琴）× 钟永丰（词、诗人）——从反水库运动开始，词曲合作已持续二十余年<sup><a href="#src6">[6]</a></sup></dd>
+        <dt>奖座</dt><dd>金曲奖最佳乐团两座（2002 交工《菊花夜行军》、2005 生祥与瓦窑坑3《临暗》）、第 28 届金曲奖评审团奖（2017《围庄》）、第 54 届金马奖原创音乐双料（《大佛普拉斯》）<sup><a href="#src2">[2]</a><a href="#src10">[10]</a><a href="#src9">[9]</a><a href="#src13">[13]</a></sup></dd>
+        <dt>一句话</dt><dd>一支用客语、月琴和唢呐，把台湾农村的离乡与还乡唱成史诗的乐队</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= 历史 ================= -->
+  <section id="history">
+    <h2><span class="k">历史</span>从反水库的工地，到金曲奖的舞台</h2>
+    <div class="rule"></div>
+    <p>故事要从一场没打赢的仗说起。上世纪九十年代，当局计划在高雄美浓兴建水库，客家庄的农民组织起反水库运动。<sup><a href="#src8">[8]</a></sup>1994 年，在淡江大学读书的美浓青年林生祥组了「观子音乐坑」，把门票收入捐给运动，唱以山歌为底、掺进西洋摇滚的客语歌——〈美浓山下〉〈反水库之歌〉在运动场合被一遍遍唱起。<sup><a href="#src8">[8]</a></sup></p>
+    <p>1998 年，交工乐队正式成军。团名「交工」取自客家农村「换工」的传统——农忙时各家互相帮工，不计报酬。<sup><a href="#src8">[8]</a></sup>1999 年 4 月，第一张专辑《我等就来唱山歌》出版；次年，这张运动专辑拿下第 11 届金曲奖最佳作曲人与最佳制作人<sup><a href="#src3">[3]</a><a href="#src11">[11]</a></sup>——一支反水库的乐队，先被主流评审听见了。</p>
+    <p>2001 年 9 月，《菊花夜行军》发行。这张概念专辑写一个叫「阿成」的农村青年：离乡、失败、还乡。2002 年 5 月，它击败五月天等对手，拿下第 13 届金曲奖最佳乐团奖<sup><a href="#src2">[2]</a><a href="#src10">[10]</a></sup>；此前三个月，英国民谣权威杂志《Folk Roots》专文介绍了这支台湾乐队<sup><a href="#src2">[2]</a></sup>。</p>
+    <p>巅峰处急流勇退。2003 年 9 月 1 日，交工乐队宣布解散，成员一分为二：林生祥与钟永丰带着新乐手组成「生祥与瓦窑坑3」，2005 年又以《临暗》再夺金曲奖最佳乐团<sup><a href="#src3">[3]</a><a href="#src4">[4]</a></sup>；其余成员组成「好客乐队」。<sup><a href="#src3">[3]</a></sup></p>
+    <p>此后林生祥与日本吉他手大竹研长期合作，2010 年贝斯手早川彻加入，2012 年 7 月更名「生祥乐队」，随后鼓手福岛纪明、唢呐手黄博裕加入，编制七人（含笔手钟永丰）。<sup><a href="#src6">[6]</a><a href="#src7">[7]</a></sup>「我庄三部曲」《我庄》《围庄》《野莲出庄》与《江湖卡夫卡》接连问世，《围庄》为反空污议题做了双唱片，未获唱片公司投资、靠网络募资完成，最终拿下第 28 届金曲奖评审团奖。<sup><a href="#src6">[6]</a><a href="#src7">[7]</a></sup></p>
+    <p>林生祥同时也是电影配乐常客：《大佛普拉斯》让他拿下第 54 届金马奖原创音乐双料奖项，此后还有《阳光普照》《男人与他的海》等。<sup><a href="#src13">[13]</a><a href="#src7">[7]</a></sup></p>
+
+    <ul class="tl">
+      <li><span class="yr">1994</span><b>观子音乐坑</b>——淡江大学，林生祥与友人合组，门票收入捐给美浓反水库运动<sup><a href="#src8">[8]</a></sup></li>
+      <li><span class="yr">1997</span><b>《过庄寻聊》</b>——首张专辑，客家庄巡回公演<sup><a href="#src8">[8]</a><a href="#src12">[12]</a></sup></li>
+      <li><span class="yr">1998</span><b>交工乐队成军</b>——投入反水库运动；团名取自农村「换工」传统<sup><a href="#src8">[8]</a></sup></li>
+      <li><span class="yr">1999</span><b>《我等就来唱山歌》</b>——运动民谣，2000 年夺金曲奖最佳作曲人、最佳制作人<sup><a href="#src3">[3]</a><a href="#src11">[11]</a></sup></li>
+      <li><span class="yr">2001</span><b>《菊花夜行军》</b>——「阿成」还乡叙事；次年击败五月天夺第 13 届金曲奖最佳乐团<sup><a href="#src2">[2]</a><a href="#src10">[10]</a></sup></li>
+      <li><span class="yr">2003</span><b>交工解散（9 月 1 日）</b>——分成「生祥与瓦窑坑3」与「好客乐队」<sup><a href="#src3">[3]</a></sup></li>
+      <li><span class="yr">2005</span><b>《临暗》</b>——再夺金曲奖最佳乐团，再次击败五月天<sup><a href="#src4">[4]</a></sup></li>
+      <li><span class="yr">2012</span><b>更名「生祥乐队」</b>——球友算笔画「大吉」；七人编制成形<sup><a href="#src1">[1]</a><a href="#src6">[6]</a></sup></li>
+      <li><span class="yr">2016</span><b>《围庄 / 动身》</b>——反空污双唱片，网络募资完成；次年夺金曲奖评审团奖<sup><a href="#src6">[6]</a><a href="#src7">[7]</a></sup></li>
+      <li><span class="yr">2017</span><b>《大佛普拉斯》</b>——第 54 届金马奖原创音乐双料<sup><a href="#src13">[13]</a></sup></li>
+      <li><span class="yr">2022</span><b>《江湖卡夫卡》</b>——「庄」系列终章，转向中年个体叙事；2025 年获第 14 届迷笛奖年度最佳摇滚专辑<sup><a href="#src6">[6]</a><a href="#src14">[14]</a></sup></li>
+    </ul>
+  </section>
+
+  <!-- ================= 成员 ================= -->
+  <section id="members">
+    <h2><span class="k">成员</span>两个时期，一支麦克风</h2>
+    <div class="rule"></div>
+    <h3>交工乐队（1998–2003）</h3>
+    <table>
+      <tr><th>成员</th><th>分工</th></tr>
+      <tr><td>林生祥</td><td>主唱、吉他、月琴、三弦<sup><a href="#src3">[3]</a></sup></td></tr>
+      <tr><td>陈冠宇</td><td>贝斯、录音师<sup><a href="#src3">[3]</a></sup></td></tr>
+      <tr><td>钟成达</td><td>打击乐<sup><a href="#src3">[3]</a></sup></td></tr>
+      <tr><td>郭进财</td><td>唢呐<sup><a href="#src3">[3]</a></sup></td></tr>
+      <tr><td>钟永丰</td><td>笔手（词）、诗人<sup><a href="#src3">[3]</a></sup></td></tr>
+    </table>
+    <p class="muted">专辑内页另载：〈风神125〉一曲中，母亲口白由曾秀梅担任。<sup><a href="#src8b">[8b]</a></sup></p>
+    <h3>生祥乐队（2012– ）现行编制</h3>
+    <table>
+      <tr><th>成员</th><th>分工</th></tr>
+      <tr><td>林生祥</td><td>主唱、六弦月琴、电月琴、木吉他<sup><a href="#src6">[6]</a></sup></td></tr>
+      <tr><td>大竹研（日本）</td><td>木吉他、电吉他<sup><a href="#src6">[6]</a></sup></td></tr>
+      <tr><td>早川彻（日本）</td><td>电贝斯、键盘、口风琴<sup><a href="#src6">[6]</a></sup></td></tr>
+      <tr><td>吴政君</td><td>打击乐器、北管乐器、二胡<sup><a href="#src6">[6]</a></sup></td></tr>
+      <tr><td>福岛纪明（日本）</td><td>爵士鼓<sup><a href="#src6">[6]</a></sup></td></tr>
+      <tr><td>黄博裕</td><td>唢呐、管子、笛子<sup><a href="#src6">[6]</a></sup></td></tr>
+      <tr><td>钟永丰</td><td>笔手、朗诵<sup><a href="#src6">[6]</a></sup></td></tr>
+    </table>
+
+    <figure class="half">
+      <img src="assets/sx_lin_goldenhorse.jpg" alt="林生祥在第54届金马奖颁奖典礼">
+      <figcaption><b>林生祥</b>在第 54 届金马奖颁奖典礼——以《大佛普拉斯》拿下原创音乐双料奖项（2017）。图：Wikimedia Commons <a href="https://commons.wikimedia.org/wiki/File:%E6%9E%97%E7%94%9F%E7%A5%A5%E7%8D%B2%E7%AC%AC54%E5%B1%86%E9%87%91%E9%A6%AC%E5%8E%9F%E5%89%B5%E9%9F%B3%E6%A8%82%E9%9B%99%E6%96%99%E7%8D%8E.jpg">文件页</a>，版权归原权利人。</figcaption>
+    </figure>
+  </section>
+
+  <!-- ================= 经典歌曲 ================= -->
+  <section id="classic">
+    <h2><span class="k">经典</span>〈夜行巴士〉：一趟开往台北的请愿夜车</h2>
+    <div class="rule"></div>
+    <div class="song">
+      <div class="t">〈夜行巴士〉<span> · 交工乐队</span></div>
+      <p class="muted" style="margin-top:6px">词：钟永丰 ｜ 曲：林生祥 ｜ 主唱：林生祥 ｜ 收录《我等就来唱山歌》（1999，专辑第 2 首）｜ 全长 <b>6:05</b>，副题「记一位老农的心情」<sup><a href="#src16">[16]</a></sup><sup><a href="#src2">[2]</a></sup></p>
+
+      <p>一九九九年，美浓反水库运动进入第六年。政府说水库一建美浓就变金库，农民不信，连年北上抗议。<sup><a href="#src16">[16]</a></sup>这张专辑的副标就叫「美浓反水库运动音乐纪实」——这些歌本来就是在街头、在农村、在立法院抗议现场唱的。<sup><a href="#src16">[16]</a></sup>〈夜行巴士〉写的正是其中一夜：一位六十出头的老农，连夜坐游览巴士北上台北，去跟政府讲他这辈子最硬的一次话。</p>
+
+      <h3>它为什么成立</h3>
+      <p><b>一、它把一场运动写成了一张车票。</b>不喊一句口号。主角是具体的人：透夜赶路、头昏脑胀、双目圆睁，看着夜色里「乌云食月一擺過一擺」（黑云掩月一次又一次），想起从前的从前。<sup><a href="#src16">[16]</a></sup>宏大叙事被缩进一个困倦的老人身上——运动最真的部分不在标语里，在夜车的座椅上。</p>
+      <p><b>二、「水库系築得屎嘛食得」——粗话入歌的尊严。</b>全曲落点是这句民谚式的狠话：水库若做得成，屎也食得。<sup><a href="#src16">[16]</a></sup>这不是修辞，是运动中真实流传的抗辩句式——它后来直接成了专辑第 5 首歌的歌名〈水庫係築得 屎嘛食得〉<sup><a href="#src2">[2]</a></sup>。庄稼人骂得越难听，说明被逼得越深。</p>
+      <p><b>三、烟楼录音，野地里的声音。</b>交工把录音器材搬进美浓熏烟叶的烟楼：泥砖墙隔音差，唱到一半门外猪叫狗吠，只得重录；蒼蠅成群停在音控台上。乐评人马世芳形容这是「野地裡萌苗的錄音美學」，那声音带着潮潤溫暖的泥味。<sup><a href="#src16">[16]</a></sup>那卡西乐师出身的钟成达把客家八音鼓和爵士鼓融合成独门的「达鼓」，陈冠宇改弹空心贝斯，加上郭进财的唢呐——这支乐队的音色，在华语乐队里找不出第二组。</p>
+      <p><b>四、重复三次的「今比日涯愛一定來去講」。</b>从「我想去讲」到「我一定要去讲」，歌词把这句话递进了三遍——那不是修辞，是壮胆。<sup><a href="#src16">[16]</a></sup>一位种了一辈子田的老人，第一次决定坐夜车进台北告状。车越往北开，天越亮，话越硬。</p>
+
+      <div class="lyric">
+        透夜趨路遊覽巴士佢緊行緊北<br>
+        頭腦暈暈目珠瞪瞪涯看著夜色<br>
+        烏雲食月一擺過一擺<br>
+        分涯愐起第頭擺介頭擺
+        <small>中译（非官方译本）：连夜赶路游览巴士它渐行渐北／头昏脑胀双目圆睁我看着夜色／黑云掩月一次又一次／让我想起那从前的从前</small>
+      </div>
+
+      <div class="lyric">
+        苦做硬做田坵大出產<br>
+        奈何年年涯緊種緊淒慘<br>
+        丁多地少兄弟爭出外<br>
+        存涯一房來蓄爺哀
+        <small>中译（非官方译本）：苦做硬做田地大出产／奈何年年我愈种愈凄惨／丁多地少兄弟争出外／剩我这一房看顾父母</small>
+      </div>
+
+      <div class="lyric">
+        今比日涯愛一定來去撖厥高毛政府講<br>
+        水庫係築得屎嘛食得
+        <small>中译（非官方译本）：今天我一定要去，跟这个政府讲／水库若做得成，屎也食得</small>
+      </div>
+      <p class="muted">歌词全文（客语原文与白话对照）见 <a href="https://www.hakkaonline.com/thread-77644-1-1.html">客家风情论坛〈夜行巴士〉</a><sup><a href="#src16">[16]</a></sup>。</p>
+    </div>
+
+    <figure>
+      <img src="assets/sx_cover_shange.jpg" alt="我等就来唱山歌专辑封面" style="max-width:420px;display:block;margin:0 auto">
+      <figcaption><b>《我等就来唱山歌》专辑封面</b>（交工乐队，1999，大大樹）。次年获第 11 届金曲奖最佳制作人与最佳作曲人<sup><a href="#src16">[16]</a></sup>。图：生祥乐队官网作品页 <a href="https://www.sxband.com/works/detail/Lets-Sing-Mountain-Songs">sxband.com</a>，版权归原权利人。</figcaption>
+    </figure>
+  </section>
+
+  <!-- ================= 延伸推荐 ================= -->
+  <section id="more">
+    <h2><span class="k">延伸</span>两首接着听</h2>
+    <div class="rule"></div>
+    <div class="recs">
+      <div class="rec">
+        <div class="n">风神125<span class="y">2001</span></div>
+        <p>《菊花夜行军》开篇，词：钟永丰，曲末母亲口白由曾秀梅担任<sup><a href="#src8b">[8b]</a></sup><sup><a href="#src15">[15]</a></sup>——夜行巴士北上去抗议，风神 125 南驶来还乡：两趟车合起来，才是完整的美浓地图。</p>
+      </div>
+      <div class="rec">
+        <div class="n">县道184<span class="y">2001</span></div>
+        <p>《菊花夜行军》卷首诗，词：钟永丰<sup><a href="#src11b">[11b]</a></sup>——把一条路过成三条动物（蛇、蚂蟥、老鼠窿），是「阿成」故事真正意义上的第一句，听完再听〈夜行巴士〉，路线就通了。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 视频与氛围 ================= -->
+  <section id="video">
+    <h2><span class="k">短片</span>与〈夜行巴士〉全曲等长的资料短片</h2>
+    <div class="rule"></div>
+    <div class="video-box">
+      <video controls preload="metadata" src="03-sheng-xiang-film.mp4"></video>
+    </div>
+    <div class="note">本片<b>不含音频</b>（全曲 6:01 等长），请同步播放交工乐队〈夜行巴士〉。画面全部为真实素材：Wikimedia Commons 照片与生祥乐队官网专辑封面；本期未使用 AI 生成影像。</div>
+  </section>
+
+  <!-- ================= 来源分歧 ================= -->
+  <section id="diverge">
+    <h2><span class="k">存疑</span>来源分歧，如实记录</h2>
+    <div class="rule"></div>
+    <div class="warn">
+      <p><b>1. 交工乐队的「成立日」。</b>多数媒体表述为「1998 年组成交工乐队」<sup><a href="#src6">[6]</a><a href="#src7">[7]</a></sup>；一篇客家音乐研究论文则记「交工乐队成立于 1999 年 1 月 8 日」<sup><a href="#src8">[8]</a></sup>。两说并存：1998 为组队活动之年，1999-01-08 或为正式登记/成军之日，未找到可裁决的原始文件。</p>
+      <p><b>2. 解散时间表述。</b>维基百科记「2003 年 9 月 1 日正式宣布解散」<sup><a href="#src3">[3]</a></sup>；求真百科林生祥条目记「2003 年宣布解散」，百度百科相关表述为「2003 年，玛莎退伍……」所载时间线与此无涉。本页采用维基的精确日期。</p>
+      <p><b>3. 金马奖项项名。</b>Commons 照片文件名记「林生祥获第 54 届金马原创音乐双料奖」<sup><a href="#src13">[13]</a></sup>，求真百科记〈有无〉「帮他拿下两座金马奖」<sup><a href="#src7">[7]</a></sup>——「双料/两座」可互证，但两项的确切奖项全名未在检索到的来源中同时列出，故本页不展开细项。</p>
+    </div>
+  </section>
+
+  <!-- ================= 资料来源 ================= -->
+  <section id="sources">
+    <h2><span class="k">来源</span>资料来源</h2>
+    <div class="rule"></div>
+    <ol class="src">
+      <li id="src1">维基百科（中文·镜像）〈生祥乐队〉：<a href="https://hackcn.de/zh-mo/%E7%94%9F%E7%A5%A5%E6%A8%82%E9%9A%8A">hackcn.de/zh-mo/生祥乐队</a></li>
+      <li id="src2">MusicBrainz《菊花夜行軍》release 页（曲目、时长、词曲署名）：<a href="https://musicbrainz.org/release/c131b388-a3d1-45f3-be0b-714ee9d4460e">musicbrainz.org/release/c131b388</a>；〈Folk Roots 专文〉见<a href="https://duhocchina.com/zh/%E4%BA%A4%E5%B7%A5%E6%A8%82%E9%9A%8A">维基镜像〈交工乐队〉</a></li>
+      <li id="src3">维基百科（中文·镜像）〈交工乐队〉（成员、解散、后续）：<a href="https://jingzhou.bbly.net/wikipedia/zh-my/%E4%BA%A4%E5%B7%A5%E6%A8%82%E9%9A%8A">jingzhou.bbly.net/wikipedia/zh-my/交工乐队</a></li>
+      <li id="src4">南方都市报（新浪娱乐转载，2005-06-03）〈黑马原来住在瓦窑坑3号〉：<a href="https://ent.sina.com.cn/x/2005-06-03/0943742158.html">ent.sina.com.cn/x/2005-06-03/0943742158.html</a></li>
+      <li id="src5">乐队语言/类型表述：维基〈生祥乐队〉（客语新民谣/摇滚）<sup>[1]</sup> 与百度百科〈生祥乐队〉（客家传统/摇滚融合）：<a href="https://baike.baidu.com/item/%E7%94%9F%E7%A5%A5%E6%A8%82%E9%9A%8A/21500561">baike.baidu.com/item/生祥乐队/21500561</a></li>
+      <li id="src6">维基百科（中文·镜像）〈生祥乐队〉（成员、更名缘由、专辑年表、奖项）：<a href="https://hackcn.de/zh-mo/%E7%94%9F%E7%A5%A5%E6%A8%82%E9%9A%8A">hackcn.de/zh-mo/生祥乐队</a></li>
+      <li id="src7">求真百科〈林生祥〉（金马奖、《大佛普拉斯》两座金马、出道二十周年）：<a href="https://pediainside.com/index.php?title=%E6%9E%97%E7%94%9F%E7%A5%A5">pediainside.com/林生祥</a></li>
+      <li id="src8">客家风情〈台湾社会运动音乐的语艺观察——以「交工乐队」之音乐内涵为例〉（观子音乐坑 1994、交工成立 1999-01-08、换工传统）：<a href="https://www.hakkaonline.com/thread-23872-1-1.html">hakkaonline.com/thread-23872-1-1.html</a></li>
+      <li id="src8b">客家风情论坛〈史上最长个客家歌曲——交工乐队《风神125》(9分49秒)〉（录音室分工：林生祥/空心吉他、陈冠宇/空心贝斯、郭进财/唢呐、钟成达/鼓锣钹；母亲口白 曾秀梅）：<a href="https://www.hakkaonline.com/forum.php?mod=viewthread&ordertype=1&tid=54991">hakkaonline.com/forum.php?…tid=54991</a></li>
+      <li id="src9">《国际先驱导报》（今日头条转载）〈林生祥：台湾的我庄与莫言的高密〉（2002 金曲奖得奖感言全文）：<a href="https://www.toutiao.com/zixun/7499391877222074380/">toutiao.com/zixun/7499391877222074380/</a></li>
+      <li id="src10">歌词坊〈交工乐队〉大事记（2002 Folk Roots、金曲奖击败五月天、2005《临暗》再胜）：<a href="https://www.gecifang.com/singer/365819.html">gecifang.com/singer/365819.html</a></li>
+      <li id="src11">星洲网〈那些留乡与离乡的人〉（林生祥自述：〈风神125〉〈菊花夜行军〉八九分钟、「生命有挣扎，又魔幻又挣扎」；受新台语歌运动启发转客语创作）：<a href="https://www.sinchew.com.my/tag/%E7%94%9F%E7%A5%A5%E4%B9%90%E9%98%9F/">sinchew.com.my/tag/生祥乐队</a></li>
+      <li id="src11b">生祥乐队官网《菊花夜行军》作品页（曲目与词曲署名）：<a href="https://www.sxband.com/works/detail/March-of-the-Chrysanthemums">sxband.com/works/detail/March-of-the-Chrysanthemums</a>；《我等就來唱山歌》作品页：<a href="https://www.sxband.com/works/detail/Lets-Sing-Mountain-Songs">sxband.com/works/detail/Lets-Sing-Mountain-Songs</a></li>
+      <li id="src12">林生祥生平年表（1997《过庄寻聊》）：<a href="https://pediainside.com/index.php?title=%E6%9E%97%E7%94%9F%E7%A5%A5">求真百科〈林生祥〉</a>；〈1997 过庄寻聊巡回〉亦见<sup>[8]</sup></li>
+      <li id="src13">Wikimedia Commons 照片文件页〈林生祥獲第54屆金馬原創音樂雙料獎〉：<a href="https://commons.wikimedia.org/wiki/File:%E6%9E%97%E7%94%9F%E7%A5%A5%E7%8D%B2%E7%AC%AC54%E5%B1%86%E9%87%91%E9%A6%AC%E5%8E%9F%E5%89%B5%E9%9F%B3%E6%A8%82%E9%9B%99%E6%96%99%E7%8D%8E.jpg">commons.wikimedia.org/wiki/File:林生祥獲第54屆金馬原創音樂雙料獎.jpg</a></li>
+      <li id="src14">微信搜一搜百科〈生祥乐队〉（2025-03-15 第 14 届迷笛奖年度最佳摇滚专辑）：<a href="https://baike.weixin.qq.com/v168387250.htm">baike.weixin.qq.com/v168387250.htm</a></li>
+      <li id="src15">〈风神125〉歌词客语原文与逐句白话对照：KKBOX <a href="https://www.kkbox.com/sg/sc/song/KtpMNbF1IXgP3Ysv3D">kkbox.com/sg/sc/song/KtpMNbF1IXgP3Ysv3D</a>；叙事背景（阿成、经济泡沫、故事开篇）另见播客〈项飙×志鹏×钟永丰〉节目注释：<a href="https://www.podchaser.com/podcasts/hellostranger-5132462/episodes/18-305629464">podchaser.com/…/18-305629464</a></li>
+      <li id="src16">〈夜行巴士〉歌词客语原文与白话对照（词：钟永丰、曲：林生祥、副题「记一位老农的心情」）：客家风情论坛 <a href="https://www.hakkaonline.com/thread-77644-1-1.html">hakkaonline.com/thread-77644-1-1.html</a>；专辑副标「美浓反水库运动音乐纪实」、2000 年金曲奖最佳制作人与最佳作曲人、烟楼录音与「达鼓」、马世芳专辑导文：KKBOX《我等就來唱山歌》专辑页 <a href="https://www.kkbox.com/hk/en/album/GkQPSeGex3YZLwQN7O">kkbox.com/hk/en/album/GkQPSeGex3YZLwQN7O</a>；曲目时长另见 Discogs <a href="https://www.discogs.com/release/2926527">discogs.com/release/2926527</a></li>
+    </ol>
+  </section>
+
+  <!-- ================= 图片来源 ================= -->
+  <section id="imgsrc">
+    <h2><span class="k">图片</span>图片来源</h2>
+    <div class="rule"></div>
+    <p class="credits">
+      本期全部画面为真实素材，未使用 AI 生成影像；版权仍归原权利人，此处仅作非商用个人阅读之引用。<br>
+      1. 林生祥 · 2012-09-01 反媒体垄断大游行（弹吉他）：Wikimedia Commons <a href="https://commons.wikimedia.org/wiki/File:%E5%AD%B8%E8%80%85%E7%AE%A1%E4%B8%AD%E7%A5%A5%E8%88%87%E6%AD%8C%E6%89%8B%E6%9E%97%E7%94%9F%E7%A5%A5%E5%8F%83%E5%8A%A020120901%E5%8F%8D%E5%AA%92%E9%AB%94%E5%A3%9F%E6%96%B7%E5%A4%A7%E9%81%8A%E8%A1%8C_Scholar_and_Singer_join_Protest_against_anti-Democracy_media-monopoly_in_TAIWAN.jpg">文件页</a>（API 限流，作者/授权号详见文件页）<br>
+      2. 林生祥 · 第 54 届金马奖：Wikimedia Commons <a href="https://commons.wikimedia.org/wiki/File:%E6%9E%97%E7%94%9F%E7%A5%A5%E7%8D%B2%E7%AC%AC54%E5%B1%86%E9%87%91%E9%A6%AC%E5%8E%9F%E5%89%B5%E9%9F%B3%E6%A8%82%E9%9B%99%E6%96%99%E7%8D%8E.jpg">文件页</a><br>
+      3. 美浓桥（石猴与「美濃橋」碑）：Wikimedia Commons <a href="https://commons.wikimedia.org/wiki/File:%E9%AB%98%E9%9B%84%E5%B8%82%E7%BE%8E%E6%BF%83_%E5%AE%A2%E5%AE%B6%E6%96%87%E5%8C%96_%E7%BE%8E%E6%BF%83%E6%A9%8B.jpg">文件页</a><br>
+      4. 美浓客家文物馆（竹编装置）：Wikimedia Commons <a href="https://commons.wikimedia.org/wiki/File:%E7%BE%8E%E6%BF%83%E5%AE%A2%E5%AE%B6%E6%96%87%E7%89%A9%E9%A4%A8.jpg">文件页</a><br>
+      5. 《菊花夜行军》专辑封面：生祥乐队官网 <a href="https://www.sxband.com/works/detail/March-of-the-Chrysanthemums">sxband.com</a><br>
+      6. 《我庄》专辑封面：生祥乐队官网 <a href="https://www.sxband.com/works/detail/My-Village">sxband.com</a><br>
+      <span class="muted">核查备注：Commons 检索中曾命荷兰电音节「Mayday 2019」、美国游行花车「Mayday Parade」、阿姆斯特丹变装皇后「Diva Mayday」等同名异物照片，均已排除。</span>
+    </p>
+  </section>
+
+  <footer>
+    给我一首歌的时间 · 第 03 站 · 亚洲 · 中国台湾（高雄美浓）<br>
+    写作原则：所有事实均经检索核实并给出可点击来源；检索不到的说法不写。本页为非商用个人阅读笔记；所引图片版权归原权利人，均注明出处；正片为无声版资料短片，请自备音源同步播放。
+  </footer>
+
+<nav class="pager">
+  <a href="02-beyond.html"><span class="dir">Prev · #02</span><span class="ttl">Beyond</span><span class="sub">中国香港 · 1983–2005</span></a>
+  <a class="next" href="04-deulgukhwa.html"><span class="dir">Next · #04</span><span class="ttl">野菊花（들국화）</span><span class="sub">韩国 · 首尔 · 1983–1989</span></a>
+</nav>
+</div>
+</body>
+</html>

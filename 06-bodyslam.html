@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>给我一首歌的时间 06 · 泰国 — Bodyslam（บอดี้สแลม）</title>
+<style>
+  :root{
+    --bg:#12100e; --panel:#1b1815; --line:#342c24; --ink:#ece7dd; --ink2:#a49b8d;
+    --gold:#d8a24a; --blue:#c08a5a; --serif:"Songti SC","Noto Serif CJK SC",serif;
+    --sans:"Hiragino Sans GB","PingFang SC",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.9;font-size:17px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px 90px}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(216,162,74,.35)}
+  a:hover{border-bottom-color:var(--gold)}
+  sup{font-size:.72em;line-height:0}
+  sup a{border:none;color:var(--gold);opacity:.9}
+
+  .stop{display:flex;align-items:center;gap:14px;margin:44px 0 18px;color:var(--ink2);font-size:14px;letter-spacing:.12em}
+  .stop .no{font-family:var(--serif);border:1px solid var(--line);padding:4px 12px;border-radius:3px}
+  .stop .route{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  h1{font-family:var(--serif);font-size:54px;line-height:1.25;font-weight:700;letter-spacing:.02em}
+  h1 .en{display:block;font-size:24px;color:var(--blue);letter-spacing:.20em;margin-top:8px;font-weight:600}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin:22px 0 0;color:var(--ink2);font-size:14.5px}
+  .meta b{color:var(--ink);font-weight:600}
+  .lede{font-family:var(--serif);font-size:20px;color:#ded8cd;border-left:3px solid var(--gold);padding:6px 0 6px 20px;margin:34px 0 10px;line-height:2}
+
+  section{margin-top:64px}
+  h2{font-family:var(--serif);font-size:27px;font-weight:700;margin-bottom:6px;display:flex;align-items:baseline;gap:14px}
+  h2 .k{color:var(--gold);font-size:16px;letter-spacing:.18em;font-family:var(--sans);font-weight:600}
+  .rule{height:1px;background:var(--line);margin:14px 0 26px}
+  h3{font-size:18.5px;margin:30px 0 8px;color:var(--ink)}
+  p{margin:12px 0;color:#d8d2c7}
+  .muted{color:var(--ink2);font-size:14.5px}
+
+  figure{margin:26px 0}
+  figure img{width:100%;display:block;border-radius:4px}
+  figure.half{max-width:520px;margin-left:auto;margin-right:auto}
+  figcaption{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.7}
+  figcaption b{color:#c3baab;font-weight:600}
+  .row{display:flex;gap:16px;flex-wrap:wrap}
+  .row figure{flex:1 1 260px;margin:20px 0 0}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px 24px;margin:22px 0}
+  .fact{display:grid;grid-template-columns:120px 1fr;gap:6px 18px;font-size:15.5px}
+  .fact dt{color:var(--ink2)}
+  .fact dd{color:var(--ink)}
+
+  table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--ink2);font-weight:600;font-size:13.5px;letter-spacing:.06em}
+  td.yr{color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+  .tl{list-style:none;margin:18px 0}
+  .tl li{position:relative;padding:0 0 22px 118px;font-size:15.5px}
+  .tl li::before{content:"";position:absolute;left:86px;top:11px;bottom:-2px;width:1px;background:var(--line)}
+  .tl li:last-child::before{display:none}
+  .tl .yr{position:absolute;left:0;top:1px;font-family:var(--serif);color:var(--gold);font-size:16px;letter-spacing:.03em}
+  .tl b{color:var(--ink)}
+
+  .song{background:linear-gradient(180deg,#191512,#141210);border:1px solid var(--line);border-radius:10px;padding:30px 30px 24px;margin-top:22px}
+  .song .t{font-family:var(--serif);font-size:34px;font-weight:700}
+  .song .t span{color:var(--gold)}
+  .lyric{font-family:var(--serif);color:#efece4;font-size:19px;line-height:2.05;border-left:3px solid var(--gold);padding-left:20px;margin:24px 0}
+  .lyric small{display:block;font-family:var(--sans);font-size:13px;color:var(--ink2);margin-top:14px}
+  .recs{display:flex;gap:16px;flex-wrap:wrap}
+  .rec{flex:1 1 300px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+  .rec .n{font-family:var(--serif);font-size:21px;font-weight:700}
+  .rec .y{color:var(--gold);font-size:14px;margin-left:8px}
+  .rec p{font-size:14.5px;margin-top:8px;color:#ccc6ba}
+
+  .video-box{background:#000;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:20px 0}
+  video{width:100%;display:block;aspect-ratio:16/9;background:#000}
+  .note{background:rgba(216,162,74,.07);border:1px solid rgba(216,162,74,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#e3d3b6;margin:16px 0}
+  .warn{background:rgba(192,138,90,.07);border:1px solid rgba(192,138,90,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#dcc9b2;margin:16px 0}
+
+  ol.src{font-size:13.5px;color:var(--ink2);line-height:2;padding-left:24px}
+  ol.src li{margin:4px 0}
+  ol.src a{word-break:break-all}
+  .credits{font-size:13px;color:var(--ink2);line-height:2}
+  footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--line);color:var(--ink2);font-size:13px}
+
+  .site-bar{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px;padding-top:34px}
+  .site-bar .brand{font-family:var(--serif);font-size:18px;color:var(--ink);border:none;letter-spacing:.04em}
+  .site-bar .brand em{font-style:normal;font-size:12px;color:#8A8377;margin-left:8px;letter-spacing:.12em}
+  .site-bar .back{font-size:13px;color:#8A8377;border:none}
+  .site-bar .back:hover{color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="site-bar">
+    <a class="brand" href="index.html">给我一首歌的时间<em>The Length of a Song</em></a>
+    <a class="back" href="index.html">← 全部期数</a>
+  </div>
+
+  <div class="stop"><span class="no">第 06 站</span><span>亚洲 · 泰国 · 曼谷</span><span class="route"></span><span>给我一首歌的时间</span></div>
+
+  <h1>Bodyslam<span class="en">บอดี้สแลม · 泰国摇滚 · 1996–今</span></h1>
+  <div class="meta">
+    <span><b>1996</b> 成军（时名 ละอ่อน La-On，泰语方言「小孩子」）<sup><a href="#src5">[5]</a><a href="#src10">[10]</a></sup></span>
+    <span>泰国 · 曼谷</span>
+    <span>另类摇滚 / 流行摇滚<sup><a href="#src9">[9]</a></sup></span>
+    <span>歌词语言：泰语</span>
+  </div>
+
+  <p class="lede">六个还在读书的学生，把队名从方言里的「小孩子」改成职业摔角术语 Bodyslam（抱摔），然后在 2005 年用一首关于「送到半路就放手」的歌，唱遍了泰国的街头巷尾。<sup><a href="#src5">[5]</a></sup> 他们是泰国商业化最成功的摇滚乐队之一；主唱 Toon 后来干了一件和唱歌一样出名的事——用两只脚，从泰国最南端跑到最北端，为公立医院募了十几亿泰铢。<sup><a href="#src12">[12]</a><a href="#src13">[13]</a></sup></p>
+
+  <figure>
+    <img src="assets/bs_band_group.jpg" alt="Bodyslam 2008 年四人阵容合影">
+    <figcaption><b>2008 年前后的四人阵容。</b>图片来源：Wikimedia Commons〈Bodyslam (Thai band).jpg〉，摄者 Sry85，CC BY 3.0<sup><a href="#img1">[图1]</a></sup></figcaption>
+  </figure>
+
+  <!-- ================= 档案 ================= -->
+  <section id="profile">
+    <h2><span class="k">档案</span>乐队速览</h2>
+    <div class="rule"></div>
+    <div class="panel">
+      <dl class="fact">
+        <dt>名字</dt><dd>Bodyslam（บอดี้สแลม），职业摔角里的「抱摔」动作。前身 ละอ่อน（La-On），泰北方言中意为「小孩子／年轻人」<sup><a href="#src5">[5]</a></sup></dd>
+        <dt>成军</dt><dd>1996 年。六名学生组队，同年在 Hot Wave Music Awards 校园乐队比赛中夺冠，随后签约 Music Bugs 厂牌<sup><a href="#src5">[5]</a><a href="#src16">[16]</a></sup></dd>
+        <dt>转折点</dt><dd>2002 年更名 Bodyslam 并缩编为三人；2003 年获 Channel V Thailand 年度最受欢迎乐队后，签入泰国最大唱片集团 GMM Grammy 旗下<sup><a href="#src5">[5]</a></sup></dd>
+        <dt>破局之作</dt><dd>第三张专辑《Believe》（2005 年 4 月 22 日，Genie Records / GMM）。发行后乐队一跃成为 GMM 旗下头牌之一，开启大半个 2005 与 2006 年的全国巡演<sup><a href="#src2">[2]</a><a href="#src16">[16]</a></sup></dd>
+        <dt>两个人</dt><dd>主唱 Toon（อาทิวราห์ คงมาลัย）与贝斯手 Pid（ธนดล ช้างเสวก）——从 1996 年创团至今一直在的两位<sup><a href="#src9">[9]</a></sup></dd>
+        <dt>活动期</dt><dd>1996–今（乐队从未解散；期间仅有成员进出）<sup><a href="#src1">[1]</a></sup></dd>
+        <dt>现场</dt><dd>两度在曼谷 Rajamangala 国家体育场开唱：2010.11.27（Live in Kraam）与 2019.2.9–10（BODYSLAM FEST Wi-Cha Tua Bao，带交响乐团编制）<sup><a href="#src1">[1]</a><a href="#src11">[11]</a></sup></dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= 历史 ================= -->
+  <section id="history">
+    <h2><span class="k">历史</span>从「小孩子」到国民乐队</h2>
+    <div class="rule"></div>
+
+    <ul class="tl">
+      <li><span class="yr">1996</span>主唱 Toon 等六名学生在曼谷的 Suankularb Wittayalai School（泰文 สวนกุหลาบวิทยาลัย，中文「玫瑰园中学」，1882 年创校的公立男校）以 ละอ่อน（La-On，泰北方言「小孩子」）为名成军——队名取自该校新生迎新活动的名字。<sup><a href="#src17">[17]</a></sup>同年拿下 Hot Wave Music Awards 高中生乐队比赛冠军，签约 Music Bugs 唱片。<sup><a href="#src5">[5]</a><a href="#src16">[16]</a></sup></li>
+      <li><span class="yr">1997</span>发行首张同名专辑，主打〈ได้หรือเปล่า〉（Dai Rue Plao，「行不行」）。<sup><a href="#src10">[10]</a></sup></li>
+      <li><span class="yr">2002</span>更名 Bodyslam，成员由六人精简为三人（Toon、Pid、吉他手 Pao）；7 月 9 日发行专辑〈Bodyslam〉，音乐转向更重的摇滚。<sup><a href="#src5">[5]</a><a href="#src11">[11]</a><a href="#src9">[9]</a></sup></li>
+      <li><span class="yr">2003</span>获 Channel V Thailand 年度最受欢迎乐队奖，签入 GMM Grammy；鼓手 Chad 加入，成为四人阵容。<sup><a href="#src5">[5]</a><a href="#src9">[9]</a></sup></li>
+      <li><span class="yr">2005</span><b>4 月 22 日《Believe》发行</b>——乐队的破局之作。<sup><a href="#src2">[2]</a><a href="#src16">[16]</a></sup> 专辑里的〈ขอบฟ้า〉（天边）成为泰国街头巷尾传唱的经典；〈ความเชื่อ〉（信念）请来泰国「为生而歌」前辈、Carabao 主唱 Aed 客声——两代泰国摇滚同框。<sup><a href="#src5">[5]</a><a href="#src6">[6]</a></sup></li>
+      <li><span class="yr">2007</span>《Save My Life》发行；翌年获泰国 Season Awards 最佳摇滚团体、最佳摇滚专辑、最佳摇滚歌曲（〈ยาพิษ〉）三项大奖。<sup><a href="#src1">[1]</a><a href="#src11">[11]</a></sup></li>
+      <li><span class="yr">2010</span>《คราม》（Kraam，「靛蓝」）发行；同年 11 月 27 日在 Rajamangala 国家体育场举办「Live in Kraam」演唱会，65,000 人，创下泰国乐队演唱会规模纪录。<sup><a href="#src1">[1]</a><a href="#src11">[11]</a></sup> 同年电影《初恋这件小事》选用乐队 2002 年的旧作〈สักวันฉันจะดีพอ〉（总有一天我会够好）作主题曲，让这首八年前的歌再度翻红。<sup><a href="#src5">[5]</a><a href="#src10">[10]</a></sup></li>
+      <li><span class="yr">2017</span>主唱 Toon 发起「ก้าวคนละก้าว」（Kaokonlakao，一步一步）慈善长跑：11 月 1 日从泰国最南端的勿洞出发，跑往最北端的湄塞，2,191 公里、55 天，最终募款超过 13 亿泰铢，捐给 11 家公立医院。<sup><a href="#src12">[12]</a><a href="#src13">[13]</a></sup></li>
+      <li><span class="yr">2019</span>2 月 9–10 日，BODYSLAM FEST「วิชาตัวเบา」（Wi-Cha Tua Bao）在 Rajamangala 国家体育场连开两晚，编制带上交响乐团；同名专辑同年发行。<sup><a href="#src1">[1]</a></sup></li>
+      <li><span class="yr">2024</span>《Sunny Side Up》（6 月 6 日）发行，与 Jeff Satur、F.HERO 等后辈合作。<sup><a href="#src1">[1]</a><a href="#src11">[11]</a></sup></li>
+      <li><span class="yr">2025</span>宣布「Power of The B-Side」交响演唱会，演出收益捐赠教育基金。<sup><a href="#src5">[5]</a></sup></li>
+    </ul>
+  </section>
+
+  <!-- ================= 成员 ================= -->
+  <section id="members">
+    <h2><span class="k">成员</span>谁在乐队里</h2>
+    <div class="rule"></div>
+
+    <figure class="half">
+      <img src="assets/bs_band_sunnyside2024.jpg" alt="Bodyslam 2024 年《Sunny Side Up》世界巡演官方宣传照（五人阵容）">
+      <figcaption><b>2024 年《Sunny Side Up》世界巡演官方宣传照。</b>左起：Pid、Ohm、Toon、Yod、Chad（媒体图说作 Shut）。图片来源：NAC 可以娱乐提供，经 BigMedia 转载，版权归原权利人<sup><a href="#img2">[图2]</a></sup></figcaption>
+    </figure>
+
+    <table>
+      <tr><th>成员</th><th>分工</th><th>在队时间</th></tr>
+      <tr><td>อาทิวราห์ คงมาลัย<br><span class="muted">Artiwara "Toon" Kongmalai</span></td><td>主唱 / 吉他</td><td class="yr">1996–今（创团成员）</td></tr>
+      <tr><td>ธนดล ช้างเสวก<br><span class="muted">Thanadol "Pid" Changsawek</span></td><td>贝斯 / 和声</td><td class="yr">1996–今（创团成员）</td></tr>
+      <tr><td>สุชัฒติ จั่นอี๊ด<br><span class="muted">Suchatti "Chad" Janed</span></td><td>鼓</td><td class="yr">2003–今<sup><a href="#fn1">注1</a></sup></td></tr>
+      <tr><td>ธนชัย ตันตระกูล<br><span class="muted">Thanachai "Yod" Tantrakul</span></td><td>吉他</td><td class="yr">2005–今</td></tr>
+      <tr><td>โอม เปล่งขำ<br><span class="muted">Ohm Plengkhum</span></td><td>键盘 / 和声</td><td class="yr">2007 或 2010–今<sup><a href="#fn2">注2</a></sup></td></tr>
+      <tr><td>รัฐพล พรรณเชษฐ์<br><span class="muted">Ratthapol "Pao" Pannachet</span></td><td>吉他 / 和声</td><td class="yr">2002–2005（离队）</td></tr>
+    </table>
+    <p class="muted" id="fn1">注1：Chad 的加入年份，百度百科记 2003 年（「签约 GMM 同时吸收一名新成员变为 4 人」）[5]，RateYourMusic 记 2003 年起 [9]，tracklist.live 记 2005 年 [15]——本页取 2003（两源一致，且与更名后四人阵容的时间线吻合）。</p>
+    <p class="muted" id="fn2">注2：键盘手 Ohm 的加入年份，RateYourMusic 记 2007 年 [9]，tracklist.live 记 2010 年 [15]，暂无更权威来源裁决，如实并存。</p>
+    <p class="muted">1996–2002 的 La-On 时期为六人编制，2002 年更名时精简为三人 [5][16]；此后经 2003（Chad）、2005（Yod）两次增员，形成沿用至今的五人阵容（Pao 于 2005 年离队）[9]。</p>
+  </section>
+
+  <!-- ================= 经典歌曲 ================= -->
+  <section id="song">
+    <h2><span class="k">经典</span>那一首歌：〈ขอบฟ้า〉（天边）</h2>
+    <div class="rule"></div>
+
+    <div class="song">
+      <div class="t">〈ขอบฟ้า〉<span>天边 · Horizon</span></div>
+      <p class="muted" style="margin-top:6px">收录于《Believe》，2005 年 4 月 22 日发行 · 时长 4:16.25 · 制作：Poonsak Jaturaboon<sup><a href="#src3">[3]</a><a href="#src4">[4]</a><a href="#src6">[6]</a></sup></p>
+    </div>
+
+    <div class="note">「最经典」无权威榜单结论，本页选择为编辑判断。各来源点名的代表曲还有〈ความรักทำให้คนตาบอด〉（爱情使人盲目）、〈ความเชื่อ〉（信念）等；其中〈ขอบฟ้า〉被百度百科明确写作「泰国街头巷尾纷纷传唱的经典歌曲」[5]，也被中国乐迷论坛称为这张专辑里的「神曲天边」[16]，是乐队早期名声的顶点。</div>
+
+    <h3>歌里发生了一件事：他把人送到半路</h3>
+    <p>〈ขอบฟ้า〉直译是「天空的边缘」，也就是地平线——一个你永远走不到的地方。整首歌就架在这个意象上：两个人曾经一起梦想着走到天边，但走到半路，她遇到了「更好的人」。副歌的第一句把这件事一次说完——<b>「天边终究要变成他，带你去往我们梦想过的一切」</b>。<sup><a href="#src4">[4]</a><a href="#src8">[8]</a></sup></p>
+    <p>这不是一首控诉的歌。叙述者从头到尾没有怨：他说「你要走，我拦不住」「无论多痛我都会忍」，然后是整首歌最重的一句——<b>「送你只能送到半路」</b>（มาส่งเธอได้แค่ครึ่งทาง）。放手被写成了一个地理动作：他能陪她走的路，到半路为止；剩下的路，是她的，也是别人的。结尾他把全部让渡归结成一个字，反复念了两次：ยอม——「我愿意」。<sup><a href="#src4">[4]</a><a href="#src8">[8]</a></sup></p>
+
+    <h3>它为什么成立</h3>
+    <p>从网易云逐句时间轴可以看清这首歌的呼吸方式：开头只给两句——「只能转头望向天边尽头」「可惜我们终究到不了地平线」——随后是近二十秒没有歌词的乐器段落，乐队才正式进来。整首歌以「望」开场，先给画面、再给叙事，副歌里那个从未出现的「天边」才落成具体的告别。<sup><a href="#src4">[4]</a></sup></p>
+    <p>它出现在乐队最需要这样一首歌的时刻。《Believe》是 Bodyslam 签入 GMM 之后的第三张录音室专辑，发行后乐队一跃成为泰国头牌摇滚乐队、开启了大半个 2005 年的全国巡演<sup><a href="#src16">[16]</a></sup>；一张需要走向全国的专辑，收一首旋律最顺、歌词最不设门槛的告别曲做支柱，是再自然不过的编法。同时期的〈ความรักทำให้คนตาบอด〉讲「爱让人盲目」，情绪更拧巴；〈ขอบฟ้า〉则把痛苦收进克制里——先认输，再祝她幸福。这种「体面地心碎」，让它成了卡带与 KTV 时代之后、真正在流媒体时代也留得下来的那一首。</p>
+    <p class="muted">说明：本页未逐项核实录音细节（调性、和声进行、录音室配置等暂无可靠中文/英文来源），以上赏析建立在歌词文本、逐句时间轴与专辑背景之上，未作声音层面的断言。</p>
+  </section>
+
+  <!-- ================= 歌词 ================= -->
+  <section id="lyrics">
+    <h2><span class="k">歌词</span>副歌选段</h2>
+    <div class="rule"></div>
+
+    <div class="lyric">
+      ขอบฟ้าต้องกลายเป็นเขาที่พาไป ทุกสิ่งที่ฝันกันเอาไว้<br>
+      天边终究要变成他，带你去往我们梦想过的一切<br><br>
+      จบแล้วไม่เหลือสักอย่าง ฉันทำได้เพียงแค่เท่านี้<br>
+      结束了，什么都不剩，我能做到的只有这些<br><br>
+      มาส่งเธอได้แค่ครึ่งทาง ก็คงต้องยอมรับมัน<br>
+      送你只能送到半路，也只能接受<br><br>
+      จะเจ็บเท่าไหร่ฉันก็จะทน เมื่อเธอจะไปฉันห้ามไม่ได้<br>
+      无论多痛我都会忍，你要走，我拦不住<br><br>
+      จะเจ็บเท่าไหร่ฉันก็จะยอม ให้เธอมีวันที่ดีข้างหน้า<br>
+      无论多痛我都愿意，换你往后的好日子
+      <small>泰文原文据网易云音乐歌词页 [4]；中文为参考译文（据 deungdutjai 英译转译，非官方译文，译者见资料来源 [8]）。网易云音乐暂无此歌官方中文翻译。</small>
+    </div>
+  </section>
+
+  <!-- ================= 延伸 ================= -->
+  <section id="more">
+    <h2><span class="k">延伸</span>再听两首</h2>
+    <div class="rule"></div>
+    <div class="recs">
+      <div class="rec">
+        <div class="n">〈ความรักทำให้คนตาบอด〉<span class="y">2005</span></div>
+        <p>《Believe》里的另一首国民金曲——「爱情使人盲目」。如果说〈ขอบฟ้า〉是放手后的克制，这首是明知无望仍不肯收心的独白，副歌更直给，也是乐队在流媒体时代最常被点播的旧作之一。<sup><a href="#src7">[7]</a></sup></p>
+      </div>
+      <div class="rec">
+        <div class="n">〈คิดฮอด〉<span class="y">2010</span></div>
+        <p>《คราม》专辑中与伊善民谣歌后 Siriporn Ampaipong 的合作——把泰国东北部的民谣声腔织进摇滚，听得见这支乐队如何让「泰国的声音」长在摇滚乐里，而不是套在英语摇滚的模子里。<sup><a href="#src11">[11]</a></sup></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 短片 ================= -->
+  <section id="film">
+    <h2><span class="k">短片</span>与〈ขอบฟ้า〉等长</h2>
+    <div class="rule"></div>
+    <p>本期资料短片与〈ขอบฟ้า〉全曲等长（4:16.25，以 Apple Music / 网易云一致标注的时长为准<sup><a href="#src3">[3]</a><a href="#src4">[4]</a></sup>），用乐队真实史料画面——2008 年四人合影、主唱肖像、专辑封面、现场照片——把这一站装进一首歌的时间里。配音版正片待解说稿定稿后合成；无声版资料短片成片后在本页上线。</p>
+    <figure>
+      <img src="assets/bs_cover_believe.jpg" alt="Bodyslam《Believe》专辑封面（2005）">
+      <figcaption><b>《Believe》专辑封面（2005）。</b>图片来源：Apple Music / iTunes 商店专辑页（GMM Grammy / Genie Records 供图），版权归原权利人<sup><a href="#img5">[图5]</a></sup></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/bs_siamsquare2018.jpg" alt="Bodyslam 2018 年曼谷暹罗广场现场">
+      <figcaption><b>2018 年，曼谷暹罗广场现场。</b>图片来源：Wikimedia Commons〈Bodyslam at Siam Square 2018.jpg〉，摄者 Thanapas.som，CC BY-SA 4.0<sup><a href="#img4">[图4]</a></sup></figcaption>
+    </figure>
+    <figure class="half">
+      <img src="assets/bs_toon_run2017.jpg" alt="2017 年「一步一步」全国慈善长跑途中的 Toon">
+      <figcaption><b>2017 年「ก้าวคนละก้าว」（一步一步）全国慈善长跑途中。</b>图片来源：Thai PBS English News（经 Coconuts Bangkok 转载），版权归原权利人<sup><a href="#img3">[图3]</a></sup></figcaption>
+    </figure>
+    <figure class="half">
+      <img src="assets/bs_toon_finish2017.jpg" alt="2017 年 12 月 25 日长跑终点湄塞冲线夜">
+      <figcaption><b>2017 年 12 月 25 日，终点湄塞冲线夜。</b>图片来源：Toon 本人 Instagram（经 The Straits Times 转载），版权归原权利人<sup><a href="#img6">[图6]</a></sup></figcaption>
+    </figure>
+  </section>
+
+  <!-- ================= 来源分歧 ================= -->
+  <section id="disputes">
+    <h2><span class="k">分歧</span>来源分歧记录</h2>
+    <div class="rule"></div>
+    <p class="muted">以下事实在不同来源间存在出入，本页如实记录、不强行取舍：</p>
+    <table>
+      <tr><th>事项</th><th>分歧</th></tr>
+      <tr><td>成军年份</td><td>多数来源记 1996 年（以 La-On 名义成军并夺冠）[5][16]；RateYourMusic / MusicBrainz 以 2002 年更名 Bodyslam 作为「成立」[1][9]。两者实为同一支乐队的前后两个名字，本页以 1996 为成军年。</td></tr>
+      <tr><td>鼓手 Chad 加入年份</td><td>2003 年 [5][9] 或 2005 年 [15]，取 2003（见成员表注1）。</td></tr>
+      <tr><td>键盘手 Ohm 加入年份</td><td>2007 年 [9] 或 2010 年 [15]，无更权威来源，并存（见成员表注2）。</td></tr>
+      <tr><td>Toon 长跑里程</td><td>起跑公布目标 2,191 公里 [13]；Khaosod English 记「到达终点 2,215 公里、55 天」[12]。本页取 2,191（目标里程），募款额两源一致（逾 13 亿泰铢）。</td></tr>
+      <tr><td>〈ขอบฟ้า〉词曲署名</td><td>网易云音乐歌词页记「作词：ขจรเดช พรมรักษา, หลังฝน；作曲：พูนศักดิ์ จตุระบุล / อาทิวราห์ คงมาลัย」[4]；Genius 记 Toon、制作人 Poonsak Jaturaboon 与 Big Ass 乐队 Kob 共同创作 [6]。署名细节两说并存。</td></tr>
+      <tr><td>《Believe》的奖项</td><td>中国乐迷论坛转述的专辑介绍称乐队拿下第 4 届 Fat Awards「最受欢迎专辑」、〈ความเชื่อ〉获「年度歌曲」[16]，与 2007 年维基百科存档脚注（引用 Fat Awards 第 4 届结果页）方向一致 [10]，但原始结果页未能取回，此条本页不作细节展开。</td></tr>
+      <tr><td>成军时的学校学段</td><td>维基百科乐队条目称 Suankularb Wittayalai School 为「elementary school（小学）」[17]；但同条目的学校条目与「高中生乐队比赛（Hot Wave Music Awards）」这一事实均表明它是 7–12 年级的中学 [17]——「小学」系乐队条目的表述误差，本页按中学处理。</td></tr>
+    </table>
+  </section>
+
+  <!-- ================= 资料来源 ================= -->
+  <section id="sources">
+    <h2><span class="k">来源</span>资料来源</h2>
+    <div class="rule"></div>
+    <ol class="src">
+      <li id="src1">MusicBrainz — bodyslam 艺人页（专辑年表、成立地）：<a href="https://musicbrainz.org/artist/3330d920-689e-40aa-94cf-96a86217272a">musicbrainz.org/artist/3330d920-689e-40aa-94cf-96a86217272a</a></li>
+      <li id="src2">MusicBrainz —《Believe》release group（发行日期 2005-04-22、Genie Records）：<a href="https://musicbrainz.org/release-group/6fa2f67a-2106-43ff-95b5-c5a9e8dd18af">musicbrainz.org/release-group/6fa2f67a-2106-43ff-95b5-c5a9e8dd18af</a></li>
+      <li id="src3">Apple Music —《believe》专辑页（〈ขอบฟ้า〉时长 4:16.25 / 256253ms）：<a href="https://music.apple.com/us/album/believe/1792749726">music.apple.com/us/album/believe/1792749726</a></li>
+      <li id="src4">网易云音乐 —〈ขอบฟ้า〉歌词页（逐句时间轴、词曲署名、时长）：<a href="https://music.163.com/#/song?id=25645277">music.163.com/#/song?id=25645277</a></li>
+      <li id="src5">百度百科 — bodyslam（成军、更名、签约、获奖、2025 交响演唱会）：<a href="https://baike.baidu.com/item/bodyslam/6952780">baike.baidu.com/item/bodyslam/6952780</a></li>
+      <li id="src6">Genius —《Believe》专辑页（各曲制作与词曲署名）：<a href="https://genius.com/albums/Bodyslam/Believe">genius.com/albums/Bodyslam/Believe</a></li>
+      <li id="src7">Shazam —〈ความรักทำให้คนตาบอด〉曲目页（发行信息、制作人）：<a href="https://www.shazam.com/song/1792749730/%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%97%E0%B8%B3%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%84%E0%B8%99%E0%B8%95%E0%B8%B2%E0%B8%9A%E0%B8%AD%E0%B8%94">shazam.com/song/1792749730</a></li>
+      <li id="src8">deungdutjai —〈ขอบฟ้า〉泰英对照译文（本页中文参考译文所据）：<a href="https://deungdutjai.com/2012/08/23/kaupfahbodyslam">deungdutjai.com/2012/08/23/kaupfahbodyslam</a></li>
+      <li id="src9">RateYourMusic — Bodyslam（成员与任期、风格）：<a href="https://rateyourmusic.com/artist/bodyslam">rateyourmusic.com/artist/bodyslam</a></li>
+      <li id="src10">Wikipedia 2007 年存档 — Bodyslam (band)（La-On 时期、成名曲列表、Fat Awards 脚注）：<a href="https://wikipedia2007.classicistranieri.com/en/b/o/d/Bodyslam_%28band%29.html">wikipedia2007.classicistranieri.com/…/Bodyslam_(band).html</a></li>
+      <li id="src11">维基百科镜像（IPFS 存档）— Bodyslam (band)（各专辑发行日期、演唱会年表、曲目表）：<a href="https://levantado.ddns.net/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Bodyslam_(band).html">levantado.ddns.net/…/Bodyslam_(band).html</a></li>
+      <li id="src12">Khaosod English —〈'Toon Bodyslam' Hands 1.3B Baht Over to Hospitals〉（55 天 2,215 公里、13 亿泰铢、11 家医院）：<a href="https://www.khaosodenglish.com/?p=1464813915">khaosodenglish.com/?p=1464813915</a></li>
+      <li id="src13">Nation Thailand —〈Toon's run tops Bt1 billion in donations〉（目标 7 亿、2,191 公里、42 天破 10 亿）：<a href="https://www.nationthailand.com/breakingnews/30334680">nationthailand.com/breakingnews/30334680</a></li>
+      <li id="src14">The Phuket News —〈Running rock star 'Toon Bodyslam' hands Vachira Hospital B10mn donation〉（2019 南部跑、7 家医院 6000 万泰铢）：<a href="https://www.thephuketnews.com/running-rock-star-toon-bodyslam-hands-vachira-hospital-b10mn-donation-74586.php">thephuketnews.com/running-rock-star-toon-bodyslam-hands-vachira-hospital-b10mn-donation-74586.php</a></li>
+      <li id="src15">tracklist.live — bodyslam（成员任期另一种记录）：<a href="https://tracklist.live/discover/artists/bodyslam">tracklist.live/discover/artists/bodyslam</a></li>
+      <li id="src16">捌零音乐论坛 —《Believe》FLAC 专辑介绍帖（破局背景、Fat Awards 之说、「神曲天边」）：<a href="https://www.ptcd.net/thread-12591-1-1.html">ptcd.net/thread-12591-1-1.html</a></li>
+      <li id="src17">维基百科 — Bodyslam (band)（校名 Suankularb Wittayalai School、队名取自新生迎新活动、Hot Wave 高中生比赛；另 Suankularb Wittayalai School 条目核为 7–12 年级中学）：<a href="https://en.wikipedia.org/wiki/Bodyslam_(band)">en.wikipedia.org/wiki/Bodyslam_(band)</a></li>
+    </ol>
+    <p class="credits" style="margin-top:18px">图片来源<br>
+      [图1] <span id="img1">Wikimedia Commons〈Bodyslam (Thai band).jpg〉，摄者 Sry85，CC BY 3.0（2008）：<a href="https://commons.wikimedia.org/wiki/File:Bodyslam_(Thai_band).jpg">commons.wikimedia.org/wiki/File:Bodyslam_(Thai_band).jpg</a></span><br>
+      [图2] <span id="img2">2024《Sunny Side Up》世界巡演官方宣传照，NAC 可以娱乐提供（经 BigMedia 转载）：<a href="https://www.bigmedia.com.tw/article/CF4224A4-3E82-407E-9229-CF887242FBAE">bigmedia.com.tw/article/CF4224A4-3E82-407E-9229-CF887242FBAE</a></span><br>
+      [图3] <span id="img3">2017「ก้าวคนละก้าว」全国慈善长跑途中照，Thai PBS English News（经 Coconuts Bangkok 转载）：<a href="https://coconuts.co/bangkok/news/toon-bodyslam-finished-epic-charity-run-yesterday-named-man-year-2017">coconuts.co/bangkok/news/toon-bodyslam-finished-epic-charity-run-yesterday-named-man-year-2017</a></span><br>
+      [图4] <span id="img4">Wikimedia Commons〈Bodyslam at Siam Square 2018.jpg〉，摄者 Thanapas.som，CC BY-SA 4.0（2018）：<a href="https://commons.wikimedia.org/wiki/File:Bodyslam_at_Siam_Square_2018.jpg">commons.wikimedia.org/wiki/File:Bodyslam_at_Siam_Square_2018.jpg</a></span><br>
+      [图5] <span id="img5">《Believe》专辑封面，取自 Apple Music / iTunes 商店专辑页（GMM Grammy / Genie Records 供图）：<a href="https://music.apple.com/us/album/believe/1792749726">music.apple.com/us/album/believe/1792749726</a></span><br>
+      [图6] <span id="img6">2017.12.25 湄塞终点冲线照，Toon 本人 Instagram（经 The Straits Times 转载）：<a href="https://www.straitstimes.com/asia/se-asia/thai-rock-star-turns-national-hero-after-two-month-run">straitstimes.com/asia/se-asia/thai-rock-star-turns-national-hero-after-two-month-run</a></span>
+    </p>
+  </section>
+
+  <footer>
+    给我一首歌的时间 · 第 06 站 · 泰国 · Bodyslam — The Length of a Song<br>
+    事实核查截至 2026-10-10；来源分歧如实并列，未采信无出处细节。本期未使用 AI 生成影像。
+  </footer>
+
+</div>
+</body>
+</html>

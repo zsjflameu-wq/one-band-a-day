@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>给我一首歌的时间 08 · 朝鲜 — 普天堡电子乐团（보천보전자악단）</title>
+<style>
+  :root{
+    --bg:#12100e; --panel:#1b1815; --line:#342c24; --ink:#ece7dd; --ink2:#a49b8d;
+    --gold:#d8a24a; --blue:#c08a5a; --serif:"Songti SC","Noto Serif CJK SC",serif;
+    --sans:"Hiragino Sans GB","PingFang SC",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.9;font-size:17px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px 90px}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(216,162,74,.35)}
+  a:hover{border-bottom-color:var(--gold)}
+  sup{font-size:.72em;line-height:0}
+  sup a{border:none;color:var(--gold);opacity:.9}
+
+  .stop{display:flex;align-items:center;gap:14px;margin:44px 0 18px;color:var(--ink2);font-size:14px;letter-spacing:.12em}
+  .stop .no{font-family:var(--serif);border:1px solid var(--line);padding:4px 12px;border-radius:3px}
+  .stop .route{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  h1{font-family:var(--serif);font-size:50px;line-height:1.25;font-weight:700;letter-spacing:.02em}
+  h1 .en{display:block;font-size:22px;color:var(--blue);letter-spacing:.16em;margin-top:8px;font-weight:600}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin:22px 0 0;color:var(--ink2);font-size:14.5px}
+  .meta b{color:var(--ink);font-weight:600}
+  .lede{font-family:var(--serif);font-size:20px;color:#ded8cd;border-left:3px solid var(--gold);padding:6px 0 6px 20px;margin:34px 0 10px;line-height:2}
+
+  section{margin-top:64px}
+  h2{font-family:var(--serif);font-size:27px;font-weight:700;margin-bottom:6px;display:flex;align-items:baseline;gap:14px}
+  h2 .k{color:var(--gold);font-size:16px;letter-spacing:.18em;font-family:var(--sans);font-weight:600}
+  .rule{height:1px;background:var(--line);margin:14px 0 26px}
+  h3{font-size:18.5px;margin:30px 0 8px;color:var(--ink)}
+  p{margin:12px 0;color:#d8d2c7}
+  .muted{color:var(--ink2);font-size:14.5px}
+
+  figure{margin:26px 0}
+  figure img{width:100%;display:block;border-radius:4px}
+  figure.half{max-width:520px;margin-left:auto;margin-right:auto}
+  figure.narrow{max-width:380px;margin-left:auto;margin-right:auto}
+  figcaption{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.7}
+  figcaption b{color:#c3baab;font-weight:600}
+  .row{display:flex;gap:16px;flex-wrap:wrap}
+  .row figure{flex:1 1 260px;margin:20px 0 0}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px 24px;margin:22px 0}
+  .fact{display:grid;grid-template-columns:120px 1fr;gap:6px 18px;font-size:15.5px}
+  .fact dt{color:var(--ink2)}
+  .fact dd{color:var(--ink)}
+
+  table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--ink2);font-weight:600;font-size:13.5px;letter-spacing:.06em}
+  td.yr{color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+  .tl{list-style:none;margin:18px 0}
+  .tl li{position:relative;padding:0 0 22px 118px;font-size:15.5px}
+  .tl li::before{content:"";position:absolute;left:86px;top:11px;bottom:-2px;width:1px;background:var(--line)}
+  .tl li:last-child::before{display:none}
+  .tl .yr{position:absolute;left:0;top:1px;font-family:var(--serif);color:var(--gold);font-size:16px;letter-spacing:.03em}
+  .tl b{color:var(--ink)}
+
+  .song{background:linear-gradient(180deg,#191512,#141210);border:1px solid var(--line);border-radius:10px;padding:30px 30px 24px;margin-top:22px}
+  .song .t{font-family:var(--serif);font-size:34px;font-weight:700}
+  .song .t span{color:var(--gold)}
+  .lyric{font-family:var(--serif);color:#efece4;font-size:19px;line-height:2.05;border-left:3px solid var(--gold);padding-left:20px;margin:24px 0}
+  .lyric small{display:block;font-family:var(--sans);font-size:13px;color:var(--ink2);margin-top:14px}
+  .recs{display:flex;gap:16px;flex-wrap:wrap}
+  .rec{flex:1 1 300px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+  .rec .n{font-family:var(--serif);font-size:21px;font-weight:700}
+  .rec .y{color:var(--gold);font-size:14px;margin-left:8px}
+  .rec p{font-size:14.5px;margin-top:8px;color:#ccc6ba}
+
+  .note{background:rgba(216,162,74,.07);border:1px solid rgba(216,162,74,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#e3d3b6;margin:16px 0}
+  .warn{background:rgba(192,138,90,.07);border:1px solid rgba(192,138,90,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#dcc9b2;margin:16px 0}
+
+  ol.src{font-size:13.5px;color:var(--ink2);line-height:2;padding-left:24px}
+  ol.src li{margin:4px 0}
+  ol.src a{word-break:break-all}
+  .credits{font-size:13px;color:var(--ink2);line-height:2}
+  .site-bar{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px;padding-top:34px}
+  .site-bar .brand{font-family:var(--serif);font-size:18px;color:var(--ink);border:none;letter-spacing:.04em}
+  .site-bar .brand em{font-style:normal;font-size:12px;color:#8A8377;margin-left:8px;letter-spacing:.12em}
+  .site-bar .back{font-size:13px;color:#8A8377;border:none}
+  .site-bar .back:hover{color:var(--gold)}
+
+  footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--line);color:var(--ink2);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="site-bar">
+    <a class="brand" href="index.html">给我一首歌的时间<em>The Length of a Song</em></a>
+    <a class="back" href="index.html">← 全部期数</a>
+  </div>
+
+  <div class="stop"><span class="no">第 08 站</span><span>亚洲 · 朝鲜 · 平壤</span><span class="route"></span><span>给我一首歌的时间</span></div>
+
+  <h1>普天堡电子乐团<span class="en">보천보전자악단 · Pochonbo Electronic Ensemble · 1985–今</span></h1>
+  <div class="meta">
+    <span><b>1985-06-04</b> 成立<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup></span>
+    <span>朝鲜 · 平壤</span>
+    <span>前身：万寿台艺术团电子音乐分队<sup><a href="#src2">[2]</a></sup></span>
+    <span>编号专辑：<b>182 卷</b>（186 张 CD）<sup><a href="#src16">[16]</a></sup></span>
+    <span>韩国民族文化大百科称其为「朝鲜代表性的大众歌谣组合」<sup><a href="#src2">[2]</a></sup></span>
+  </div>
+
+  <p class="lede">一个国家最流行的一支乐队，唱的是合成器和电吉他。他们最受欢迎的一首歌，叫〈见到你很高兴〉——它先在东京的剧场里唱给在日朝鲜人听，后来成了南北交流活动上的开场曲，最后又在 2023 年冬天从所有舞台上消失。</p>
+
+  <section id="birth">
+    <h2><span class="k">01</span>从万寿台独立出来的电子乐团</h2>
+    <div class="rule"></div>
+    <p>1980 年代中期，合成器正在全世界流行。韩国民族文化大百科的记述是：金正日就「按照世界音乐发展的趋势，把电子音乐发展成朝鲜式的东西」作出指示——先在万寿台艺术团里组建一个电子音乐演奏分队积累经验，1985 年 6 月 4 日，这个分队独立成团<sup><a href="#src2">[2]</a></sup>。英文维基百科同样记载乐团「从万寿台艺术团的电子音乐部分立出来，成为该国第一支电子流行组合」，成立日期同为 1985 年 6 月 4 日<sup><a href="#src1">[1]</a></sup>。</p>
+    <p>成立之初，它的正式名称是「普天堡轻音乐团」（보천보경음악단），到 1992 年才改用今天通行的「电子乐团」<sup><a href="#src1">[1]</a></sup>。这与豆瓣等中文条目「正式名称是普天堡轻音乐团」的表述一致。</p>
+    <p>它与王在山轻音乐团并称朝鲜两大电子音乐团。民族文化大百科这样描述他们的意义：「脱离过去进行曲式节奏的生活歌谣，以全新的节奏引起了巨大反响」，并且「至今仍是朝鲜居民喜爱的曲目」<sup><a href="#src2">[2]</a></sup>。</p>
+
+    <div class="panel"><dl class="fact">
+      <dt>成立</dt><dd>1985-06-04（普天堡战斗 48 周年当日）<sup><a href="#src1">[1]</a></sup><sup><a href="#src2">[2]</a></sup></dd>
+      <dt>前身</dt><dd>万寿台艺术团电子音乐分队<sup><a href="#src2">[2]</a></sup></dd>
+      <dt>早期名称</dt><dd>普天堡轻音乐团（至 1992）<sup><a href="#src1">[1]</a></sup></dd>
+      <dt>编制</dt><dd>「由青年演奏家的器乐组合、声乐家、创作家、指挥等约 15 人内外构成」（民族文化大百科，据报道）<sup><a href="#src2">[2]</a></sup></dd>
+      <dt>乐器</dt><dd>以合成器等电子乐器为中心，混用钢琴等西洋乐器与传统乐器<sup><a href="#src2">[2]</a></sup></dd>
+      <dt>唱片</dt><dd>编号专辑发行至 182 卷（186 张 CD）<sup><a href="#src16">[16]</a></sup></dd>
+    </dl></div>
+
+    <figure class="half">
+      <img src="assets/pee_cover_vol1.jpg" alt="《보천보전자악단 제1집》封面">
+      <figcaption><b>《보천보전자악단 [제1집]》</b>（1991）CD 封面，左上是乐团的「PEE」标志。来源：Cover Art Archive（MusicBrainz release <a href="https://musicbrainz.org/release/969a3cbb-c311-429e-8038-fe8aae9f1d11">969a3cbb</a>）</figcaption>
+    </figure>
+
+    <p class="muted">关于解散时间，来源并不一致：英文维基百科记「活跃年份 1985–2015」，MusicBrainz 的艺人条目则记为 1985-06-04 至 2012 年终止。本页不作裁断，详见「来源分歧」。</p>
+  </section>
+
+  <section id="name">
+    <h2><span class="k">02</span>名字里的那场战斗</h2>
+    <div class="rule"></div>
+    <p>「普天堡」不是平壤的地名，而是一场战斗的名字。</p>
+    <p>1937 年 6 月 4 日，一支抗日游击队越过鸭绿江，袭击了朝鲜北部普天堡的日本警察驻在所等设施。英文维基百科记载，日本方面的报告称指挥者是崔贤（최현），朝鲜官方史观则归于金日成；学术界对这场战斗的叙述同样存在分歧<sup><a href="#src4">[4]</a></sup>。战斗的消息第二天就登上了各地报纸——当时的《东亚日报》《朝鲜日报》都在 6 月 6 日刊出了「普天堡被袭事件续报」「共产系兵匪越境袭来」的报道，这些版面今天仍可在维基共享资源上看到<sup><a href="#src4">[4]</a></sup>。</p>
+    <p><b>登报带来的结果，是名字。</b>据中文维基百科整理的当时《东亚日报》报道：该报因「孙基祯日章旗抹消事件」停刊后刚复刊不久，把这次袭击当作「事件新闻」做了大规模连续报道，朝鲜境内各大报纸也广为报道——「金日成之名也因此为朝鲜人所知」<sup><a href="#src28">[28]</a></sup>。日本当局随即悬赏捉拿袭击指挥官金日成与崔贤（初为 2000 日元，后来对金日成一人的赏金提高到 2 万日元）<sup><a href="#src28">[28]</a></sup>；同年 11 月 18 日，《京城日报》还登出过「金日成被满洲国军击毙」的假消息<sup><a href="#src28">[28]</a></sup>。英文维基百科补充了更长的一段后果：日本方面此后加紧追剿，金日成 1940 年被迫退入苏联；1945 年他随苏军回到朝鲜时，「普天堡英雄」的名声帮他取得了民众的接受与支持；这场战斗直到 2003 年才第一次写进韩国的历史教科书<sup><a href="#src4">[4]</a></sup>。</p>
+    <div class="note">伤亡数字有两套口径：按当时《东亚日报》的报道，驻在所当晚在岗的 5 名警察全部逃走、无一伤亡，死者是一名巡查的幼子及其母亲，翌日追击战中警察死 7 人、伤 14 人<sup><a href="#src28">[28]</a></sup>；朝鲜方面与百度百科的叙述则是「击毙日本警察 5 名，缴获轻机枪 1 挺、步枪 6 支」<sup><a href="#src30">[30]</a></sup>。两者无法对齐，本页不采信任何一套，只陈述双方都承认的事实：这件事被登上了报纸。</div>
+    <p>1985 年 6 月 4 日——距离那场袭击正好四十八年——乐团在平壤成立，并把这场战斗的名字放进了自己的团名<sup><a href="#src1">[1]</a></sup><sup><a href="#src2">[2]</a></sup>。韩国民族文化大百科同一条目也指出，乐团曾在 1990 年前后赴中国、日本等地巡演，「正是在日本巡演的过程中，它的实体被外界所知」<sup><a href="#src2">[2]</a></sup>。</p>
+
+    <div class="row">
+      <figure>
+        <img src="assets/pee_donga1937.jpg" alt="《东亚日报》1937-06-06 报道">
+        <figcaption><b>《东亚日报》1937-06-06 朝刊二面</b>，「普天堡被袭事件续报」。来源：Wikimedia Commons（公有领域，<a href="https://commons.wikimedia.org/wiki/File:%EB%B3%B4%EC%B2%9C%EB%B3%B4_%EC%8A%B5%EA%B2%A9_%EC%86%8D%EB%B3%B4_1937-06-06_%EB%8F%99%EC%95%84%EC%9D%BC%EB%B3%B4.jpg">文件页</a>）</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/pee_chosun1937.jpg" alt="《朝鲜日报》1937-06-06 报道">
+        <figcaption><b>《朝鲜日报》1937-06-06 夕刊二面</b>，「共产系兵匪越境袭来」。来源：Wikimedia Commons（公有领域，<a href="https://commons.wikimedia.org/wiki/File:%EB%B3%B4%EC%B2%9C%EB%B3%B4_%EC%82%AC%EA%B1%B4_%EB%B3%B4%EB%8F%84_1937-06-06_%EC%A1%B0%EC%84%A0%EC%9D%BC%EB%B3%B4.jpg">文件页</a>）</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="sound">
+    <h2><span class="k">03</span>合成器与生活歌谣</h2>
+    <div class="rule"></div>
+    <p>普天堡的声音，是朝鲜流行乐里的一次换挡。</p>
+    <p>民族文化大百科的表述是：乐团「以合成器等电子乐器为中心，混用钢琴等西洋乐器与传统乐器」，并设有专职的声乐、舞蹈演员和合唱团；在节奏与歌词之间，「依据朝鲜劳动党的文艺方针，更重视歌词」；同时「也会把各国流行音乐纳入曲目」<sup><a href="#src2">[2]</a></sup>。</p>
+    <p>曲目构成可以在编号专辑里直接看到：第 12 卷《Korean Folk Songs 1》收〈阿里郎〉〈敦达里〉〈杨山道〉等民谣改编，第 22、23 卷是电影音乐和外国歌曲，第 28 卷是纯器乐<sup><a href="#src1">[1]</a></sup>。英文维基百科还特别提到他们翻唱过 Modern Talking 的〈Brother Louie〉和 Neil Sedaka 的〈One Way Ticket〉<sup><a href="#src1">[1]</a></sup>。</p>
+
+    <figure class="half">
+      <img src="assets/pee_cover_vol23.jpg" alt="《보천보전자악단 제23집》封面">
+      <figcaption><b>《보천보전자악단 [제23집]》</b>（Vol. 23: Foreign Songs 1，1991）封面。来源：Cover Art Archive（MusicBrainz release <a href="https://musicbrainz.org/release/dbe06685-13cd-4d5d-b19b-e5b942cb178b">dbe06685</a>）</figcaption>
+    </figure>
+  </section>
+
+  <section id="members">
+    <h2><span class="k">04</span>台前的女人们</h2>
+    <div class="rule"></div>
+    <p>普天堡的台前，主唱<b>全部</b>是女歌手；编制里伴奏的乐手，则<b>全部</b>是男性。英文维基百科列出的八位 vocal——玄松月、李京淑、金光淑、李芬姬、赵锦花、全惠英、金贞女、尹惠英——全是女性，而合成器、钢琴、电子琴、吉他、贝斯、鼓、打击乐到指挥、作曲，无一例外全是男性<sup><a href="#src1">[1]</a></sup>；中文维基百科的成员表干脆把歌手那一节的标题写成「女歌手」<sup><a href="#src25">[25]</a></sup>。这一「女歌手在前、全男性器乐编制在后」的形式，是 1991 年赴日演出前整编定下的<sup><a href="#src1">[1]</a></sup>。她们后来大多拿到了朝鲜的最高艺术头衔。</p>
+    <div class="note">唯一提到男性出声的，是一条视频站投稿里的二手转述（「乐手们有时还负责歌曲的伴唱」），来源不够格，本页不采用。所以这里的措辞是「台前主唱全是女歌手、伴奏全是男乐手」，而不是「没有一个男人唱过歌」。</div>
+    <div class="row">
+      <figure>
+        <img src="assets/pee_cover_rks8.jpg" alt="《Vol. 8: Li Gyong Suk's Solos 1》封面">
+        <figcaption><b>《Vol. 8: Li Gyong Suk's Solos 1》</b>（1991）李京淑独唱曲集第 1 辑封面。来源：Cover Art Archive（MusicBrainz release <a href="https://musicbrainz.org/release/c2d58d77-14a5-4eef-afe4-670dfc757c71">c2d58d77</a>）</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/pee_cover_vol62.jpg" alt="《보천보전자악단 제62집》封面">
+        <figcaption><b>《보천보전자악단 [제62집]》</b>（1995）封面。据 Grokipedia 整理的曲目表，李京淑独唱曲集第 2 辑即对应第 62 卷（含〈Glad to See You〉）。来源：Cover Art Archive（<a href="https://musicbrainz.org/release/6dd9cc53-b059-4525-aeef-ac1d9c56171c">6dd9cc53</a>）</figcaption>
+      </figure>
+    </div>
+    <table>
+      <thead><tr><th>人物</th><th>身份</th><th>可核查的事实</th></tr></thead>
+      <tbody>
+        <tr><td><b>李京淑</b><br><span class="muted">리경숙 / Ri Kyong-suk</span></td><td>主唱</td><td>1970-01-01 生于平壤；1988 年加入乐团；1991 年随团赴日本巡演；〈见到你很高兴〉〈城市姑娘出嫁〉〈我的国家最好〉原唱；2016 年起在金元均音乐大学任教<sup><a href="#src5">[5]</a></sup></td></tr>
+        <tr><td><b>金光淑</b><br><span class="muted">김광숙 / Kim Kwang-suk</span></td><td>主唱</td><td>1964-01-22 生于平壤，1986 年入团，1988 年获功勋演员、1992 年获人民艺术家；2018-01-14 因心脏病去世，享年 53 岁；据 KCNA，金正恩送了花圈<sup><a href="#src6">[6]</a></sup><sup><a href="#src18">[18]</a></sup></td></tr>
+        <tr><td><b>玄松月</b><br><span class="muted">현송월 / Hyon Song-wol</span></td><td>主唱（2000 年代初）</td><td>据英文维基百科，曾为王在山轻音乐团与普天堡电子乐团歌手，代表作〈骏马姑娘〉（준마처녀，1999）；2012–2018 任牡丹峰乐团团长，2018 年起任三池渊管弦乐团团长<sup><a href="#src7">[7]</a></sup><sup><a href="#src1">[1]</a></sup></td></tr>
+        <tr><td><b>리종오</b><br><span class="muted">Ri Jong-o</span></td><td>指挥 · 主要作曲家</td><td>1943–2016；据韩联社讣闻，1960 年毕业于平壤音乐舞蹈大学并留校任教，1979 年起任部队作曲家，1980 年代末起任普天堡作曲家兼指挥；〈见到你很高兴〉〈口哨〉等均出自他手；2016-11-08 因急性心肌梗死去世<sup><a href="#src3">[3]</a></sup>。汉字表记未在权威来源中核实到，本页一律标注罗马字</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">在册成员的完整名单（含合成器、电吉他、贝斯、鼓、钢琴、电子琴、打击乐等分工）见英文维基百科「Known members」一节——该节自身标注「需要更多来源」，本页不整段转引<sup><a href="#src1">[1]</a></sup>。</p>
+  </section>
+
+  <section id="classic">
+    <h2><span class="k">05</span>经典曲 ·〈见到你很高兴〉</h2>
+    <div class="rule"></div>
+
+    <div class="song">
+      <div class="t">〈반갑습니다〉<span>〈见到你很高兴〉</span></div>
+      <p class="muted">又译〈喜相逢〉／Bangapseumnida。MusicBrainz 记 2000 年官方发行《반갑습니다 [북한가요 2집]》第 1 轨为 208 秒（3:28）<sup><a href="#src13">[13]</a></sup>；本片所用音源为 2015 年数字合集（archive.org [WEB FLAC]），实测 <b>207.2 秒（3:27）</b>，成片以实测值为准。词曲：据韩联社与 Koryo Tours 为 리종오（Ri Jong-o）<sup><a href="#src3">[3]</a></sup><sup><a href="#src11">[11]</a></sup>；中文维基百科则记「由北韩歌手李京淑创作」<sup><a href="#src15">[15]</a></sup>——见「来源分歧」。</p>
+    </div>
+
+    <p><b>这首歌是怎么诞生的。</b>1991 年，普天堡电子乐团赴日本巡演，面向在日朝鲜人团体（总联）组织<sup><a href="#src1">[1]</a></sup><sup><a href="#src3">[3]</a></sup>。英文 namu wiki 的记述是：作曲家리종오当时希望「改变会场里生硬的气氛、更贴近在日朝鲜人」，于是写下了这首开场曲；用户可编辑来源，仅作参考<sup><a href="#src19">[19]</a></sup>。KBS 世界引述共同社则记作「1991 年由普天堡电子乐团发表」<sup><a href="#src8">[8]</a></sup>。可以确认的硬事实是：李京淑是原唱，1991 年首唱于日本<sup><a href="#src5">[5]</a></sup><sup><a href="#src9">[9]</a></sup>。</p>
+
+    <figure class="half">
+      <img src="assets/pee_cover_japan1.jpg" alt="《일본방문공연 1부》封面">
+      <figcaption><b>《일본방문공연 1부》</b>（日本访问公演 第1部，1992）封面——五名女歌手与乐团的舞台照，正是 1991–1992 年日本巡演留下的演出专辑。来源：Cover Art Archive（MusicBrainz release <a href="https://musicbrainz.org/release/c9c59875-8258-4552-94c3-e962ae74bb89">c9c59875</a>）</figcaption>
+    </figure>
+
+    <p><b>它为什么成立。</b>这首歌的副歌只有一句话反复——「见到你很高兴」。澳大利亚 ABC 电台一档介绍朝鲜流行乐的节目把它单独拎出来讲：「副歌几乎就是『很高兴见到你』一遍遍地重复」，并评价它是这些歌里「政治色彩最淡的一首」<sup><a href="#src17">[17]</a></sup>。Koryo Tours 把它列进「朝鲜卡拉 O K 七首必唱」的第一首，理由是「打破任何场合的冷场、让全场跟着合唱」<sup><a href="#src11">[11]</a></sup>。一首歌的旋律简单到任何人开口就能跟，而这正是它在各种官方场合被反复选中的原因——韩国 KBS 的专题节目说，南北音乐交流活动的曲目单里，「〈见到你很高兴〉常被当作开场曲」<sup><a href="#src21">[21]</a></sup>。</p>
+
+    <p><b>歌词。</b>三段歌词都从「동포여러분 형제여러분」（同胞们、兄弟们）起头，第一段讲重逢，第二段讲握手，第三段讲爱国。第 2 段里有一句「통일 잔치날도 멀지 않네」（统一节庆之日也不远了）——2023 年之后，正是这句歌词让它在朝鲜从舞台上消失<sup><a href="#src8">[8]</a></sup>。</p>
+
+    <div class="lyric">
+      동포여러분　형제여러분　이렇게 만나니 반갑습니다<br>
+      얼싸안고　좋아　웃음이요　절싸안고　좋아 눈물얼세<br>
+      어허허 어허허허허　닐리리야　반갑습니다
+      <small>朝鲜语原文据 Koryo Tours 歌词页<sup><a href="#src12">[12]</a></sup>；此处只列第 1 段前两句与副歌。</small>
+    </div>
+
+    <div class="lyric">
+      同胞　一家人　兄弟　一家亲<br>
+      如此的　聚一堂　真心欢迎您<br>
+      哦哦哦　哩儿哩呀　真心欢迎您
+      <small>中译 · 非官方译本。译者「幕后高人」，据 5sing 歌曲页转录<sup><a href="#src22">[22]</a></sup>；本页未另作翻译。</small>
+    </div>
+
+    <figure class="half">
+      <img src="assets/pee_cover_bangap.jpg" alt="《반갑습니다 북한가요 2집》封面">
+      <figcaption><b>《반갑습니다 [북한가요 2집]》</b>（2000-12-08，ARA·RIO 系列）封面，第 1 轨即〈반갑습니다〉，演唱者栏为 보천보전자악단。来源：Cover Art Archive（MusicBrainz release <a href="https://musicbrainz.org/release/0ccbd463-1836-44ea-b117-e1aff61c3e77">0ccbd463</a>）</figcaption>
+    </figure>
+  </section>
+
+  <section id="road">
+    <h2><span class="k">06</span>一首欢迎曲的十二年</h2>
+    <div class="rule"></div>
+    <ul class="tl">
+      <li><span class="yr">1991</span><b>东京首唱。</b>普天堡电子乐团赴日本巡演，〈见到你很高兴〉第一次被唱出来<sup><a href="#src3">[3]</a></sup><sup><a href="#src9">[9]</a></sup>。</li>
+      <li><span class="yr">1998</span><b>传进韩国。</b>金刚山观光开放，韩国游客在朝鲜听到了这首歌——韩联社把这一年记作它「被韩国人熟知」的起点<sup><a href="#src3">[3]</a></sup><sup><a href="#src15">[15]</a></sup>。</li>
+      <li><span class="yr">2000</span><b>南北首脑会晤。</b>此后它在韩国广为流传，常被列为南北交流活动的「指定曲目」<sup><a href="#src15">[15]</a></sup>。朝鲜《朝鲜新报》称它是「南北方与海外同胞共同演唱的民族之歌」「统一歌谣」<sup><a href="#src15">[15]</a></sup>。</li>
+      <li><span class="yr">2001</span><b>平壤的演唱会。</b>据韩联社，2001 年 4 月韩国歌手在平壤开演唱会，第一首就是〈见到你很高兴〉<sup><a href="#src3">[3]</a></sup>。</li>
+      <li><span class="yr">2018</span><b>江陵，时隔十五年。</b>2 月 8 日，三池渊管弦乐团在江陵艺术中心举行平昌冬奥会庆祝演出，玄松月率领；据韩国官方网韩宣网，「团长玄松月率领的朝鲜三池渊管弦乐团首先以朝鲜名歌〈见到你很高兴〉开场」。全场观众 812 人<sup><a href="#src10">[10]</a></sup>。</li>
+      <li><span class="yr">2023</span><b>「敌对两国」。</b>据韩联社，金正恩在 12 月把南北关系定性为「两个敌对国家」<sup><a href="#src8">[8]</a></sup>。</li>
+      <li><span class="yr">2025</span><b>从舞台上消失。</b>据共同社报道（KBS 世界转引），这首歌被排除在演出曲目之外，「在中国雇用朝鲜女性工作的朝鲜餐厅里也听不到了」<sup><a href="#src8">[8]</a></sup>。namu wiki 记「2025 年起禁演」<sup><a href="#src19">[19]</a></sup>。</li>
+    </ul>
+
+    <figure class="half">
+      <img src="assets/pee_national_theater.jpg" alt="首尔国立剧场">
+      <figcaption><b>首尔国立剧场（국립극장）</b>。2018-02-11 晚，三池渊管弦乐团的第二场演出在此举行<sup><a href="#src10">[10]</a></sup>。本图为剧场实景，非演出当晚照片。来源：Wikimedia Commons（<a href="https://commons.wikimedia.org/wiki/File:Samjiyon_Orchestra_Seoul_01.jpg">Samjiyon Orchestra Seoul 01.jpg</a>，文件页见此）</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/pee_hyon_songwol.jpg" alt="玄松月">
+      <figcaption><b>玄松月</b>，三池渊管弦乐团团长、牡丹峰乐团前团长；据英文维基百科，她 2000 年代初是普天堡电子乐团的主唱之一<sup><a href="#src7">[7]</a></sup>。2018 年 2 月，首尔。来源：韩国青瓦台官方摄影（Wikimedia Commons，KOGL Type 1，<a href="https://commons.wikimedia.org/wiki/File:North_Korea%27s_Samjiyon_Orchestra_director_Hyon_Song-wol.jpg">文件页</a>）</figcaption>
+    </figure>
+  </section>
+
+  <section id="after">
+    <h2><span class="k">07</span>乐团本身，去哪了</h2>
+    <div class="rule"></div>
+    <p>关于乐团后来的去向，公开来源都很薄，而且互相并不完全对得上——但把几条线索拼起来，能看出一条相当清楚的轨迹：<b>它不是某一天被解散的，是被拆散、分流，最后只剩下一个名字偶尔被重新启用。</b></p>
+
+    <p><b>转折点大致在 2007 年前后。</b>中文维基百科的记述是：2007 年，国内保守派老干部对乐团的演出风格不满，认为它「不符合朝鲜的民族情感」，乐团在朝鲜音乐界的影响随之大减；此后大批成员转入王在山轻音乐团，以及 2009 年新成立的银河水管弦乐团<sup><a href="#src25">[25]</a></sup>。⚠️ 这条（尤其是「保守派不满」的具体说法）目前只在中文维基百科见到，英文维基与其他来源都未载，本页按单一来源处理，读者请自行判断。</p>
+
+    <p><b>「分流」有独立的学术佐证。</b>芬兰于韦斯屈莱大学 Pekka Korhonen 与 Werner Koidl 关于银河水管弦乐团兴衰的论文写道：银河水「最早的根源，是被称作〈银河水〉的一群年轻女歌手——<b>普天堡电子乐团下属的一个分支</b>，朝中社在 2008 年 2 月 8 日首次提及」；银河水管弦乐团 2009 年成立，2012 年在巴黎演出，<b>2013 年 8 月被相当突然地解散</b>，并成为随后一连串清洗的开端<sup><a href="#src26">[26]</a></sup><sup><a href="#src27">[27]</a></sup>。同一篇论文还提到：这里说的「牡丹峰」并不是 2012 年成立的牡丹峰乐团，而是一个小型女声合唱组——「<b>最初是普天堡电子乐团的一个项目</b>」，银河水 2009 年成立后，它开始与银河水同台演出；后来成为金正恩夫人的李雪主，当年就常在这个组里<sup><a href="#src26">[26]</a></sup>。</p>
+
+    <p>换句话说，朝鲜此后每一个「国家流行乐团」的人才，多少都从普天堡这条线上出来过：银河水小组（2008）→ 银河水管弦乐团（2009）→ 牡丹峰乐团（2012）→ 三池渊管弦乐团（2018）。乐团的名字消失了，人和机器没有。</p>
+
+    <p><b>「事实上的解散」有一个很朝鲜式的标记。</b>中文维基百科记载：2011 年 2 月起，朝鲜中央电视台播出《回忆之歌——普天堡电子乐团曲目选》，播的是全盛时期的演出录像，到 6 月结束——播旧录像，等于宣告它已成过去<sup><a href="#src25">[25]</a></sup>。此后乐团又以原班人马重聚过：2015 年 2 月的《回忆之歌》演唱会，以及 2015 年 10 月 11 日建党 70 周年演出《伟大的党，玫瑰色的朝鲜》，李京淑都在其中<sup><a href="#src5">[5]</a></sup>。</p>
+
+    <p><b>还有一个人是被「抹掉」的。</b>合成器手金元日（김원일）在约 2009 年重播的演出里被用技术手段抹去影像，此后再未被列为成员——中英文维基百科都只写「因某种未知原因」<sup><a href="#src1">[1]</a></sup><sup><a href="#src25">[25]</a></sup>。原因至今没有可靠来源，本页不作猜测。</p>
+
+    <p><b>另一个「消失」是假新闻。</b>2013 年 8 月，韩媒一度报道玄松月（传为金正恩前女友）等银河水、王在山乐团成员被处决；2014 年春天她出现在朝鲜电视上，好好的，其他被传死亡的音乐人也陆续被看到<sup><a href="#src7">[7]</a></sup>。她后来当了牡丹峰乐团团长、三池渊管弦乐团团长，2018 年 2 月带团到韩国演出——开场曲就是〈见到你很高兴〉。</p>
+
+    <p>可以确认的两条人事消息是：主要作曲家兼指挥리종오于 2016 年 11 月 8 日去世，韩联社称他为「朝鲜传奇作曲家」，并指他的〈见到你很高兴〉与〈口哨〉都是韩国人也知道的歌<sup><a href="#src3">[3]</a></sup>；歌手金光淑于 2018 年 1 月 14 日去世，享年 53 岁，据 KCNA，金正恩送了花圈<sup><a href="#src6">[6]</a></sup><sup><a href="#src18">[18]</a></sup>。</p>
+
+    <p>而 2012 年之后，朝鲜新的「国民天团」是牡丹峰乐团——英文维基百科在牡丹峰乐团条目里写道：新式乐团的组建，可以视为对王在山轻音乐团、普天堡电子乐团这类轻音乐团「已经不再流行」的承认<sup><a href="#src7b">[7]</a></sup>。</p>
+
+    <figure class="half">
+      <img src="assets/pee_kis_square.jpg" alt="平壤金日成广场">
+      <figcaption><b>平壤金日成广场</b>。据英文维基百科李京淑条目，2015-10-11 她随普天堡电子乐团参加了建党 70 周年大型团体操和艺术演出《伟大的党，玫瑰色的朝鲜》（위대한 당, 로서한 조선），并在 2015 年 2 月的《回忆之歌》演唱会上与乐团老团员同台<sup><a href="#src5">[5]</a></sup>。本图为广场实景，非演出照。来源：Wikimedia Commons（Jan Engelhardt 摄，CC BY-SA 4.0，<a href="https://commons.wikimedia.org/wiki/File:Kim_Il-sung_Square_-_02.jpg">文件页</a>）</figcaption>
+    </figure>
+  </section>
+
+  <section id="recs">
+    <h2><span class="k">08</span>延伸推荐</h2>
+    <div class="rule"></div>
+    <div class="recs">
+      <div class="rec">
+        <div class="n">〈휘파람〉<span class="y">〈口哨〉1989</span></div>
+        <p>韩联社把它列为리종오另一首「韩国人也熟悉」的歌<sup><a href="#src3">[3]</a></sup>。据 Koryo Tours，它把朝鲜诗人赵基天的诗谱了曲，「副歌里那段放克音色最出彩」<sup><a href="#src11">[11]</a></sup>。</p>
+      </div>
+      <div class="rec">
+        <div class="n">〈도시처녀 시집와요〉<span class="y">〈城市姑娘出嫁〉1990</span></div>
+        <p>李京淑演唱的同名电影主题曲。韩联社、英文维基百科都把它列在她的代表作里<sup><a href="#src3">[3]</a></sup><sup><a href="#src5">[5]</a></sup>；Koryo Tours 的评价是「节奏真的很抓人，会让你想抢过话筒假装会唱」<sup><a href="#src11">[11]</a></sup>。</p>
+      </div>
+      <div class="rec">
+        <div class="n">〈다시 만납시다〉<span class="y">〈再相逢〉</span></div>
+        <p>同由李京淑演唱。Koryo Tours 说这是朝鲜的散场曲——「朝鲜人绝不会在聚会中途点这首歌，它是告别时才唱的」<sup><a href="#src11">[11]</a></sup>。</p>
+      </div>
+    </div>
+    <p class="muted">本页选择为编辑判断，非榜单结论：〈见到你很高兴〉的「最经典」来自多个来源的共同指认（韩联社、KBS、ABC、Koryo Tours、民族文化大百科），但没有任何一份权威榜单对普天堡电子乐团的作品做过排名。</p>
+  </section>
+
+  <section id="film">
+    <h2><span class="k">09</span>本期短片</h2>
+    <div class="rule"></div>
+    <p>资料短片与〈见到你很高兴〉全曲等长（<b>3:27</b>，207.2 秒，音源实测），画面全部用真实史料——团徽、1937 年两家报纸的普天堡袭击报道版面、六张专辑封面、三池渊管弦乐团首尔演出照、平壤金日成广场。解说共 9 段：从团名、声音、成员，到 1991 年歌的诞生、传入韩国，再到乐团本身的去向（成员分流、2015 年重聚、2016/2018 两位核心人物去世）与 2023 年歌曲被拿掉。配音版正片待解说稿定稿后制作；本站嵌入的是无声资料版。</p>
+    <div class="video-box">
+      <video controls preload="metadata" src="08-pochonbo-film.mp4"></video>
+    </div>
+    <div class="note">本片<b>不含音频</b>（全曲 3:27 等长），请同步播放普天堡电子乐团〈반갑습니다〉（见到你很高兴）。画面全部为真实素材：Wikimedia Commons 团徽与 1937 年报纸版面、Cover Art Archive 专辑封面、三池渊管弦乐团首尔演出照、平壤金日成广场；本期未使用 AI 生成影像。</div>
+    <div class="note">本期歌曲只有 <b>3 分 27 秒</b>，是全系列最短的一站——解说共 9 段，约 160 秒，平均每段 18 秒。歌词页放在全片最后一段，无人说话，留白放歌。</div>
+  </section>
+
+  <section id="disagree">
+    <h2><span class="k">10</span>来源分歧</h2>
+    <div class="rule"></div>
+    <table>
+      <thead><tr><th style="width:180px">事项</th><th>分歧</th></tr></thead>
+      <tbody>
+        <tr><td>词曲作者</td><td>韩联社讣闻与 Koryo Tours 记为乐团指挥兼作曲家 리종오（Ri Jong-o）<sup><a href="#src3">[3]</a></sup><sup><a href="#src11">[11]</a></sup>；英文 namu wiki 同<sup><a href="#src19">[19]</a></sup>；中文维基百科记「由北韩歌手李京淑创作」<sup><a href="#src15">[15]</a></sup>。本页取 리종오（新闻源更硬），并如实并列。</td></tr>
+        <tr><td>首演年份</td><td>「1991 年在日本巡演首演」为多数说法（韩联社、KBS、Korea Daily、中文维基）<sup><a href="#src3">[3]</a></sup><sup><a href="#src8">[8]</a></sup><sup><a href="#src15">[15]</a></sup>；ABC 电台节目则记「为 1989 年青年运动会而写并发表」<sup><a href="#src17">[17]</a></sup>。本页取 1991。</td></tr>
+        <tr><td>作曲家汉字表记</td><td>리종오的汉字写法未在权威来源中核实到（中文网络歌曲页有写作「李宗吴」<sup><a href="#src22">[22]</a></sup>）。本页不采用，一律标罗马字。</td></tr>
+        <tr><td>乐团解散时间</td><td>中文维基百科记 2011 年 2–6 月播出《回忆之歌》选辑「相当于宣告事实上解散」<sup><a href="#src25">[25]</a></sup>；英文维基百科记活跃期 1985–2015<sup><a href="#src1">[1]</a></sup>；namu wiki 记 2008 年解散、2012 年发行第 182 辑后停止<sup><a href="#src19">[19]</a></sup>；MusicBrainz 记至 2012<sup><a href="#src13b">[13]</a></sup>；民族文化大百科记「1990 年代以后活动转疏，2008 年起另有活动」<sup><a href="#src2">[2]</a></sup>。本页标题暂写「1985–今」，不作裁断——可以确认的是 2015 年仍有重聚演出<sup><a href="#src5">[5]</a></sup><sup><a href="#src25">[25]</a></sup>。</td></tr>
+        <tr><td>2015 年重聚月份</td><td>英文维基百科李京淑条目记 2015 年 <b>2 月</b>《回忆之歌》演唱会<sup><a href="#src5">[5]</a></sup>；中文维基百科记 2015 年 <b>3 月</b>播出《回忆之歌》<sup><a href="#src25">[25]</a></sup>。两处指的应是同一次重聚。</td></tr>
+        <tr><td>2011 年《回忆之歌》与「保守派不满」</td><td>两条<b>均仅见于中文维基百科</b><sup><a href="#src25">[25]</a></sup>，未在英文维基、学术论文（<sup><a href="#src23">[23]</a></sup><sup><a href="#src26">[26]</a></sup>）或其他来源中交叉到。本页保留并已明确标注为单一来源，不作为结论。</td></tr>
+        <tr><td>玄松月出生年份</td><td>普天堡条目成员名单记 1976<sup><a href="#src1">[1]</a></sup>；玄松月本人条目记 1977（引韩国国家情报院说法）<sup><a href="#src7">[7]</a></sup>。本页不写年份。</td></tr>
+        <tr><td>金光淑享年</td><td>英文维基百科按 1964-01-22 生、2018-01-14 卒记 53 岁<sup><a href="#src6">[6]</a></sup>；Explore DPRK 标题写 55 岁。本页取 53。</td></tr>
+        <tr><td>金光淑葬礼报道日期</td><td>英文维基百科引 KCNA 报道日期为 2018-01-14<sup><a href="#src6">[6]</a></sup>；KCNA Watch 的存档时间戳为 2018-01-15。差异仅在存档时间，不影响事实。</td></tr>
+        <tr><td>禁演报道时间</td><td>共同社报道经 KBS 世界转引，未标注报道日期<sup><a href="#src8">[8]</a></sup>；namu wiki 记「2025 年禁演」<sup><a href="#src19">[19]</a></sup>。本页只写「被排除在演出曲目之外」，不落具体日期。</td></tr>
+        <tr><td>歌词文本异文</td><td>第 2 段该句，Koryo Tours 转写为「조군위한 마음 뜨거우니」<sup><a href="#src12">[12]</a></sup>；中文歌曲页作「조국이 한마음 뜨거우니」<sup><a href="#src22">[22]</a></sup>。两处含义不同（「为你们/为祖国」），本页歌词栏只引第 1 段以避开。</td></tr>
+        <tr><td>普天堡战斗的伤亡</td><td>两套口径无法对齐：据当时《东亚日报》的报道，驻在所当晚在岗 5 名警察全部逃走、无一伤亡，死者是一名巡查的幼子及其母亲，翌日追击战警察死 7 人、伤 14 人<sup><a href="#src28">[28]</a></sup>；百度百科（朝鲜方面叙述）记「击毙日本警察 5 名，缴获轻机枪 1 挺、步枪 6 支」<sup><a href="#src30">[30]</a></sup>。本页不采信任何一套数字。</td></tr>
+        <tr><td>是否有男性主唱</td><td>英文维基百科成员表中 8 位 vocal 全部为女性、器乐与创作岗位全部为男性<sup><a href="#src1">[1]</a></sup>；中文维基百科歌手一节标题即「女歌手」<sup><a href="#src25">[25]</a></sup>；学术与百科综述称其形式为「女歌手在前、全男性器乐编制在后」<sup><a href="#src1">[1]</a></sup>。唯一提到男性出声的是一条视频站投稿的二手转述，来源不足，本页不采用。⛔ 因此本页不写「从来没有男性唱过歌」，只写「台前主唱全是女歌手、伴奏全是男乐手」。</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="sources">
+    <h2><span class="k">11</span>资料来源</h2>
+    <div class="rule"></div>
+    <ol class="src">
+      <li id="src1">Wikipedia (EN) · Pochonbo Electronic Ensemble — <a href="https://en.wikipedia.org/wiki/Pochonbo_Electronic_Ensemble">en.wikipedia.org/wiki/Pochonbo_Electronic_Ensemble</a></li>
+      <li id="src2">한국민족문화대백과사전（韩国学中央研究院）· 보천보전자악단 — <a href="https://encykorea.aks.ac.kr/Contents/Item/E0070161">encykorea.aks.ac.kr/Contents/Item/E0070161</a></li>
+      <li id="src3">Yonhap News Agency（2016-11-09）· N. Korea's legendary songwriter Ri Jong-o dies — <a href="https://m-en.yna.co.kr/view/AEN20161109004800315">m-en.yna.co.kr/view/AEN20161109004800315</a></li>
+      <li id="src4">Wikipedia (EN) · Battle of Pochonbo — <a href="https://en.wikipedia.org/wiki/Battle_of_Pochonbo">en.wikipedia.org/wiki/Battle_of_Pochonbo</a></li>
+      <li id="src5">Wikipedia (EN) · Ri Kyong-suk — <a href="https://en.wikipedia.org/wiki/Ri_Kyong-suk">en.wikipedia.org/wiki/Ri_Kyong-suk</a></li>
+      <li id="src6">Wikipedia (EN) · Kim Kwang-suk — <a href="https://en.wikipedia.org/wiki/Kim_Kwang-suk">en.wikipedia.org/wiki/Kim_Kwang-suk</a></li>
+      <li id="src7">Wikipedia (EN) · Hyon Song-wol — <a href="https://en.wikipedia.org/wiki/Hyon_Song-wol">en.wikipedia.org/wiki/Hyon_Song-wol</a></li>
+      <li id="src7b">Wikipedia (EN) · Moranbong Band — <a href="https://en.wikipedia.org/wiki/Moranbong_Band">en.wikipedia.org/wiki/Moranbong_Band</a></li>
+      <li id="src8">KBS World（转引共同社）· Kyodo: N. Korea Bans Performance of 'Nice to Meet You' after Primary Enemy Designation of S. Korea — <a href="https://world.kbs.co.kr/service/news_view.htm?Seq_Code=192731&amp;lang=e">world.kbs.co.kr/service/news_view.htm?Seq_Code=192731</a></li>
+      <li id="src9">The Korea Daily US · North Korea bans song widely regarded as symbol of inter-Korean reconciliation — <a href="https://www.koreadailyus.com/north-korea-bans-song-widely-regarded-as-symbol-of-inter-korean-reconciliation">koreadailyus.com</a></li>
+      <li id="src10">韩宣网（Korea.net 中文，2018-02-09）· 时隔15年访韩的朝鲜艺术团《见到你很高兴》 — <a href="https://chinese.korea.net/NewsFocus/Culture/view?articleId=153881">chinese.korea.net/NewsFocus/Culture/view?articleId=153881</a>（英文版 <a href="https://www.korea.net/NewsFocus/Culture/view?articleId=153879">korea.net/…153879</a>）</li>
+      <li id="src11">Koryo Tours · 7 songs for Korean karaoke — <a href="https://koryogroup.com/blog/7-songs-for-korean-karaoke">koryogroup.com/blog/7-songs-for-korean-karaoke</a></li>
+      <li id="src12">Koryo Tours · North Korean Song Pangapsumnida (Song Lyrics) — <a href="https://www.koryogroup.com/blog/north-korean-song-pangapsumnida-song-lyrics-nice-to-meet-you">koryogroup.com/blog/north-korean-song-pangapsumnida-song-lyrics-nice-to-meet-you</a></li>
+      <li id="src13">MusicBrainz · 《반갑습니다 [북한가요 2집]》(2000-12-08) 曲目表 — <a href="https://musicbrainz.org/release/0ccbd463-1836-44ea-b117-e1aff61c3e77">musicbrainz.org/release/0ccbd463-1836-44ea-b117-e1aff61c3e77</a>（另：2015 年数字合集 <a href="https://musicbrainz.org/release/a02b01a5-fd7e-4d23-aadc-5b6d92a0d6f2">a02b01a5</a> 记 207200ms）</li>
+      <li id="src13b">MusicBrainz · 보천보전자악단（艺人条目，life-span 1985-06-04 – 2012）— <a href="https://musicbrainz.org/artist/cd72e086-d7a8-4fd8-a6b8-829229a28e8c">musicbrainz.org/artist/cd72e086-d7a8-4fd8-a6b8-829229a28e8c</a></li>
+      <li id="src14">Cover Art Archive · 本页所用专辑封面 — <a href="https://coverartarchive.org/release/969a3cbb-c311-429e-8038-fe8aae9f1d11">969a3cbb</a> · <a href="https://coverartarchive.org/release/c2d58d77-14a5-4eef-afe4-670dfc757c71">c2d58d77</a> · <a href="https://coverartarchive.org/release/dbe06685-13cd-4d5d-b19b-e5b942cb178b">dbe06685</a> · <a href="https://coverartarchive.org/release/c9c59875-8258-4552-94c3-e962ae74bb89">c9c59875</a> · <a href="https://coverartarchive.org/release/6dd9cc53-b059-4525-aeef-ac1d9c56171c">6dd9cc53</a> · <a href="https://coverartarchive.org/release/0ccbd463-1836-44ea-b117-e1aff61c3e77">0ccbd463</a></li>
+      <li id="src15">中文维基百科 · 見到你很高興 — <a href="https://zh.wikipedia.org/wiki/%E8%A6%8B%E5%88%B0%E4%BD%A0%E5%BE%88%E9%AB%98%E8%88%88">zh.wikipedia.org/wiki/見到你很高興</a>（其引 통일뉴스 2001-05-22 等）</li>
+      <li id="src16">Juchify · Pochonbo Electronic Ensemble（182 卷 / 186 张 CD）— <a href="https://juchify.com/artist/1/pochonbo-electronic-ensemble">juchify.com/artist/1/pochonbo-electronic-ensemble</a></li>
+      <li id="src17">ABC Triple J · The other side of K-pop: a beginner's guide to North Korean pop music — <a href="https://www.abc.net.au/triplej/programs/something-more/a-beginners-guide-to-north-korean-pop/10884792">abc.net.au/triplej</a></li>
+      <li id="src18">KCNA（2018-01-14，经 KCNA Watch 存档）· Kim Jong Un Sends Wreath to Bier of Kim Kwang Suk — <a href="https://kcnawatch.co/newstream/1515967291-637734637/kim-jong-un-sends-wreath-to-bier-of-kim-kwang-suk/">kcnawatch.co</a></li>
+      <li id="src19">namu wiki (EN) · Nice to meet you — <a href="https://en.namu.wiki/w/%EB%B0%98%EA%B0%91%EC%8A%B5%EB%8B%88%EB%8B%A4">en.namu.wiki/w/반갑습니다</a>（用户可编辑，仅作辅助）</li>
+      <li id="src20">namu wiki (EN) · 리종오 (Lee Jong-oh) — <a href="https://en.namu.wiki/w/%EB%A6%AC%EC%A2%85%EC%98%A4">en.namu.wiki/w/리종오</a>（用户可编辑，仅作辅助）</li>
+      <li id="src21">KBS World · Inter-Korean Exchanges in Music — <a href="https://world.kbs.co.kr/service/contents_view.htm?lang=e&amp;menu_cate=northkorea&amp;id=&amp;board_seq=445897">world.kbs.co.kr/…board_seq=445897</a></li>
+      <li id="src22">5sing · 〈见到你很高兴〉中译歌词页（译者「幕后高人」，非官方）— <a href="https://5sing.kugou.com/m/detail/bz-1331460-3.html">5sing.kugou.com/m/detail/bz-1331460-3.html</a></li>
+      <li id="src23">Cho, K. (2020). North Korean music and its political role observed through popular songs: a critical evaluation of four bands. University of Pretoria.（引自 <a href="#src1">[1]</a>）</li>
+      <li id="src24">Tertitskiy, F. (2026). History in Two Keys: The Battle of Pochonbo and the State Myth Surrounding It. <i>Journal of Korean Studies</i> 31(1), 155–185.（引自 <a href="#src4">[4]</a>）</li>
+      <li id="src25"><b>⚠️ 单一来源</b> · 中文维基百科 · 普天堡电子乐团 — <a href="https://zh.wikipedia.org/wiki/普天堡电子乐团">zh.wikipedia.org/wiki/普天堡电子乐团</a>（2007 年风格争议与人员分流、2011 年《回忆之歌》播出、2015 年重聚、金元日被抹去影像。该条目多处未给出处，本页仅作线索使用并已标注）</li>
+      <li id="src26">Korhonen, P. &amp; Koidl, W. (2018). The Rise and Fall of the Ŭnhasu Orchestra. 于韦斯屈莱大学（University of Jyväskylä）— <a href="https://jyx.jyu.fi/handle/123456789/62537">jyx.jyu.fi/handle/123456789/62537</a>（学术来源：银河水小组为普天堡电子乐团下属分支、朝中社 2008-02-08 首提；银河水 2013 年 8 月突然解散；「牡丹峰」小合唱组最初为普天堡的一个项目）</li>
+      <li id="src27">Wikipedia (EN) · Unhasu Orchestra — <a href="https://en.wikipedia.org/wiki/Unhasu_Orchestra">en.wikipedia.org/wiki/Unhasu_Orchestra</a>（2009-05-30 成立、2012-03-14 巴黎演出、2013-08 解散）</li>
+      <li id="src28">中文维基百科 · 普天堡战役 — <a href="https://zh.wikipedia.org/wiki/%E6%99%AE%E5%A4%A9%E5%A0%A1%E6%88%98%E5%BD%B9">zh.wikipedia.org/wiki/普天堡战役</a>（据当时《东亚日报》报道：大规模连续报道、「金日成之名也因此为朝鲜人所知」、悬赏 2000→2 万日元、1937-11-18《京城日报》假消息、两套伤亡口径）</li>
+      <li id="src30">百度百科 · 普天堡战斗 — <a href="https://baike.baidu.com/item/%E6%99%AE%E5%A4%A9%E5%A0%A1%E6%88%98%E6%96%97/3251428">baike.baidu.com/item/普天堡战斗</a>（另一套伤亡与缴获口径，与当时报纸报道不符，本页仅作分歧记录）</li>
+    </ol>
+  </section>
+
+  <section id="images">
+    <h2><span class="k">12</span>图片来源</h2>
+    <div class="rule"></div>
+    <div class="credits">
+      <p>本页与短片全部使用真实素材，<b>未使用任何 AI 生成影像</b>。版权仍归原权利人；本项目为非商用个人阅读，使用时均已标注来源。</p>
+      <ol>
+        <li id="img1"><b>[图1]</b> 普天堡电子乐团团徽 — Wikimedia Commons「Pochonbo Electronic Ensemble logo.png」，公有领域文字标志（<a href="https://commons.wikimedia.org/wiki/File:Pochonbo_Electronic_Ensemble_logo.png">文件页</a>）</li>
+        <li id="img2"><b>[图2]</b> 《东亚日报》1937-06-06 报道 — Commons「보천보 습격 속보 1937-06-06 동아일보.jpg」，公有领域（<a href="https://commons.wikimedia.org/wiki/File:%EB%B3%B4%EC%B2%9C%EB%B3%B4_%EC%8A%B5%EA%B2%A9_%EC%86%8D%EB%B3%B4_1937-06-06_%EB%8F%99%EC%95%84%EC%9D%BC%EB%B3%B4.jpg">文件页</a>）</li>
+        <li id="img3"><b>[图3]</b> 《朝鲜日报》1937-06-06 报道 — Commons「보천보 사건 보도 1937-06-06 조선일보.jpg」，公有领域（<a href="https://commons.wikimedia.org/wiki/File:%EB%B3%B4%EC%B2%9C%EB%B3%B4_%EC%82%AC%EA%B1%B4_%EB%B3%B4%EB%8F%84_1937-06-06_%EC%A1%B0%EC%84%A0%EC%9D%BC%EB%B3%B4.jpg">文件页</a>）</li>
+        <li id="img4"><b>[图4]</b> 李京淑独唱曲集《Vol. 8》封面 — Cover Art Archive（MusicBrainz release <a href="https://musicbrainz.org/release/c2d58d77-14a5-4eef-afe4-670dfc757c71">c2d58d77</a>）</li>
+        <li id="img5"><b>[图5]</b> 《보천보전자악단 [제62집]》封面 — Cover Art Archive（<a href="https://musicbrainz.org/release/6dd9cc53-b059-4525-aeef-ac1d9c56171c">6dd9cc53</a>）</li>
+        <li id="img6"><b>[图6]</b> 《보천보전자악단 [제23집]》封面 — Cover Art Archive（<a href="https://musicbrainz.org/release/dbe06685-13cd-4d5d-b19b-e5b942cb178b">dbe06685</a>）</li>
+        <li id="img7"><b>[图7]</b> 《보천보전자악단 [제1집]》封面 — Cover Art Archive（<a href="https://musicbrainz.org/release/969a3cbb-c311-429e-8038-fe8aae9f1d11">969a3cbb</a>）</li>
+        <li id="img8"><b>[图8]</b> 《반갑습니다 [북한가요 2집]》封面 — Cover Art Archive（<a href="https://musicbrainz.org/release/0ccbd463-1836-44ea-b117-e1aff61c3e77">0ccbd463</a>）</li>
+        <li id="img9"><b>[图9]</b> 玄松月 — 韩国青瓦台官方摄影（Kim Jinseok 摄），Wikimedia Commons「North Korea's Samjiyon Orchestra director Hyon Song-wol.jpg」，KOGL Type 1（<a href="https://commons.wikimedia.org/wiki/File:North_Korea%27s_Samjiyon_Orchestra_director_Hyon_Song-wol.jpg">文件页</a>）</li>
+        <li id="img10"><b>[图10]</b> 平壤金日成广场 — Wikimedia Commons「Kim Il-sung Square - 02.jpg」，Jan Engelhardt 摄，CC BY-SA 4.0（<a href="https://commons.wikimedia.org/wiki/File:Kim_Il-sung_Square_-_02.jpg">文件页</a>）</li>
+        <li id="img10b"><b>[图11]</b> 首尔国立剧场 — Wikimedia Commons「Samjiyon Orchestra Seoul 01.jpg」（<a href="https://commons.wikimedia.org/wiki/File:Samjiyon_Orchestra_Seoul_01.jpg">文件页</a>）</li>
+        <li id="img11"><b>[图12]</b> 《일본방문공연 1부》封面（1992，日本访问公演）— Cover Art Archive（MusicBrainz release <a href="https://musicbrainz.org/release/c9c59875-8258-4552-94c3-e962ae74bb89">c9c59875</a>）</li>
+        <li id="img12"><b>[图13]</b> 《공훈배우 김광숙독창곡집 1》封面（1991，功勋演员金光淑独唱曲集 1）— Cover Art Archive（MusicBrainz release <a href="https://musicbrainz.org/release/73f39f5c-01b0-47e7-8020-a30d70c72c5f">73f39f5c</a>）</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    给我一首歌的时间 · 第 08 站 · 朝鲜 · 普天堡电子乐团 — The Length of a Song<br>
+    事实核查截至 2026-10-16；来源分歧如实并列，未采信无出处细节。本期未使用 AI 生成影像。<br>
+    本页嵌入的是无声资料版（3:27，与〈见到你很高兴〉等长）；配音版正片待解说稿定稿后制作。
+  </footer>
+
+</div>
+</body>
+</html>

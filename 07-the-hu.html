@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>给我一首歌的时间 07 · 蒙古 — The Hu（Хү）</title>
+<style>
+  :root{
+    --bg:#12100e; --panel:#1b1815; --line:#342c24; --ink:#ece7dd; --ink2:#a49b8d;
+    --gold:#d8a24a; --blue:#c08a5a; --serif:"Songti SC","Noto Serif CJK SC",serif;
+    --sans:"Hiragino Sans GB","PingFang SC",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.9;font-size:17px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px 90px}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(216,162,74,.35)}
+  a:hover{border-bottom-color:var(--gold)}
+  sup{font-size:.72em;line-height:0}
+  sup a{border:none;color:var(--gold);opacity:.9}
+
+  .stop{display:flex;align-items:center;gap:14px;margin:44px 0 18px;color:var(--ink2);font-size:14px;letter-spacing:.12em}
+  .stop .no{font-family:var(--serif);border:1px solid var(--line);padding:4px 12px;border-radius:3px}
+  .stop .route{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  h1{font-family:var(--serif);font-size:54px;line-height:1.25;font-weight:700;letter-spacing:.02em}
+  h1 .en{display:block;font-size:24px;color:var(--blue);letter-spacing:.20em;margin-top:8px;font-weight:600}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin:22px 0 0;color:var(--ink2);font-size:14.5px}
+  .meta b{color:var(--ink);font-weight:600}
+  .lede{font-family:var(--serif);font-size:20px;color:#ded8cd;border-left:3px solid var(--gold);padding:6px 0 6px 20px;margin:34px 0 10px;line-height:2}
+
+  section{margin-top:64px}
+  h2{font-family:var(--serif);font-size:27px;font-weight:700;margin-bottom:6px;display:flex;align-items:baseline;gap:14px}
+  h2 .k{color:var(--gold);font-size:16px;letter-spacing:.18em;font-family:var(--sans);font-weight:600}
+  .rule{height:1px;background:var(--line);margin:14px 0 26px}
+  h3{font-size:18.5px;margin:30px 0 8px;color:var(--ink)}
+  p{margin:12px 0;color:#d8d2c7}
+  .muted{color:var(--ink2);font-size:14.5px}
+
+  figure{margin:26px 0}
+  figure img{width:100%;display:block;border-radius:4px}
+  figure.half{max-width:520px;margin-left:auto;margin-right:auto}
+  figcaption{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.7}
+  figcaption b{color:#c3baab;font-weight:600}
+  .row{display:flex;gap:16px;flex-wrap:wrap}
+  .row figure{flex:1 1 260px;margin:20px 0 0}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px 24px;margin:22px 0}
+  .fact{display:grid;grid-template-columns:120px 1fr;gap:6px 18px;font-size:15.5px}
+  .fact dt{color:var(--ink2)}
+  .fact dd{color:var(--ink)}
+
+  table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--ink2);font-weight:600;font-size:13.5px;letter-spacing:.06em}
+  td.yr{color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+  .tl{list-style:none;margin:18px 0}
+  .tl li{position:relative;padding:0 0 22px 118px;font-size:15.5px}
+  .tl li::before{content:"";position:absolute;left:86px;top:11px;bottom:-2px;width:1px;background:var(--line)}
+  .tl li:last-child::before{display:none}
+  .tl .yr{position:absolute;left:0;top:1px;font-family:var(--serif);color:var(--gold);font-size:16px;letter-spacing:.03em}
+  .tl b{color:var(--ink)}
+
+  .song{background:linear-gradient(180deg,#191512,#141210);border:1px solid var(--line);border-radius:10px;padding:30px 30px 24px;margin-top:22px}
+  .song .t{font-family:var(--serif);font-size:34px;font-weight:700}
+  .song .t span{color:var(--gold)}
+  .lyric{font-family:var(--serif);color:#efece4;font-size:19px;line-height:2.05;border-left:3px solid var(--gold);padding-left:20px;margin:24px 0}
+  .lyric small{display:block;font-family:var(--sans);font-size:13px;color:var(--ink2);margin-top:14px}
+  .recs{display:flex;gap:16px;flex-wrap:wrap}
+  .rec{flex:1 1 300px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+  .rec .n{font-family:var(--serif);font-size:21px;font-weight:700}
+  .rec .y{color:var(--gold);font-size:14px;margin-left:8px}
+  .rec p{font-size:14.5px;margin-top:8px;color:#ccc6ba}
+
+  .video-box{background:#000;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:20px 0}
+  video{width:100%;display:block;aspect-ratio:16/9;background:#000}
+  .note{background:rgba(216,162,74,.07);border:1px solid rgba(216,162,74,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#e3d3b6;margin:16px 0}
+  .warn{background:rgba(192,138,90,.07);border:1px solid rgba(192,138,90,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#dcc9b2;margin:16px 0}
+
+  ol.src{font-size:13.5px;color:var(--ink2);line-height:2;padding-left:24px}
+  ol.src li{margin:4px 0}
+  ol.src a{word-break:break-all}
+  .credits{font-size:13px;color:var(--ink2);line-height:2}
+
+  .site-bar{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px;padding-top:34px}
+  .site-bar .brand{font-family:var(--serif);font-size:18px;color:var(--ink);border:none;letter-spacing:.04em}
+  .site-bar .brand em{font-style:normal;font-size:12px;color:#8A8377;margin-left:8px;letter-spacing:.12em}
+  .site-bar .back{font-size:13px;color:#8A8377;border:none}
+  .site-bar .back:hover{color:var(--gold)}
+
+  footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--line);color:var(--ink2);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="site-bar">
+    <a class="brand" href="index.html">给我一首歌的时间<em>The Length of a Song</em></a>
+    <a class="back" href="index.html">← 全部期数</a>
+  </div>
+
+  <div class="stop"><span class="no">第 07 站</span><span>亚洲 · 蒙古 · 乌兰巴托</span><span class="route"></span><span>给我一首歌的时间</span></div>
+
+  <h1>The Hu<span class="en">Хү（蒙古语「人」）· Hunnu Rock · 2016–今</span></h1>
+  <div class="meta">
+    <span><b>2016</b> 成军<sup><a href="#src1">[1]</a><a href="#src3">[3]</a></sup></span>
+    <span>蒙古 · 乌兰巴托</span>
+    <span>自称风格：Hunnu Rock（呼麦 + 马头琴 + 金属）<sup><a href="#src1">[1]</a></sup></span>
+    <span>歌词语言：蒙古语（含古战歌与诗歌语汇）<sup><a href="#src1">[1]</a><a href="#src17">[17]</a></sup></span>
+  </div>
+
+  <p class="lede">一位功勋歌手在音乐学院里挑了四个学生：两个拉马头琴、一个弹托布秀尔、一个吹绰尔。2018 年秋末，他们把两支 MV 挂上 YouTube，没有任何宣传——几个月里几千万播放。2019 年 4 月，一首唱狼的歌把这支乐队送上 Billboard 榜首，成为第一个做到这件事的蒙古音乐团体；同年 11 月，蒙古国把最高国家勋章第一次颁给了一支乐队。<sup><a href="#src1">[1]</a><a href="#src5">[5]</a><a href="#src7">[7]</a><a href="#src18">[18]</a></sup></p>
+
+  <figure>
+    <img src="assets/hu_budapest2023.jpg" alt="The Hu 2023 年布达佩斯 Park 舞台全景，背后 THE HU 标志">
+    <figcaption><b>2023 年 7 月 17 日，布达佩斯 Park 舞台。</b>图片来源：Wikimedia Commons〈The Hu.jpg〉，摄者 Elekes Andor，CC BY-SA 4.0<sup><a href="#img1">[图1]</a></sup></figcaption>
+  </figure>
+
+  <!-- ================= 档案 ================= -->
+  <section id="profile">
+    <h2><span class="k">档案</span>乐队速览</h2>
+    <div class="rule"></div>
+    <div class="panel">
+      <dl class="fact">
+        <dt>名字</dt><dd>The Hu——蒙古语「хүн」（人）的词根，读音同英语 the who。乐队明确说这不是在向 The Who 致敬：「取这个名字是因为它有包容性。这不关乎你是不是蒙古人，而关乎你是人。」——Temka，2019 年，卫报<sup><a href="#src3">[3]</a></sup></dd>
+        <dt>成军</dt><dd>2016 年，乌兰巴托。由歌手兼制作人 Б. 达西冬德格（B. Dashdondog，艺名 Dashka）从蒙古国立音乐舞蹈学院挑选学生组建，词曲主要由 Dashka 写，四位成员负责各自声部<sup><a href="#src1">[1]</a><a href="#src3">[3]</a><a href="#src12">[12]</a></sup></dd>
+        <dt>风格名</dt><dd>「Hunnu Rock」——灵感来自匈奴（蒙古语 Хүннү），一个以蒙古高原为根据地的古代游牧帝国；乐队作品里也确实用上了古蒙古战吼与诗歌<sup><a href="#src1">[1]</a></sup></dd>
+        <dt>乐器</dt><dd>核心编制里没有电吉他：马头琴（morin khuur）×2、托布秀尔（tovshuur）、口弦琴（tumur khuur）、绰尔（tsuur）木管，加呼麦；巡演时再加吉他、贝斯、鼓与蒙古手鼓 hengereg<sup><a href="#src1">[1]</a><a href="#src12">[12]</a></sup></dd>
+        <dt>破局之作</dt><dd>2018 年秋末上线的两支 MV〈Yuve Yuve Yu〉与〈Wolf Totem〉；2019 年 4 月〈Wolf Totem〉登顶 Billboard 硬摇滚数字销量榜<sup><a href="#src1">[1]</a><a href="#src5">[5]</a></sup></dd>
+        <dt>国家荣誉</dt><dd>2019 年获「蒙古文化使者」证书与最高国家勋章「成吉思汗勋章」——后者 2005 年设立以来只授予个人，为颁给乐队修改了规则，乐队成为第 12 位得主；2022 年 11 月成为 UNESCO「和平艺术家」，是该称号史上第一支摇滚乐队。两次授勋的理由是同一件事：把蒙古的文化带向世界——国家层面的措辞是「向全世界推广蒙古民族文化与艺术」，UNESCO 层面的措辞是他们演奏的呼麦、马头琴、绰尔本身就在人类非物质文化遗产名录里<sup><a href="#src6">[6]</a><a href="#src7">[7]</a><a href="#src9">[9]</a><a href="#src10">[10]</a><a href="#src25">[25]</a><a href="#src26">[26]</a></sup></dd>
+        <dt>专辑</dt><dd>《The Gereg》（2019）、《Rumble of Thunder》（2022）、《Hun》（2026）<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup></dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= 历史 ================= -->
+  <section id="history">
+    <h2><span class="k">历史</span>音乐学院里挑出来的乐队</h2>
+    <div class="rule"></div>
+
+    <ul class="tl">
+      <li><span class="yr">2016</span>制作人 Dashka 组建乐队。四位成员都毕业于乌兰巴托的蒙古国立音乐舞蹈学院，受过呼麦与传统音乐的正规训练，平时也听 Metallica、System of a Down、Rammstein。Dashka 此前多年与模仿西方声音的本地流行、摇滚乐队合作，想做一个「没人做过」的东西——把可信的金属乐嫁接到传统蒙古音乐上。他们的成长期正赶上蒙古的制度转折：卫报写道，西方摇滚与金属在共产主义时期的蒙古是被禁的，那个时代 1992 年结束。成员们是孩子，但记得那场剧变。「国家陷入财政危机……但正因为那场改变，我们今天才能玩摇滚。」——贾亚<sup><a href="#src1">[1]</a><a href="#src3">[3]</a></sup></li>
+      <li><span class="yr">2018</span>秋末，两支 MV〈Yuve Yuve Yu〉、〈Wolf Totem〉在 YouTube 上线，无厂牌、无宣传；蒙通社后来回顾称其发布后一个月内获得约 2500 万播放，卫报在 2019 年 10 月统计两支 MV 合计播放已逾 4500 万。<sup><a href="#src1">[1]</a><a href="#src18">[18]</a><a href="#src3">[3]</a></sup></li>
+      <li><span class="yr">2019.4</span><b>〈Wolf Totem〉登上 Billboard 硬摇滚数字销量榜首位</b>——第一个登顶 Billboard 榜单的蒙古音乐团体；〈Yuve Yuve Yu〉同榜第 7，〈Wolf Totem〉另在 Hot Rock Songs 榜列第 22。<sup><a href="#src1">[1]</a><a href="#src5">[5]</a></sup></li>
+      <li><span class="yr">2019.5</span>5 月 17 日，蒙古国总统巴特图勒嘎接见乐队，肯定其向世界推广蒙古国的成绩<sup><a href="#src8">[8]</a></sup>；同年 8 月 10 日，外交部长向乐队颁授「蒙古文化使者」证书<sup><a href="#src9">[9]</a></sup>。</li>
+      <li><span class="yr">2019.9</span><b>9 月 13 日首专《The Gereg》发行</b>（Eleven Seven 唱片）。专辑名取自成吉思汗时代的外交通行牌「gereng」（gereg）——当时的「护照」。首发登上 Billboard 最佳新艺人榜第 1、世界专辑榜第 1，全 genre Billboard 200 最高 103 位；被 Loudwire 评为 2019 年 50 佳摇滚专辑之一。<sup><a href="#src1">[1]</a><a href="#src2">[2]</a><a href="#src3">[3]</a><a href="#src6">[6]</a></sup></li>
+      <li><span class="yr">2019.11</span><b>11 月 27 日「国家自豪日」，蒙古国总统授予乐队成吉思汗勋章</b>——该国最高国家荣誉。授勋理由，蒙通社的措辞是「表彰其向全世界推广蒙古民族文化与艺术，并在世界摇滚乐中创造出新的音乐类型」；巴特图勒嘎总统在仪式上把它比作披头士 1965 年获英帝国勋章：「出于完全相同的理由——让世界知道蒙古，让这个民族在国际舞台上增光。」该勋章 2005 年设立以来只授予个人，为颁给乐队专门修改了规则（「可授予个人、团体或组织」），乐队由此成为第 12 位得主（共 11 人获勋，含两位外籍经纪人）。时值乐队在美国巡演，勋章由创始人达西冬德格代领。<sup><a href="#src7">[7]</a><a href="#src21">[21]</a><a href="#src23">[23]</a><a href="#src25">[25]</a></sup></li>
+      <li><span class="yr">2020</span>3 月，2020 年度 Heavy Music Awards「最佳国际突破乐队」提名；4 月，在澳大利亚巡演期间因新冠疫情被困悉尼近郊一处民宿 45 天，就地写了〈Black Thunder〉，顺手拍了下厨系列片「Hu's in the Kitchen」。<sup><a href="#src20">[20]</a><a href="#src1">[1]</a></sup></li>
+      <li><span class="yr">2022</span><b>9 月 2 日第二张专辑《Rumble of Thunder》发行</b>；11 月 25 日在巴黎 UNESCO 总部获颁「和平艺术家」称号。UNESCO 的授衔理由写得很具体：他们使用的呼麦（2010 年列入）、马头琴（2008 年列入）与绰尔（2009 年列入，属「急需保护」名录）都在人类非物质文化遗产名录之内，授衔是为表彰乐队「推广与传承这份遗产」的作用；作为交换，乐队承诺担任该领域 UNESCO 项目的代言人。吉尼斯世界纪录将此事记为「首支获该称号的摇滚乐队」。<sup><a href="#src1">[1]</a><a href="#src6">[6]</a><a href="#src10">[10]</a><a href="#src11">[11]</a><a href="#src26">[26]</a></sup></li>
+      <li><span class="yr">2024</span>受邀为 Iron Maiden「Future Past」北美巡演暖场；10 月 4 日发行 Iron Maiden〈The Trooper〉翻唱版。<sup><a href="#src1">[1]</a></sup></li>
+      <li><span class="yr">2026</span>7 月 24 日第三张专辑《Hun》发行；同年 2 月为 Netflix 剧集《海贼王》真人版献唱〈Pray to the Sun〉（与 Declan De Barra 合作）。<sup><a href="#src1">[1]</a><a href="#src15">[15]</a></sup></li>
+      <li><span class="yr">延伸</span>蒙古国央行宣布发行印有乐队形象的纪念币——蒙通社报道称，该国此前约发行过 600 种纪念币，主题多为重大历史纪念日与濒危物种，给一支在世乐队出币并不常见。<sup><a href="#src19">[19]</a></sup></li>
+    </ul>
+  </section>
+
+  <!-- ================= 成员 ================= -->
+  <section id="members">
+    <h2><span class="k">成员</span>谁在乐队里</h2>
+    <div class="rule"></div>
+
+    <p>四个核心成员都是学院派出身，分工按传统乐器划线：两把马头琴互为对话，托布秀尔负责像节奏吉他一样碾出riff，口弦琴与绰尔补中景纹理，呼麦则是全队共享的人声技能。<sup><a href="#src1">[1]</a><a href="#src2">[2]</a><a href="#src12">[12]</a></sup></p>
+
+    <table>
+      <tr><th>成员</th><th>分工</th><th>在队时间</th></tr>
+      <tr><td>嘎拉巴德拉赫<br><span class="muted">Galbadrakh "Gala" Tsendbaatar，艺名 Gala</span></td><td>「闪电」马头琴（ayanga morin khuur）· 主呼麦<sup><a href="#src2">[2]</a><a href="#src22">[22]</a></sup></td><td class="yr">2016–今（创团成员）</td></tr>
+      <tr><td>恩赫赛汗<br><span class="muted">Enkhsaikhan "Enkush" Batjargal，艺名 Enkush</span></td><td>「火」马头琴（gal morin khuur）· 呼麦<sup><a href="#src2">[2]</a><a href="#src22">[22]</a></sup></td><td class="yr">2016–今（创团成员）</td></tr>
+      <tr><td>尼亚姆詹茨<br><span class="muted">Nyamjantsan "Jaya" Galsanjamts，艺名 Jaya</span></td><td>口弦琴（tumur khuur）· 绰尔（tsuur）· 呼麦；2008–2018 年间同时在学院任教<sup><a href="#src1">[1]</a><a href="#src12">[12]</a></sup></td><td class="yr">2016–今（创团成员）</td></tr>
+      <tr><td>特穆伦<br><span class="muted">Temuulen "Temka" Naranbaatar，艺名 Temka</span></td><td>「自然」托布秀尔（baigali tovshuur）· 和声、编程与混音<sup><a href="#src2">[2]</a><a href="#src22">[22]</a></sup></td><td class="yr">2016–今（创团成员）</td></tr>
+      <tr><td>Б·达西冬德格<br><span class="muted">B. Dashdondog，艺名 Dashka</span></td><td>制作人 · 词曲 · 编程（乐队创始人与精神核心，不随队上台）<sup><a href="#src1">[1]</a><a href="#src12">[12]</a></sup></td><td class="yr">2016–今</td></tr>
+      <tr><td>巡演阵容<br><span class="muted">Unumunkh "Ono" Maralkhuu / Jambaldorj "Jamba" Ayush / Odbayar "Odko" Gantumur / Nyamdavaa "Davaa" Byambaa</span></td><td>蒙古手鼓 hengereg 与口弦琴 / 吉他 / 爵士鼓 / 贝斯<sup><a href="#src1">[1]</a><a href="#src12">[12]</a></sup></td><td class="yr">2019/2020–今</td></tr>
+    </table>
+
+    <div class="row">
+      <figure class="half">
+        <img src="assets/hu_gala2023.jpg" alt="Gala 2023 年布达佩斯现场演奏马头琴">
+        <figcaption><b>主呼麦兼马头琴手 Gala。</b>图片来源：Wikimedia Commons〈Gala -.jpg〉，摄者 Elekes Andor，CC BY-SA 4.0（2023 年布达佩斯 Park）<sup><a href="#img6">[图6]</a></sup></figcaption>
+      </figure>
+      <figure class="half">
+        <img src="assets/hu_jaya2023.jpg" alt="Jaya 2023 年布达佩斯现场">
+        <figcaption><b>口弦琴、绰尔兼呼麦 Jaya。</b>图片来源：Wikimedia Commons〈Jaya (2).jpg〉，摄者 Elekes Andor，CC BY-SA 4.0（2023 年布达佩斯 Park）<sup><a href="#img7">[图7]</a></sup></figcaption>
+      </figure>
+    </div>
+    <div class="row">
+      <figure class="half">
+        <img src="assets/hu_enkush2023.jpg" alt="Enkush 2023 年布达佩斯现场演奏马头琴">
+        <figcaption><b>马头琴兼呼麦 Enkush。</b>图片来源：Wikimedia Commons〈Enkush (2).jpg〉，摄者 Elekes Andor，CC BY-SA 4.0（2023 年布达佩斯 Park）<sup><a href="#img8">[图8]</a></sup></figcaption>
+      </figure>
+      <figure class="half">
+        <img src="assets/hu_rip2019.jpg" alt="The Hu 2019 年 Rock im Park 音乐节现场四人站位">
+        <figcaption><b>2019 年 6 月，德国纽伦堡 Rock im Park 音乐节（自左至右：Temka、Gala、Jaya、Enkush，鼓位在后）。</b>图片来源：Wikimedia Commons〈2019 RiP The Hu - by 2eight - ZSC2060.jpg〉，摄者 Stefan Brending (2eight)，CC BY-SA 4.0<sup><a href="#img2">[图2]</a></sup></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= 经典歌曲 ================= -->
+  <section id="song">
+    <h2><span class="k">经典</span>那一首歌：〈Wolf Totem〉（狼图腾）</h2>
+    <div class="rule"></div>
+
+    <div class="song">
+      <div class="t">〈Wolf Totem〉<span>Чонон сүлд · 狼图腾</span></div>
+      <p class="muted" style="margin-top:6px">收录于《The Gereg》第 2 轨 · 时长 5:38 · MV 于 2018 年秋末随乐队首批作品上线 · 制作：The Hu / B. Dashdondog<sup><a href="#src2">[2]</a><a href="#src15">[15]</a><a href="#src13">[13]</a></sup></p>
+    </div>
+
+    <div class="note">「最经典」无权威榜单结论，本页选择为编辑判断：〈Wolf Totem〉是让乐队第一个登上 Billboard 榜首的蒙古团体之作，也是四首里有实体唱片认证的两首之一（美国 RIAA 金唱片、加拿大音乐协会白金）；与它并列的另一首破局曲〈Yuve Yuve Yu〉在 YouTube 播放量和公告牌主流摇滚榜（第 4）上更高，两首并列为乐队的「破局双曲」。<sup><a href="#src1">[1]</a><a href="#src6">[6]</a></sup></div>
+
+    <h3>歌词是一份「猛兽对仗表」</h3>
+    <p>把蒙古语西里尔原文逐行对读（据 Genius 收录的歌词），〈Wolf Totem〉的写法一目了然：它不是叙事，是一份蒙古史诗式的对仗猛兽表——狮子、虎、象、豹按位置逐一登场，句式成对出现，最后落到「人」：<b>「人为与豹搏斗而拼尽全力」</b>。中段以「Ху，ху」的齐声战吼作副歌，收尾一段把速度与图腾一层层叠上去：<b>「以隼的速度加速突进／以狼的勇气如火焰燃烧／以战马的蹄声作响／以成吉思汗的印记压阵」</b>。<sup><a href="#src13">[13]</a><a href="#src14">[14]</a></sup></p>
+    <p>英文维基在介绍乐队时专门提过这一点：他们的歌词里包含古蒙古战吼与诗歌<sup><a href="#src1">[1]</a><a href="#src17">[17]</a></sup>。这首歌最像这类体裁的当代复活——吟唱的对象不是具体的某个人，是「每个人身体里的那个战士」。乐队自己对这首歌的解释是：「我们相信每个人体内都有一个战士。透过〈Wolf Totem〉，我们想唤醒它，让你能面对恐惧、跨过去。这首歌唱的是直面并接受对手，然后成为赢家。」——乐队自述，《Metal Hammer》2019 年逐轨导览<sup><a href="#src4">[4]</a></sup></p>
+
+    <h3>它为什么成立</h3>
+    <p>听感上，这首歌成立的支点有三层，都建立在真实来源可查的事实上。</p>
+    <p><b>第一层：金属乐的「重」，不是电吉他给的。</b>《The Gereg》的署名里，两把马头琴分别叫「闪电」（ayanga）与「火」（gal），托布秀尔叫「自然」（baigali）——三件弹拨与弓弦乐器经过拾音与失真处理，承担了传统金属里节奏吉他的全部职能<sup><a href="#src2">[2]</a><a href="#src22">[22]</a></sup>。卫报的乐评人对这种声音的描述是：节拍不像西方金属那样「捶打」，而是「疾驰」——那是游牧先人对马的联想<sup><a href="#src3">[3]</a></sup>。口弦琴手兼管乐手贾亚的说法更直接：「传统蒙古音乐本来就是金属的，无论从乐器发出的声音还是史诗般的题材。它很容易就转化成现代金属。」<sup><a href="#src12">[12]</a></sup></p>
+    <p><b>第二层：呼麦与吼音的语法相通。</b>呼麦让一个人同时唱出两到三个声部，低频铺底、泛音成线；对习惯金属吼腔的西方听众，它天然「像」嘶吼，却远比嘶吼精密。卫报记录了贾亚的解释：呼麦模仿的是水声与风声，「自然就在我们的嗓音里」<sup><a href="#src3">[3]</a></sup>。放在〈Wolf Totem〉里，它把副歌那句「Ху」的战吼从口号变成了音墙。</p>
+    <p><b>第三层：timing。</b>2018 年的 YouTube 正需要一支无法被归类的乐队——Eleven Seven 唱片的运营主管 Steve Kline 对卫报说：「吸引我们的不是播放量，而是他们的声音完全独一无二。我们甚至没法给他们贴标签……我们只会说：我们不太确定这是什么，但它真的很好。」<sup><a href="#src3">[3]</a></sup>另一边，这支乐队在本土叙事里站得住：他们用蒙古语唱，MV 把传统骑手与骑哈雷的皮衣客放进同一画面——一种东方视角的《逍遥骑士》<sup><a href="#src3">[3]</a></sup>。一首既有部落史诗骨架、又有金属律动的歌，恰好同时满足了两种想象。</p>
+    <p class="muted">说明：本页未逐项核实录音细节（调性、BPM、和声进行、录音室配置等暂无可靠来源），以上赏析建立在歌词文本、可查的乐器署名与乐评报道之上，未作声音层面的技术断言。</p>
+  </section>
+
+  <!-- ================= 歌词 ================= -->
+  <section id="lyrics">
+    <h2><span class="k">歌词</span>选段（开头与末段）</h2>
+    <div class="rule"></div>
+
+    <div class="lyric">
+      Арслан ирвээс алалдан уралдъя<br>
+      狮子与雪豹争斗到底<br><br>
+      Барс ирвээс байлдан уралдъя<br>
+      虎与雪豹比拼驰骋<br><br>
+      Заан ирвээс жанчилдан уралдъя<br>
+      象把雪豹打得节节败退<br><br>
+      Хүн ирвээс хүчилдэн уралдъя<br>
+      人为与雪豹较量而拼尽全力
+      <br><br>——<br><br>
+      Шонхорын хурдаар хурцлан давшъя<br>
+      以隼的速度锐利突进<br><br>
+      Чонын зоригоор асан дүрэлзэье<br>
+      以狼的勇气如火焰燃烧<br><br>
+      Тэнхээт морьдын туурайгаар нүргэе<br>
+      以骏马的蹄声轰鸣作响<br><br>
+      Тамгат Чингисийн ухаанаар даръя<br>
+      以成吉思汗的印记压阵
+      <small>蒙古语西里尔原文据 Genius 歌词页 [13]；中文为参考译文（据 Genius 社区英译 [14] 意译，非官方译文）。蒙古语歌词不用普通话念，只上字幕。</small>
+    </div>
+  </section>
+
+  <!-- ================= 延伸 ================= -->
+  <section id="more">
+    <h2><span class="k">延伸</span>再听两首</h2>
+    <div class="rule"></div>
+    <div class="recs">
+      <div class="rec">
+        <div class="n">〈Yuve Yuve Yu〉<span class="y">2018</span></div>
+        <p>破局双曲的另一半——歌名直译「为什么？为什么？为什么？」，卫报转译为「How Strange, How Strange」。内容是对长辈的敬重与对自然的守护；MV 为拍西蒙古的实景，乐队 14 天跑了五千多公里的无铺装路，在高山和戈壁之间冻着拍完。它是乐队在公告牌主流摇滚榜上位置最高的一首（第 4）。<sup><a href="#src3">[3]</a><a href="#src4">[4]</a><a href="#src1">[1]</a></sup></p>
+      </div>
+      <div class="rec">
+        <div class="n">〈The Same〉<span class="y">2019</span></div>
+        <p>《The Gereg》里最「文物」的一首：歌词出自 1624 年刻在岩石上的 Tsogt Taij（绰克图台吉）诗篇——蒙古文学史上有名的「绰克图台吉岩刻」。把一首近四百年前的岩石铭文写进金属乐编曲，乐队对「祖先」这件事最直白的一次表态。<sup><a href="#src4">[4]</a></sup></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 短片 ================= -->
+  <section id="film">
+    <h2><span class="k">短片</span>与〈Wolf Totem〉等长</h2>
+    <div class="rule"></div>
+    <p>本期资料短片与〈Wolf Totem〉全曲等长（5:38 / 338.0 秒，以 Apple Music 与 MusicBrainz 一致标注的时长为准<sup><a href="#src15">[15]</a><a href="#src2">[2]</a></sup>），画面用乐队真实史料——2023 布达佩斯与 Hellfest / Aftershock 现场照、三位核心成员肖像、2019 德国音乐节现场、三张专辑封面——并在四处插入官方 MV 片段（〈Wolf Totem〉官方 MV 三段、〈This Is Mongol〉官方 MV 一段，均由 The HU 官方 YouTube 频道发布，片段出处已在对应画面标注）。〈Wolf Totem〉音源内录与配音版正片待解说稿定稿后进行。</p>
+    <div class="video-box">
+      <video controls preload="metadata" src="07-the-hu-film.mp4"></video>
+    </div>
+    <div class="note">本片<b>不含音频</b>（全曲 5:38 等长），请同步播放 The Hu〈Wolf Totem〉。画面全部为真实素材：Wikimedia Commons 现场照与 Apple Music 专辑封面，另在四处插入官方 MV 片段（12 秒以内、去原声，出处已标注在画面上）；本期未使用 AI 生成影像。</div>
+    <figure>
+      <img src="assets/hu_gereg_cover.jpg" alt="The Hu《The Gereg》专辑封面（2019）">
+      <figcaption><b>《The Gereg》专辑封面（2019）。</b>图片来源：Apple Music / iTunes 商店专辑页（Better Noise Music 供图），版权归原权利人<sup><a href="#img9">[图9]</a></sup></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/hu_hellfest2023.jpg" alt="The Hu 2023 年法国 Hellfest 音乐节现场">
+      <figcaption><b>2023 年 6 月，法国 Hellfest 音乐节。</b>图片来源：Wikimedia Commons〈The Hu Hellfest 2023.jpg〉，摄者 Hoolen，CC BY-SA 4.0<sup><a href="#img4">[图4]</a></sup></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/hu_aftershock2023.jpg" alt="The Hu 2023 年 Aftershock 音乐节现场，舞台上有牦牛尾幡">
+      <figcaption><b>2023 年 10 月，美国 Aftershock 音乐节（摄影师记下：台上立着一面牦牛尾幡）。</b>图片来源：Wikimedia Commons〈20231006 the hu.jpg〉，摄者 Wünderbrot，CC BY-SA 4.0<sup><a href="#img5">[图5]</a></sup></figcaption>
+    </figure>
+    <div class="row">
+      <figure class="half">
+        <img src="assets/hu_rumble_cover.jpg" alt="The Hu《Rumble of Thunder》专辑封面（2022）">
+        <figcaption><b>《Rumble of Thunder》封面（2022）。</b>图片来源：Apple Music / iTunes 商店专辑页（Better Noise Music 供图）<sup><a href="#img10">[图10]</a></sup></figcaption>
+      </figure>
+      <figure class="half">
+        <img src="assets/hu_hun_cover.jpg" alt="The Hu《Hun》专辑封面（2026）">
+        <figcaption><b>《Hun》封面（2026）。</b>图片来源：Apple Music / iTunes 商店专辑页（Better Noise Music 供图）<sup><a href="#img11">[图11]</a></sup></figcaption>
+      </figure>
+    </div>
+    <figure class="half">
+      <img src="assets/hu_rockamring2019.jpg" alt="The Hu 2019 年 Rock am Ring 音乐节现场特写">
+      <figcaption><b>2019 年 6 月，德国 Rock am Ring 音乐节现场。</b>图片来源：Wikimedia Commons〈The Hu - 2019159133408 2019-06-08 Rock am Ring - 0158 - B70I9288.jpg〉，摄者 Sven Mandel，CC BY-SA 4.0<sup><a href="#img3">[图3]</a></sup></figcaption>
+    </figure>
+  </section>
+
+  <!-- ================= 来源分歧 ================= -->
+  <section id="disputes">
+    <h2><span class="k">分歧</span>来源分歧记录</h2>
+    <div class="rule"></div>
+    <p class="muted">以下事实在不同来源间存在出入，本页如实记录、不强行取舍：</p>
+    <table>
+      <tr><th>事项</th><th>分歧</th></tr>
+      <tr><td>成军年份</td><td>英文维基、卫报、UNESCO 表述、吉尼斯均记 2016 年 [1][3][6][10]；首发中文报道（搜狐 2018）称「成立于 2017 年 10 月」[22]。本页取 2016（多源一致且含官方表述）。</td></tr>
+      <tr><td>两支 MV 上线时间</td><td>英文维基记「2018 年末」[1]；Genius 给〈Wolf Totem〉标注 2018-11-16 [13]；蒙通社回顾称「2018 年秋季」[18]；搜狗百科记「2018 年 12 月」[20]。并存，本页表述为「2018 年秋末」。</td></tr>
+      <tr><td>Billboard 登顶日期</td><td>英文维基（引 Billboard）记〈Wolf Totem〉2019 年 4 月 11 日登顶硬摇滚数字销量榜 [1]；吉尼斯记榜期 2019 年 4 月 20 日「首次登顶」[6]。应为「夺冠日」与「榜期日」之差，本页只写「2019 年 4 月」。</td></tr>
+      <tr><td>播放量口径</td><td>蒙通社：发布后一个月约 2500 万 [18]；卫报（2019 年 10 月）：两支 MV 一年内合计逾 4500 万 [3]；网易（2021 年 12 月）：两首分别 4100 万与 2800 万 [22]。口径与时间点不同，本页只引 2019 年口径并标注时间。</td></tr>
+      <tr><td>「hunnu」释义</td><td>英文维基：风格名取自匈奴（Хүннү），而「Hu」才是「人」[1]；《Metal Hammer》导览则把「hunnu」直接注为「人」[4]。本页取维基说，前者并存。</td></tr>
+      <tr><td>文化使者证书年份</td><td>蒙通社报道（8 月 10 日颁证）[9] 与吉尼斯（记 2019 年）[6] 一致为 2019；搜狗百科记 2020 年 4 月 [20]。本页取 2019。</td></tr>
+      <tr><td>「金属乐被禁」表述</td><td>卫报写「西方音乐在共产主义时期被禁，该时代 1992 年结束」[3]；英文维基表述为「此前被禁的重金属」[1]。本页采卫报表述并标注时间范围，不作更宽泛的引申。</td></tr>
+      <tr><td>获勋人数</td><td>蒙通社头条（引 GoGo 网）记成吉思汗勋章授予乐队共 11 人（4 名主唱、创始人、两位经纪人、鼓、吉他、贝斯等）[21]；总统府公文页只写「授予 The Hu 乐队」[7]。本页写「首次颁给团体」，人数取 11 并注明来源。</td></tr>
+      <tr><td>成吉思汗勋章年份</td><td>蒙通社 [25]、新华社（2019-11-18 宣布决定）、总统府公文 [7] 均为 2019 年 11 月 27 日；UNESCO 新闻稿与法新社系列报道（The National、The Standard 等转载）则记作「2020 年」[6][10][11]。本页取 2019（官方一手来源、多源一致）。</td></tr>
+      <tr><td>绰尔（tsuur）的名录归属</td><td>UNESCO 官方新闻稿把呼麦、绰尔、马头琴并称为「已列入人类非物质文化遗产名录」[10]；严格按 ICH 官网，马头琴 2008 年、呼麦 2010 年列入代表作名录，绰尔 2009 年列入的是「急需保护的非物质文化遗产名录」[26]。本页正文按官方口径并称，此处补记精确归属。</td></tr>
+    </table>
+  </section>
+
+  <!-- ================= 资料来源 ================= -->
+  <section id="sources">
+    <h2><span class="k">来源</span>资料来源</h2>
+    <div class="rule"></div>
+    <ol class="src">
+      <li id="src1">英文维基百科 — The Hu（成军、成员乐器、榜单、成吉思汗勋章、专辑年表、Star Wars 合作）：<a href="https://en.wikipedia.org/wiki/The_Hu">en.wikipedia.org/wiki/The_Hu</a></li>
+      <li id="src2">英文维基百科 — The Gereg（曲目与时长、录音室 Nature Sound Studio、制作人、ayanga/gal/baigali 乐器署名、Loudwire 2019 50 佳）：<a href="https://en.wikipedia.org/wiki/The_Gereg">en.wikipedia.org/wiki/The_Gereg</a></li>
+      <li id="src3">The Guardian —〈Steppe change: how Mongolian rock band the Hu conquered the world〉（Jim Farber，2019-10-22：组队、共產时期禁令、4500 万播放、唱片公司引语、Elton John、MV 意象）：<a href="https://www.theguardian.com/music/2019/oct/22/its-something-new-how-mongolian-rock-band-the-hu-went-viral">theguardian.com/music/2019/oct/22/…</a></li>
+      <li id="src4">Louder / Metal Hammer —〈The HU's track-by-track guide to debut album The Gereg〉（Fraser Lewry，2019-09-13：〈Wolf Totem〉〈Yuve Yuve Yu〉〈The Same〉等逐轨自述）：<a href="https://www.loudersound.com/features/the-hus-track-by-track-guide-to-debut-album-the-gereg">loudersound.com/features/the-hus-track-by-track-guide…</a></li>
+      <li id="src5">Billboard —〈The Hu Brings Mongolian Metal to No. 1 on Hard Rock Digital Song Sales Chart〉（Kevin Rutherford，2019-04-18）：<a href="https://www.billboard.com/pro/the-hu-mongolian-metal-number-1-hard-rock-digital-song-sales/">billboard.com/pro/the-hu-mongolian-metal…</a></li>
+      <li id="src6">Guinness World Records —〈First rock act to be named UNESCO's Artist for Peace〉（2022-11-25 巴黎授衔；Billboard 各榜日期；2019 文化使者证书）：<a href="https://guinnessworldrecords.com/world-records/727676-first-rock-act-to-be-named-unescos-artist-for-peace">guinnessworldrecords.com/world-records/727676…</a></li>
+      <li id="src7">蒙古国总统府 —〈The Chinggis Khaan Order Conferred on The HU Band〉（2019-11-27）：<a href="https://president.mn/en/2019/11/27/the-chinggis-khaan-order-conferred-on-the-hu-band/">president.mn/en/2019/11/27/…</a></li>
+      <li id="src8">蒙古国总统府 —〈Meeting with The Hu Band〉（2019-05-17）：<a href="https://president.mn/en/2019/05/17/meeting-with-the-hu-band/">president.mn/en/2019/05/17/…</a></li>
+      <li id="src9">蒙古通讯社 Montsame —〈The Hu becomes Cultural Envoy of Mongolia〉（外长颁授文化使者证书）：<a href="https://www.montsame.mn/en/read/197493">montsame.mn/en/read/197493</a></li>
+      <li id="src10">蒙古国家安全委员会新闻（转 Montsame）—〈Mongolian rock band "The HU" becomes UNESCO Artist for Peace〉（UNESCO 授辞全文）：<a href="https://en.iss.gov.mn/?p=1047">en.iss.gov.mn/?p=1047</a></li>
+      <li id="src11">Prensa Latina —〈Mongolian heavy metal band is named UNESCO Artist for Peace〉（2022-11-25，UNESCO 总部长 Audrey Azoulay 授衔）：<a href="https://www.plenglish.com/news/2022/11/25/mongolian-heavy-metal-band-is-named-unesco-artist-for-peace/">plenglish.com/news/2022/11/25/…</a></li>
+      <li id="src12">Bozeman Daily Chronicle —〈The Hu use metal to share tales of Mongolian ancestors〉（Rachel Hergett：贾亚任教 2008–2018、巡演编制、呼麦模仿水声风声等引语）：<a href="https://www.bozemandailychronicle.com/ruckus/the-hu-use-metal-to-share-tales-of-mongolian-ancestors/article_3d54d364-677f-11ee-87db-332a5e8f5f97.html">bozemandailychronicle.com/ruckus/…</a></li>
+      <li id="src13">Genius —〈Wolf Totem〉蒙古语歌词页（西里尔原文；页面标注 2018-11-16）：<a href="https://genius.com/The-hu-wolf-totem-lyrics">genius.com/The-hu-wolf-totem-lyrics</a></li>
+      <li id="src14">Genius —〈Wolf Totem (English Translation)〉（社区英译，本页中文参考译文所据）：<a href="https://genius.com/Genius-english-translations-the-hu-wolf-totem-english-translation-lyrics">genius.com/Genius-english-translations…</a></li>
+      <li id="src15">Apple Music —《The Gereg (Deluxe Edition)》专辑页（〈Wolf Totem〉时长 338.0s = 5:38、封面）：<a href="https://music.apple.com/us/album/the-gereg-deluxe-edition/1699420854">music.apple.com/us/album/the-gereg-deluxe-edition</a></li>
+      <li id="src16">MusicBrainz — The HU 艺人页与《The Gereg》release group（发行日期 2019-09-13、厂牌）：<a href="https://musicbrainz.org/artist/8601a656-4830-457c-a3f1-f25b105d1629">musicbrainz.org/artist/8601a656…</a></li>
+      <li id="src17">NPR —〈How a Mongolian Heavy Metal Band Got Millions of YouTube Views〉（Katya Cengel，2019-01-05；「歌词含古蒙古战吼与诗歌」一节经英文维基引用核对，正文页未能直接取回）：<a href="https://www.npr.org/sections/goatsandsoda/2019/01/05/680528912/how-a-mongolian-heavy-metal-band-got-millions-of-youtube-views">npr.org/sections/goatsandsoda/2019/01/05/…</a></li>
+      <li id="src18">蒙通社 Montsame —〈蒙通社评出 2022 年宣传蒙古国的 9 大要闻〉（2018 年秋两支 MV 一个月约 2500 万播放；Metal Hammer 年度 10 佳 MV）：<a href="https://www.montsame.mn/ru/read/310571">montsame.mn/ru/read/310571</a></li>
+      <li id="src19">蒙通社 Montsame —〈蒙央行发行纪念硬币〉（The Hu 纪念币、该国约 600 种纪念币背景）：<a href="https://montsame.mn/en/read/252152">montsame.mn/en/read/252152</a></li>
+      <li id="src20">搜狗百科 — The Hu（中文名转写、2018 年 12 月 MV 之说、Heavy Music Awards 2020 提名、纪念币）：<a href="https://baike.sogou.com/v218411947.htm">baike.sogou.com/v218411947.htm</a></li>
+      <li id="src21">蒙通社头条 —〈蒙古国「成吉思汗」勋章授予「THE HU」摇滚乐队〉（11 人获勋、首次颁给团体、代领经过）：<a href="https://m.toutiao.com/a6764032761222136334/">m.toutiao.com/a6764032761222136334</a></li>
+      <li id="src22">搜狐 —〈蒙古国超新乐队 THE HU 首部 MV《Yu ve yu ve yu》全网首发〉（2018：乐器专名 Aynga / Gal / Baigali、「2017 年 10 月成立」之说）：<a href="https://www.sohu.com/a/256979450_508040">sohu.com/a/256979450_508040</a></li>
+      <li id="src23">百度百科 — 成吉思汗勋章（设立以来历年获得者、2019 年授予 The Hu）：<a href="https://baike.baidu.com/item/%E6%88%90%E5%90%89%E6%80%9D%E6%B1%97%E5%8B%8B%E7%AB%A0/68149902">baike.baidu.com/item/成吉思汗勋章</a></li>
+      <li id="src24">网易 / 摇滚天堂 —〈四个蒙古大汉立志成为乐坛传奇〉（2021-12-17：两首 MV 播放量 4100 万 / 2800 万、NME 后台访谈转述）：<a href="https://www.163.com/dy/article/GREUUOG30517AC1I.html">163.com/dy/article/GREUUOG30517AC1I.html</a></li>
+      <li id="src25">蒙通社 Montsame —〈The Hu awarded Order of Chinggis Khaan, supreme state prize in Mongolia〉（2019-11-27 授勋：理由为向世界推广蒙古文化并开创世界摇滚新乐种、第 12 位得主、为颁给团体修改规则、总统以披头士 1965 年获英帝国勋章作比）：<a href="https://montsame.mn/en/read/208232">montsame.mn/en/read/208232</a></li>
+      <li id="src26">UNESCO 非物质文化遗产 — 蒙古国页（马头琴 2008 年列入代表作名录、呼麦 2010 年列入、绰尔 tsuur 2009 年列入急需保护名录）：<a href="https://ich.unesco.org/en-state/mongolia-MN">ich.unesco.org/en-state/mongolia-MN</a></li>
+    </ol>
+    <p class="credits" style="margin-top:18px">图片来源<br>
+      [图1] <span id="img1">Wikimedia Commons〈The Hu.jpg〉，摄者 Elekes Andor，CC BY-SA 4.0（2023-07-17，布达佩斯 Park）：<a href="https://commons.wikimedia.org/wiki/File:The_Hu.jpg">commons.wikimedia.org/wiki/File:The_Hu.jpg</a></span><br>
+      [图2] <span id="img2">Wikimedia Commons〈2019 RiP The Hu - by 2eight - ZSC2060.jpg〉，摄者 Stefan Brending (2eight)，CC BY-SA 4.0（2019-06-07，Rock im Park）：<a href="https://commons.wikimedia.org/wiki/File:2019_RiP_The_Hu_-_by_2eight_-_ZSC2060.jpg">commons.wikimedia.org/wiki/File:2019_RiP_The_Hu…</a></span><br>
+      [图3] <span id="img3">Wikimedia Commons〈The Hu - 2019159133408 2019-06-08 Rock am Ring - 0158 - B70I9288.jpg〉，摄者 Sven Mandel，CC BY-SA 4.0：<a href="https://commons.wikimedia.org/wiki/File:The_Hu_-_2019159133408_2019-06-08_Rock_am_Ring_-_0158_-_B70I9288.jpg">commons.wikimedia.org/wiki/File:The_Hu_…_Rock_am_Ring…</a></span><br>
+      [图4] <span id="img4">Wikimedia Commons〈The Hu Hellfest 2023.jpg〉，摄者 Hoolen，CC BY-SA 4.0（2023-06-18）：<a href="https://commons.wikimedia.org/wiki/File:The_Hu_Hellfest_2023.jpg">commons.wikimedia.org/wiki/File:The_Hu_Hellfest_2023.jpg</a></span><br>
+      [图5] <span id="img5">Wikimedia Commons〈20231006 the hu.jpg〉，摄者 Wünderbrot，CC BY-SA 4.0（2023-10-06，Aftershock）：<a href="https://commons.wikimedia.org/wiki/File:20231006_the_hu.jpg">commons.wikimedia.org/wiki/File:20231006_the_hu.jpg</a></span><br>
+      [图6] <span id="img6">Wikimedia Commons〈Gala -.jpg〉，摄者 Elekes Andor，CC BY-SA 4.0（2023-07-17）：<a href="https://commons.wikimedia.org/wiki/File:Gala_-.jpg">commons.wikimedia.org/wiki/File:Gala_-.jpg</a></span><br>
+      [图7] <span id="img7">Wikimedia Commons〈Jaya (2).jpg〉，摄者 Elekes Andor，CC BY-SA 4.0（2023-07-17）：<a href="https://commons.wikimedia.org/wiki/File:Jaya_(2).jpg">commons.wikimedia.org/wiki/File:Jaya_(2).jpg</a></span><br>
+      [图8] <span id="img8">Wikimedia Commons〈Enkush (2).jpg〉，摄者 Elekes Andor，CC BY-SA 4.0（2023-07-17）：<a href="https://commons.wikimedia.org/wiki/File:Enkush_(2).jpg">commons.wikimedia.org/wiki/File:Enkush_(2).jpg</a></span><br>
+      [图9] <span id="img9">《The Gereg》专辑封面，取自 Apple Music / iTunes 商店专辑页（Better Noise Music 供图）：<a href="https://music.apple.com/us/album/the-gereg-deluxe-edition/1699420854">music.apple.com/us/album/the-gereg-deluxe-edition</a></span><br>
+      [图10] <span id="img10">《Rumble of Thunder》专辑封面，取自 Apple Music / iTunes 商店专辑页（Better Noise Music 供图）：<a href="https://music.apple.com/us/album/rumble-of-thunder/1632178351">music.apple.com/us/album/rumble-of-thunder</a></span><br>
+      [图11] <span id="img11">《Hun》专辑封面，取自 Apple Music / iTunes 商店专辑页（Better Noise Music 供图）：<a href="https://music.apple.com/us/album/hun/6767602940">music.apple.com/us/album/hun</a></span><br>
+      [图12] <span id="img12">以下为资料短片用图（图文页未直接展示）。Wikimedia Commons〈The Hu - 2019159133446 2019-06-08 Rock am Ring - 0001 - 5DSR0573.jpg〉，摄者 Sven Mandel，CC BY-SA 4.0（2019-06-08，Rock am Ring）：<a href="https://commons.wikimedia.org/wiki/File:The_Hu_-_2019159133446_2019-06-08_Rock_am_Ring_-_0001_-_5DSR0573.jpg">commons.wikimedia.org/wiki/File:The_Hu_…_5DSR0573.jpg</a></span><br>
+      [图13] <span id="img13">Wikimedia Commons〈The Hu - 2019159133510 2019-06-08 Rock am Ring - 0009 - 5DSR0581.jpg〉，摄者 Sven Mandel，CC BY-SA 4.0（2019-06-08，Rock am Ring）：<a href="https://commons.wikimedia.org/wiki/File:The_Hu_-_2019159133510_2019-06-08_Rock_am_Ring_-_0009_-_5DSR0581.jpg">commons.wikimedia.org/wiki/File:The_Hu_…_5DSR0581.jpg</a></span><br>
+      [图14] <span id="img14">Wikimedia Commons〈The Hu - 2019159133217 2019-06-08 Rock am Ring - 0040 - B70I9170.jpg〉，摄者 Sven Mandel，CC BY-SA 4.0（2019-06-08，Rock am Ring）：<a href="https://commons.wikimedia.org/wiki/File:The_Hu_-_2019159133217_2019-06-08_Rock_am_Ring_-_0040_-_B70I9170.jpg">commons.wikimedia.org/wiki/File:The_Hu_…_B70I9170.jpg</a></span><br>
+      [图15] <span id="img15">Wikimedia Commons〈The Hu - 2019159133153 2019-06-08 Rock am Ring - 0037 - B70I9167.jpg〉，摄者 Sven Mandel，CC BY-SA 4.0（2019-06-08，Rock am Ring）：<a href="https://commons.wikimedia.org/wiki/File:The_Hu_-_2019159133153_2019-06-08_Rock_am_Ring_-_0037_-_B70I9167.jpg">commons.wikimedia.org/wiki/File:The_Hu_…_B70I9167.jpg</a></span><br>
+      [图16] <span id="img16">Wikimedia Commons〈The Hu - 2019159133335 2019-06-08 Rock am Ring - 0119 - B70I9249.jpg〉，摄者 Sven Mandel，CC BY-SA 4.0（2019-06-08，Rock am Ring）：<a href="https://commons.wikimedia.org/wiki/File:The_Hu_-_2019159133335_2019-06-08_Rock_am_Ring_-_0119_-_B70I9249.jpg">commons.wikimedia.org/wiki/File:The_Hu_…_B70I9249.jpg</a></span><br>
+      [图17] <span id="img17">Wikimedia Commons〈The Hu - 2025159 192910 2025-06-08 Zeltfestival Rhein-Neckar - Sven - 1D X MK II - 0229 - B70I2302.jpg〉，摄者 Sven Mandel，CC BY-SA 4.0（2025-06-08，Zeltfestival Rhein-Neckar）：<a href="https://commons.wikimedia.org/wiki/File:The_Hu_-_2025159_192910_2025-06-08_Zeltfestival_Rhein-Neckar_-_Sven_-_1D_X_MK_II_-_0229_-_B70I2302.jpg">commons.wikimedia.org/wiki/File:The_Hu_…_B70I2302.jpg</a></span><br>
+      [图18] <span id="img18">Wikimedia Commons〈The Hu - 2025159 200052 2025-06-08 Zeltfestival Rhein-Neckar - Sven - 1D X MK II - 0398 - B70I2471.jpg〉，摄者 Sven Mandel，CC BY-SA 4.0（2025-06-08，Zeltfestival Rhein-Neckar）：<a href="https://commons.wikimedia.org/wiki/File:The_Hu_-_2025159_200052_2025-06-08_Zeltfestival_Rhein-Neckar_-_Sven_-_1D_X_MK_II_-_0398_-_B70I2471.jpg">commons.wikimedia.org/wiki/File:The_Hu_…_B70I2471.jpg</a></span><br>
+      [图19] <span id="img19">Wikimedia Commons〈The-hu-samar'ock.jpg〉，摄者 Valere jelic，CC BY-SA 4.0（2019-12-14，Samar'ock Festival）：<a href="https://commons.wikimedia.org/wiki/File:The-hu-samar%27ock.jpg">commons.wikimedia.org/wiki/File:The-hu-samar'ock.jpg</a></span><br>
+      [图20] <span id="img20">Wikimedia Commons〈The-hu.jpg〉，摄者 Valere jelic，CC BY-SA 4.0（2019-12-14，Samar'ock Festival）：<a href="https://commons.wikimedia.org/wiki/File:The-hu.jpg">commons.wikimedia.org/wiki/File:The-hu.jpg</a></span>
+    </p>
+  </section>
+
+  <footer>
+    给我一首歌的时间 · 第 07 站 · 蒙古 · The Hu — The Length of a Song<br>
+    事实核查截至 2026-10-13；来源分歧如实并列，未采信无出处细节。本期未使用 AI 生成影像。
+  </footer>
+
+</div>
+</body>
+</html>

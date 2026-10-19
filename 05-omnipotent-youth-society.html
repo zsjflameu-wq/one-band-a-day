@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>给我一首歌的时间 05 · 中国内地 — 万能青年旅店（Omnipotent Youth Society）</title>
+<style>
+  :root{
+    --bg:#12100e; --panel:#1b1815; --line:#342c24; --ink:#ece7dd; --ink2:#a49b8d;
+    --gold:#d8a24a; --blue:#c08a5a; --serif:"Songti SC","Noto Serif CJK SC",serif;
+    --sans:"Hiragino Sans GB","PingFang SC",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.9;font-size:17px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px 90px}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(216,162,74,.35)}
+  a:hover{border-bottom-color:var(--gold)}
+  sup{font-size:.72em;line-height:0}
+  sup a{border:none;color:var(--gold);opacity:.9}
+
+  .stop{display:flex;align-items:center;gap:14px;margin:44px 0 18px;color:var(--ink2);font-size:14px;letter-spacing:.12em}
+  .stop .no{font-family:var(--serif);border:1px solid var(--line);padding:4px 12px;border-radius:3px}
+  .stop .route{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  h1{font-family:var(--serif);font-size:54px;line-height:1.25;font-weight:700;letter-spacing:.02em}
+  h1 .en{display:block;font-size:24px;color:var(--blue);letter-spacing:.20em;margin-top:8px;font-weight:600}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin:22px 0 0;color:var(--ink2);font-size:14.5px}
+  .meta b{color:var(--ink);font-weight:600}
+  .lede{font-family:var(--serif);font-size:20px;color:#ded8cd;border-left:3px solid var(--gold);padding:6px 0 6px 20px;margin:34px 0 10px;line-height:2}
+
+  section{margin-top:64px}
+  h2{font-family:var(--serif);font-size:27px;font-weight:700;margin-bottom:6px;display:flex;align-items:baseline;gap:14px}
+  h2 .k{color:var(--gold);font-size:16px;letter-spacing:.18em;font-family:var(--sans);font-weight:600}
+  .rule{height:1px;background:var(--line);margin:14px 0 26px}
+  h3{font-size:18.5px;margin:30px 0 8px;color:var(--ink)}
+  p{margin:12px 0;color:#d8d2c7}
+  .muted{color:var(--ink2);font-size:14.5px}
+
+  figure{margin:26px 0}
+  figure img{width:100%;display:block;border-radius:4px}
+  figure.half{max-width:520px;margin-left:auto;margin-right:auto}
+  figcaption{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.7}
+  figcaption b{color:#c3baab;font-weight:600}
+  .row{display:flex;gap:16px;flex-wrap:wrap}
+  .row figure{flex:1 1 260px;margin:20px 0 0}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px 24px;margin:22px 0}
+  .fact{display:grid;grid-template-columns:120px 1fr;gap:6px 18px;font-size:15.5px}
+  .fact dt{color:var(--ink2)}
+  .fact dd{color:var(--ink)}
+
+  table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--ink2);font-weight:600;font-size:13.5px;letter-spacing:.06em}
+  td.yr{color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+  .tl{list-style:none;margin:18px 0}
+  .tl li{position:relative;padding:0 0 22px 118px;font-size:15.5px}
+  .tl li::before{content:"";position:absolute;left:86px;top:11px;bottom:-2px;width:1px;background:var(--line)}
+  .tl li:last-child::before{display:none}
+  .tl .yr{position:absolute;left:0;top:1px;font-family:var(--serif);color:var(--gold);font-size:16px;letter-spacing:.03em}
+  .tl b{color:var(--ink)}
+
+  .song{background:linear-gradient(180deg,#191512,#141210);border:1px solid var(--line);border-radius:10px;padding:30px 30px 24px;margin-top:22px}
+  .song .t{font-family:var(--serif);font-size:34px;font-weight:700}
+  .song .t span{color:var(--gold)}
+  .lyric{font-family:var(--serif);color:#efece4;font-size:19px;line-height:2.05;border-left:3px solid var(--gold);padding-left:20px;margin:24px 0}
+  .lyric small{display:block;font-family:var(--sans);font-size:13px;color:var(--ink2);margin-top:14px}
+  .recs{display:flex;gap:16px;flex-wrap:wrap}
+  .rec{flex:1 1 300px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+  .rec .n{font-family:var(--serif);font-size:21px;font-weight:700}
+  .rec .y{color:var(--gold);font-size:14px;margin-left:8px}
+  .rec p{font-size:14.5px;margin-top:8px;color:#ccc6ba}
+
+  .video-box{background:#000;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:20px 0}
+  video{width:100%;display:block;aspect-ratio:16/9;background:#000}
+  .note{background:rgba(216,162,74,.07);border:1px solid rgba(216,162,74,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#e3d3b6;margin:16px 0}
+  .warn{background:rgba(192,138,90,.07);border:1px solid rgba(192,138,90,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#dcc9b2;margin:16px 0}
+
+  ol.src{font-size:13.5px;color:var(--ink2);line-height:2;padding-left:24px}
+  ol.src li{margin:4px 0}
+  ol.src a{word-break:break-all}
+  .credits{font-size:13px;color:var(--ink2);line-height:2}
+  footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--line);color:var(--ink2);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="stop"><span class="no">第 05 站</span><span>亚洲 · 中国内地 · 石家庄</span><span class="route"></span><span>给我一首歌的时间</span></div>
+
+  <h1>万能青年旅店<span class="en">Omnipotent Youth Society · 中国摇滚 · 1996–今</span></h1>
+  <div class="meta">
+    <span><b>1996</b> 成军（时名 The Nico）<sup><a href="#src1">[1]</a><a href="#src4">[4]</a></sup></span>
+    <span>河北 · 石家庄</span>
+    <span>独立摇滚 / 另类摇滚 / 前卫摇滚<sup><a href="#src2">[2]</a></sup></span>
+    <span>歌词语言：普通话</span>
+  </div>
+
+  <p class="lede">一支乐队用十四年磨出了第一张专辑，第一张专辑的最后一首歌，成了中国北方一座工业城市的「市歌」。<sup><a href="#src6">[6]</a></sup> 又过了十年，他们才交出第二张——上线半天卖了二十万张<sup><a href="#src3">[3]</a></sup>。这些年里成员来来去去，一直都在的只有两个人：写旋律的董亚千，写词的姬赓。<sup><a href="#src1">[1]</a><a href="#src3">[3]</a></sup></p>
+
+  <!-- ================= 档案 ================= -->
+  <section id="profile">
+    <h2><span class="k">档案</span>乐队速览</h2>
+    <div class="rule"></div>
+    <div class="panel">
+      <dl class="fact">
+        <dt>名字</dt><dd>万能青年旅店（Omnipotent Youth Society），乐迷简称「万青」。前身 The Nico，名字取自美国盲瓜乐队（The Blind Melon）已故主唱 Shannon Hoon 小女儿的名字<sup><a href="#src4">[4]</a></sup><sup><a href="#src1">[1]</a></sup></dd>
+        <dt>更名</dt><dd>2002 年。姬赓的解释：「我觉得我们乐队这些年太败了，所以换名字冲冲晦气」<sup><a href="#src4">[4]</a></sup></dd>
+        <dt>成军地</dt><dd>河北省石家庄市。排练室是主唱董亚千家不到 20 平米的小屋，钥匙压在门下水泥板底下，谁都能进来——人称「旅店」<sup><a href="#src4">[4]</a><a href="#src10">[10]</a></sup></dd>
+        <dt>两个人</dt><dd>董亚千（主唱/吉他，全碟作曲）、姬赓（贝斯，全碟作词）——成立至今唯一没换过的两位<sup><a href="#src1">[1]</a><a href="#src3">[3]</a></sup></dd>
+        <dt>活动期</dt><dd>1996–今（2010 年才出第一张专辑，2020 年第二张）<sup><a href="#src1">[1]</a><a href="#src8">[8]</a></sup></dd>
+        <dt>奖项</dt><dd>第 11 届音乐风云榜最佳摇滚新人、最佳摇滚专辑、最佳摇滚歌曲（〈不万能的喜剧〉）<sup><a href="#src3">[3]</a><sup><a href="#src5">[5]</a></sup>；第 11 届华语音乐传媒大奖最佳乐队<sup><a href="#src5">[5]</a></sup>；第 12 届迷笛奖年度最佳摇滚乐队/专辑/歌曲（〈河北墨麒麟〉）<sup><a href="#src3">[3]</a></sup></dd>
+        <dt>唱片公司</dt><dd>自主厂牌「郊眠寺」；2014 年起与摩登天空签演出经纪约（创作不受约束）<sup><a href="#src2">[2]</a><sup><a href="#src3">[3]</a></sup></dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= 历史 ================= -->
+  <section id="history">
+    <h2><span class="k">历史</span>从「旅店」到万青</h2>
+    <div class="rule"></div>
+
+    <figure>
+      <img src="assets/sjz_skyline2012.jpg" alt="石家庄天际线（黄昏）">
+      <figcaption><b>石家庄天际线</b>——华北平原上的工业城市，万青歌词里的「八角柜台」「人民商场」都在这里。<b>注意：这是 2012 年的当代街景，不是 1990 年代旧照</b>。图：Wikimedia Commons（File:Skyline of Shijiazhuang 2012.jpg），<a href="https://commons.wikimedia.org/wiki/File:Skyline_of_Shijiazhuang_2012.jpg">文件页</a></figcaption>
+    </figure>
+
+    <p>1996 年，董亚千和小学同学姬赓、鼓手张培栋在石家庄组了乐队 The Neo——不对，是 The Nico，名字来自他们最爱翻唱的盲瓜乐队主唱的小女儿。<sup><a href="#src4">[4]</a><sup><a href="#src1">[1]</a></sup></sup> 那间收留各路闲散青年的小屋，就是乐队的一切：排练在这里，后来第一张专辑的大部分录音也在这里。<sup><a href="#src4">[4]</a><sup><a href="#src10">[10]</a></sup></sup></p>
+    <p>九十年代末到 2002 年，乐队几乎散伙：姬赓考上长沙的大学<sup><a href="#src4">[4]</a></sup>，董亚千患上抑郁症，去秦皇岛疗养——后来那首〈秦皇岛〉就写的是这段日子<sup><a href="#src4">[4]</a><sup><a href="#src19">[19]</a></sup></sup>。2002 年底更名「万能青年旅店」；2006 年前后乐队重组，小号手史立、萨克斯手冯玉良、大提琴手鲁轶等陆续加入，不插电小样〈不万能的喜剧〉开始在网上流传。<sup><a href="#src4">[4]</a><sup><a href="#src2">[2]</a></sup></sup></p>
+    <p>2010 年 11 月 12 日，首张同名专辑出版。此后十年乐队几乎从公众视野消失——只在 2014 年签了摩登天空的演出经纪约、2015–16 年做了「河北墨麒麟」巡演、2016 年参加「音乐肖像」计划录了单曲〈张洲〉<sup><a href="#src3">[3]</a><sup><a href="#src2">[2]</a></sup></sup>。2019 年秋天，排练厅迁进河北电影制片厂——一栋照着河南电影制片厂图纸建、却把图纸看反了的楼，「门是反手开的，锁安在屋子里面」。<sup><a href="#src10">[10]</a><sup><a href="#src12">[12]</a></sup></sup> 2020 年 12 月 22 日，第二张专辑《冀西南林路行》出版。<sup><a href="#src1">[1]</a><sup><a href="#src8">[8]</a></sup></sup></p>
+
+    <ul class="tl">
+      <li><span class="yr">1996</span><b>The Nico</b> 成立：董亚千、姬赓、张培栋；排练室即董亚千家（「旅店」）<sup><a href="#src4">[4]</a></sup></li>
+      <li><span class="yr">1999</span>第一首作品〈巢穴在望〉（1998 录）收进摇滚合辑《非常次序》<sup><a href="#src4">[4]</a></sup></li>
+      <li><span class="yr">2000–02</span>姬赓赴长沙读大学；董亚千抑郁症赴秦皇岛疗养；2002 年底更名「万能青年旅店」<sup><a href="#src4">[4]</a></sup></li>
+      <li><span class="yr">2006</span>重组（史立等加入）；小样《废人们 都在忙什么?》；〈不万能的喜剧〉网络流传<sup><a href="#src4">[4]</a><sup><a href="#src2">[2]</a></sup></sup></li>
+      <li><span class="yr">2009</span>首张 EP《万能鸵鸟驯养指南》（2 月 2 日）<sup><a href="#src1">[1]</a><sup><a href="#src3">[3]</a></sup></sup></li>
+      <li><span class="yr">2010</span>首张专辑《万能青年旅店》（11 月 12 日，独立发行）；豆瓣年度第一张<sup><a href="#src8">[8]</a><sup><a href="#src1">[1]</a></sup></sup></li>
+      <li><span class="yr">2011</span>音乐风云榜最佳摇滚新人/专辑；华语音乐传媒大奖最佳乐队<sup><a href="#src3">[3]</a><sup><a href="#src5">[5]</a></sup></sup></li>
+      <li><span class="yr">2012–13</span>与台湾乐团甜梅号联合巡演；2013 年首次台湾演出；韩寒手抄〈杀死那个石家庄人〉歌词推荐<sup><a href="#src3">[3]</a><sup><a href="#src10">[10]</a></sup><sup><a href="#src1">[1]</a></sup></sup></li>
+      <li><span class="yr">2015–16</span>「河北墨麒麟」系列专场巡演；单曲〈张洲〉（音乐肖像计划）<sup><a href="#src3">[3]</a></sup></li>
+      <li><span class="yr">2019</span>排练厅迁入河北电影制片厂；年底鼓手冯江加入<sup><a href="#src10">[10]</a><sup><a href="#src3">[3]</a></sup></sup></li>
+      <li><span class="yr">2020</span>第二张专辑《冀西南林路行》（12 月 22 日，数字专辑）<sup><a href="#src1">[1]</a><sup><a href="#src3">[3]</a></sup></sup></li>
+      <li><span class="yr">2021</span>姬赓获「2020 年度石家庄市政府特殊津贴专家」——摇滚乐手首例<sup><a href="#src13">[13]</a><sup><a href="#src12">[12]</a></sup></sup></li>
+      <li><span class="yr">2023</span>第 12 届迷笛奖：年度最佳摇滚乐队、最佳摇滚专辑（〈河北墨麒麟〉最佳摇滚歌曲）<sup><a href="#src3">[3]</a></sup></li>
+    </ul>
+
+    <div class="row">
+      <figure>
+        <img src="assets/cover_1st.jpg" alt="首张专辑《万能青年旅店》封面">
+        <figcaption><b>首张专辑《万能青年旅店》</b>（2010.11.12，独立发行）。图：Cover Art Archive / MusicBrainz（release-group 860dc2de），版权归万能青年旅店。</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/cover_2nd.jpg" alt="《冀西南林路行》封面">
+        <figcaption><b>第二张专辑《冀西南林路行》</b>（2020.12.22，数字专辑）。图：Cover Art Archive / MusicBrainz（release-group 0b3afb3c），版权归万能青年旅店。</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/cover_zhangzhou.jpg" alt="〈张洲〉单曲封面">
+        <figcaption><b>单曲〈张洲〉</b>（2016，「音乐肖像」计划）。图：Cover Art Archive / MusicBrainz（release-group 3397cad3），版权归万能青年旅店。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= 成员 ================= -->
+  <section id="members">
+    <h2><span class="k">成员</span>名单一直在流动</h2>
+    <div class="rule"></div>
+
+    <div class="row">
+      <figure>
+        <img src="assets/band_fuzhou2019.jpg" alt="万青 2019 年福州茉莉音乐节演出">
+        <figcaption><b>万能青年旅店，2019 年福州茉莉音乐节</b>。图：Wikimedia Commons（File:Omnipotent Youth Society in Fuzhou 20190101.jpg，摄影：翔宇，CC BY-SA 4.0），<a href="https://commons.wikimedia.org/wiki/File:Omnipotent_Youth_Society_in_Fuzhou_20190101.jpg">文件页</a></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/band_2025.jpg" alt="万青 2025 年南丹音乐节演出">
+        <figcaption><b>万能青年旅店，2025 年南丹音乐节</b>。图：Wikimedia Commons（File:万青 2025 南丹音乐节.jpg，中国新闻社，CC BY 4.0），<a href="https://commons.wikimedia.org/wiki/File:%E4%B8%87%E9%9D%92_2025_%E5%8D%97%E4%B8%B9%E9%9F%B3%E4%B9%90%E8%8A%82.jpg">文件页</a></figcaption>
+      </figure>
+    </div>
+
+    <table>
+      <tr><th>成员</th><th>位置</th><th>备注</th></tr>
+      <tr><td><b>董亚千</b></td><td>主唱 / 吉他 / 曼陀铃</td><td>全碟作曲。早年在秦皇岛疗养期间写出〈秦皇岛〉<sup><a href="#src4">[4]</a><sup><a href="#src2">[2]</a></sup></sup></td></tr>
+      <tr><td><b>姬赓</b></td><td>贝斯</td><td>全碟作词。2000 年考入中南林业科技大学，2004 年回石家庄读研<sup><a href="#src4">[4]</a></sup></td></tr>
+      <tr><td><b>史立</b></td><td>小号 / 长笛 / 次中音号</td><td>2006 年重组时加入<sup><a href="#src4">[4]</a><sup><a href="#src2">[2]</a></sup></sup></td></tr>
+      <tr><td><b>冯江</b></td><td>鼓</td><td>2019 年底加入<sup><a href="#src3">[3]</a></sup>。此前鼓手几经更替，另有「现任鼓手杨友耕」一说，见<a href="#diverge">来源分歧</a></td></tr>
+      <tr><td class="muted">合作乐手</td><td class="muted">萨克斯 / 小提琴 / 键盘 / 大提琴 等</td><td class="muted">名单随巡演流动：冯玉良、鲁轶、杨旭、李增辉、刘阔等先后参与<sup><a href="#src2">[2]</a></sup></td></tr>
+      <tr><td class="muted">离队</td><td class="muted">张培栋（鼓，2001 赴日）、荀亮（鼓）、崔旭东（吉他）等</td><td class="muted">早期成员<sup><a href="#src4">[4]</a></sup></td></tr>
+    </table>
+  </section>
+
+  <!-- ================= 经典歌曲 ================= -->
+  <section id="song">
+    <h2><span class="k">经典歌曲</span>杀死那个石家庄人</h2>
+    <div class="rule"></div>
+    <div class="song">
+      <div class="t">杀死那个石家庄人<span> · 5:44</span></div>
+      <p class="muted">词：姬赓 · 曲：董亚千 · 编曲：万能青年旅店 · 收录于《万能青年旅店》（2010-11-12），专辑最后一首<sup><a href="#src6">[6]</a><sup><a href="#src8">[8]</a></sup></sup></p>
+      <div class="lyric">
+        傍晚6点下班 换掉药厂的衣裳<br>
+        妻子在熬粥 我去喝几瓶啤酒<br>
+        如此生活30年 直到大厦崩塌<br>
+        云层深处的黑暗啊 淹没心底的景观
+        <small>副歌节选 · 词：姬赓 · 全文见网易云歌词页<sup><a href="#src14">[14]</a></sup>（另有乐迷联想 2001 年石家庄爆炸案，无可靠出处，姬赓本人的解释见下）</small>
+      </div>
+    </div>
+
+    <h3>它为什么成立</h3>
+    <p><b>结构</b>：三段叙事，一家三口。姬赓自己的解释：「这歌讲的就是一家三口，日常生活的悲剧。冷漠的父亲，绝望的母亲，尚未被驯服的儿子。这样的家庭在我生活的家属院就有很多。这不是一个正常的成长过程，是对热情和自尊的蚕食。」<sup><a href="#src6">[6]</a><sup><a href="#src4">[4]</a></sup></sup></p>
+    <p><b>编曲</b>：开场是曼陀铃的拨弦，口琴和大提琴垫在底下；中段标志性的小号进来，把叙事接过去；结尾电吉他与鼓的音墙推起来，董亚千从平静的白描唱到嘶吼。<sup><a href="#src6">[6]</a><sup><a href="#src5">[5]</a></sup></sup> 曼陀铃是董亚千的乐器之一<sup><a href="#src2">[2]</a></sup>——这支乐队很少用音墙叙事，这一段的爆发因此格外重。</p>
+    <p><b>歌词</b>：「八角柜台」「人民商场」里的「一张假钞买一把假枪」——姬赓说，「八角柜台」是想象出来的意象，「人民商场」是他小时候河北最热闹的百货商场，后来破落了；「乒乓少年」暗喻一个压抑的乖乖牌，打球是他郁闷的青春唯一的宣泄。<sup><a href="#src6">[6]</a></sup> 歌词把九十年代国企改制、下岗潮里北方工业家庭的失语，压缩成三段白描。<sup><a href="#src6">[6]</a><sup><a href="#src10">[10]</a></sup></sup></p>
+    <p><b>为什么是它</b>：这首歌被石家庄人当作「市歌」<sup><a href="#src6">[6]</a></sup>；2012 年台湾乐评人马世芳评价它是中国当代摇滚最精彩的作品（中文媒体转述，未见原始文面）<sup><a href="#src10">[10]</a></sup>；2013 年韩寒把歌词抄成字帖发布<sup><a href="#src1">[1]</a><sup><a href="#src16">[16]</a></sup></sup>。</p>
+
+    <div class="note">「最经典」没有权威榜单结论——这是<b>本页选择</b>，不是榜单结论。各来源并称的代表作还有：〈秦皇岛〉〈十万嬉皮〉〈不万能的喜剧〉（百度百科代表作品栏）<sup><a href="#src3">[3]</a></sup>、〈河北墨麒麟〉（2023 迷笛奖年度最佳摇滚歌曲）<sup><a href="#src3">[3]</a></sup>。</div>
+  </section>
+
+  <!-- ================= 延伸聆听 ================= -->
+  <section id="recs">
+    <h2><span class="k">延伸</span>再听两首</h2>
+    <div class="rule"></div>
+    <div class="recs">
+      <div class="rec">
+        <div class="n">秦皇岛<span class="y">2010</span></div>
+        <p>董亚千在秦皇岛疗养期间写下的歌——小号像从海面上吹过来，8 分钟里从孤岛回到人间。它是这张专辑「讲故事」能力的另一极。</p>
+      </div>
+      <div class="rec">
+        <div class="n">山雀<span class="y">2020</span></div>
+        <p>《冀西南林路行》里最亮的一首：山间神灵「不自知的灵动与即将招致的危险」<sup><a href="#src10">[10]</a></sup>。听完它，你会明白这十年他们没有白等。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 短片 ================= -->
+  <section id="film">
+    <h2><span class="k">短片</span>把这一站装进一首歌里</h2>
+    <div class="rule"></div>
+    <div class="video-box">
+      <video controls preload="metadata" poster="assets/cover_1st.jpg">
+        <source src="05-omnipotent-youth-society-film.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="muted">无声资料版，长度与〈杀死那个石家庄人〉全曲一致（网易云口径 5:44.25）。建议另开播放器同步播放这首歌。</p>
+    <div class="warn">⏳ 解说配音版待定稿：解说逐字稿见同目录〈中国内地-万能青年旅店-解说文案.md〉，你确认「定稿」后才合成 TTS 与正片。音源亦待内录。</div>
+  </section>
+
+  <!-- ================= 来源分歧 ================= -->
+  <section id="diverge">
+    <h2><span class="k">分歧</span>来源分歧与存疑处</h2>
+    <div class="rule"></div>
+    <table>
+      <tr><th style="width:56px">#</th><th>事项</th><th>各说</th></tr>
+      <tr><td class="yr">1</td><td>重组完成时间</td><td>快懂百科记 2004 年 4 月（「另一种说法是 2006 年间」）<sup><a href="#src4">[4]</a></sup>；百度百科记 2006 年<sup><a href="#src3">[3]</a></sup>。本页取 2006 前后。</td></tr>
+      <tr><td class="yr">2</td><td>现任鼓手</td><td>英文维基现任成员列冯江（鼓）、杨友耕列已离队<sup><a href="#src1">[1]</a></sup>；快懂百科称乐队「由……鼓手杨友耕组成」<sup><a href="#src4">[4]</a></sup>；界面新闻记 2019 年底冯江加入<sup><a href="#src3">[3]</a></sup>。本页按冯江处理，杨友耕存疑。</td></tr>
+      <tr><td class="yr">3</td><td>首专曲目数</td><td>快懂百科曲目表列 8 首（缺〈在这颗行星所有的酒馆〉）<sup><a href="#src5">[5]</a></sup>；MusicBrainz 与 Discogs 均为 9 首<sup><a href="#src8">[8]</a><sup><a href="#src9">[9]</a></sup></sup>。以 MusicBrainz 为准。</td></tr>
+      <tr><td class="yr">4</td><td>二辑销量</td><td>「上线半天 20 万张、两周销售额过千万」<sup><a href="#src3">[3]</a></sup>／「首月销量近 50 万张」<sup><a href="#src4">[4]</a></sup>／「70 万张，创中国独立数字专辑纪录」<sup><a href="#src1">[1]</a></sup>。三说并存，本页引用 20 万张口径（半天）。</td></tr>
+      <tr><td class="yr">5</td><td>「姬赓」写法</td><td>维基与百度百科作「姬赓」<sup><a href="#src1">[1]</a><sup><a href="#src3">[3]</a></sup></sup>；部分媒体行文作「姬庚」（如新浪博客转载、部分乐评）。「赓」为正字口径。</td></tr>
+      <tr><td class="yr">6</td><td>歌曲灵感联想</td><td>百度百科记「一度被乐迷猜测这首歌的灵感来自 2001 年石家庄爆炸案」<sup><a href="#src6">[6]</a></sup>——乐迷联想，无当事人或乐评佐证；姬赓本人的解释是一家三口的日常悲剧<sup><a href="#src6">[6]</a><sup><a href="#src4">[4]</a></sup></sup>。</td></tr>
+      <tr><td class="yr">7</td><td>〈杀死那个石家庄人〉原名</td><td>百度百科：「原名《那个石家庄人》」<sup><a href="#src6">[6]</a></sup>，未见他源旁证，按「原名」处理但标注单一来源。</td></tr>
+    </table>
+  </section>
+
+  <!-- ================= 资料来源 ================= -->
+  <section id="sources">
+    <h2><span class="k">来源</span>资料来源</h2>
+    <div class="rule"></div>
+    <ol class="src">
+      <li id="src1">英文维基百科 · Omnipotent Youth Society — <a href="https://en.wikipedia.org/wiki/Omnipotent_Youth_Society">en.wikipedia.org/wiki/Omnipotent_Youth_Society</a></li>
+      <li id="src2">中文维基百科 · 万能青年旅店 — <a href="https://zh.wikipedia.org/wiki/%E4%B8%87%E8%83%BD%E9%9D%92%E5%B9%B4%E6%97%85%E5%BA%97">zh.wikipedia.org/wiki/万能青年旅店</a></li>
+      <li id="src3">百度百科 · 万能青年旅店 — <a href="https://baike.baidu.com/item/%E4%B8%87%E8%83%BD%E9%9D%92%E5%B9%B4%E6%97%85%E5%BA%97/6473239">baike.baidu.com/item/万能青年旅店</a></li>
+      <li id="src4">快懂百科 · 万能青年旅店 — <a href="https://www.baike.com/wikiid/7158714397787455518">baike.com/wikiid/7158714397787455518</a></li>
+      <li id="src5">快懂百科 · 《万能青年旅店》专辑 — <a href="https://www.baike.com/wikiid/847748163832082058">baike.com/wikiid/847748163832082058</a></li>
+      <li id="src6">百度百科 · 杀死那个石家庄人 — <a href="https://baike.baidu.com/item/%E6%9D%80%E6%AD%BB%E9%82%A3%E4%B8%AA%E7%9F%B3%E5%AE%B6%E5%BA%84%E4%BA%BA/9654001">baike.baidu.com/item/杀死那个石家庄人</a></li>
+      <li id="src7">快懂百科 · 杀死那个石家庄人 — <a href="https://baike.com/wikiid/7257306275565240376">baike.com/wikiid/7257306275565240376</a></li>
+      <li id="src8">MusicBrainz ·《万能青年旅店》（2010-11-12，CN 版 release，9 曲时长） — <a href="https://musicbrainz.org/release/263f5af9-e59f-46fd-abea-ddb6d0fb74cc">musicbrainz.org/release/263f5af9</a></li>
+      <li id="src9">Discogs Fandom ·《万能青年旅店》专辑页 — <a href="https://discogs.fandom.com/zh/wiki/%E4%B8%87%E8%83%BD%E9%9D%92%E5%B9%B4%E6%97%85%E5%BA%97_(%E4%B8%87%E8%83%BD%E9%9D%92%E5%B9%B4%E6%97%85%E5%BA%97%E4%B8%93%E8%BE%91)">discogs.fandom.com（zh）</a></li>
+      <li id="src10">界面新闻 ·《石家庄摇滚往事：万青与华北平原的忧伤》（2019） — <a href="https://www.jiemian.com/article/9768410.html">jiemian.com/article/9768410.html</a></li>
+      <li id="src11">南方人物周刊（南方+）·《万能青年旅店 并肩莽莽原野荒｜时代的肖像》（2019 年第 17 期，姜晓明图/文） — <a href="https://static.nfapp.southcn.com/content/201906/27/c2360083.html">static.nfapp.southcn.com</a></li>
+      <li id="src12">燕赵都市报 ·《封神 11 年的万青获官方「点赞」》（2021-11-12，PDF） — <a href="https://yzdsb.hebnews.cn/pc/paper/att/202111/12/64a9f8b9-43c7-453e-a9e5-87283e33372a.pdf">yzdsb.hebnews.cn</a></li>
+      <li id="src13">新浪娱乐 ·《〈杀死那个石家庄人〉贝斯手获石家庄人才津贴》（2021-11-04） — <a href="https://ent.sina.com.cn/y/yneidi/2021-11-04/doc-iktzscyy3521200.shtml">ent.sina.com.cn</a></li>
+      <li id="src14">网易云音乐 ·〈杀死那个石家庄人〉歌词（lrc，id 386844） — <a href="https://music.163.com/#/song?id=386844">music.163.com/#/song?id=386844</a></li>
+      <li id="src15">Time Out Shanghai · Interview: Omnipotent Youth Society（2012-07-02，Archive） — <a href="https://web.archive.org/web/20121104212455/http://www.timeoutshanghai.com/features/Music-Music_features/6728/Interview-Omnipotent-Youth-Society.html">timeoutshanghai.com（存档）</a></li>
+      <li id="src16">Beijing Cream · Friday Night Musical Outro（韩寒手抄歌词转述，2013-01） — <a href="http://beijingcream.com/2013/01/friday-night-musical-outro-omnipotent-youth-society-kill-that-man-from-shijiazhuang/">beijingcream.com</a></li>
+      <li id="src17">The World of Chinese · How OYS Captured the Emotions of a Generation（2022） — <a href="https://www.theworldofchinese.com/2022/02/how-a-band-from-chinas-industrial-heartland-captured-the-emotions-of-a-generation/">theworldofchinese.com</a></li>
+      <li id="src18">澎湃/看理想 ·《万能青年旅店：用十年时间，朝前走了一步》（2021） — <a href="https://www.thepaper.cn/newsDetail_forward_10836994">thepaper.cn/newsDetail_forward_10836994</a></li>
+      <li id="src19">MusicBrainz · 艺人页（OYS，含 2020《冀西南林路行》release-group） — <a href="https://musicbrainz.org/artist/4cd1ce8c-469e-4ff6-a987-59819b975a85">musicbrainz.org/artist/4cd1ce8c</a></li>
+    </ol>
+
+    <h3>图片来源</h3>
+    <div class="credits">
+      <b>band_fuzhou2019.jpg</b> — 万青 2019 年福州茉莉音乐节演出照 · Wikimedia Commons（File:Omnipotent Youth Society in Fuzhou 20190101.jpg，摄影：翔宇，CC BY-SA 4.0）。<br>
+      <b>band_2025.jpg</b> — 万青 2025 年南丹音乐节演出照 · Wikimedia Commons（File:万青 2025 南丹音乐节.jpg，中国新闻社，CC BY 4.0）。<br>
+      <b>cover_1st.png</b> —《万能青年旅店》专辑封面（2010）· Cover Art Archive / MusicBrainz（release-group 860dc2de）。<br>
+      <b>cover_2nd.png</b> —《冀西南林路行》专辑封面（2020）· Cover Art Archive / MusicBrainz（release-group 0b3afb3c）。<br>
+      <b>cover_zhangzhou.png</b> —〈张洲〉单曲封面（音乐肖像计划，2015/2016）· Cover Art Archive / MusicBrainz（release-group 3397cad3）。<br>
+      <b>sjz_skyline2012.jpg</b> — 石家庄天际线（2012，黄昏）· Wikimedia Commons（File:Skyline of Shijiazhuang 2012.jpg）。<br>
+      <b>sjz_towers.jpg</b> — 石家庄住宅高楼 · Wikimedia Commons（File:石家庄高楼.jpg）。<br>
+      <b>sjz_centre.jpg</b> — 石家庄市中心 · Wikimedia Commons（File:Shijiazhuang city centre.jpg）。<br>
+      以上图片版权归原权利人所有，此处非商用个人阅读使用；专辑封面版权归万能青年旅店/唱片公司。
+    </div>
+  </section>
+
+  <footer>
+    给我一首歌的时间 · 第 05 站 · 中国内地 · 万能青年旅店 — The Length of a Song<br>
+    事实核查截至 2026-10-07；来源分歧如实并列，未采信无出处细节。
+  </footer>
+</div>
+</body>
+</html>
