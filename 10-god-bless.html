@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>给我一首歌的时间 10 · 印度尼西亚 — God Bless</title>
+<style>
+  :root{
+    --bg:#12100e; --panel:#1b1815; --line:#342c24; --ink:#ece7dd; --ink2:#a49b8d;
+    --gold:#d8a24a; --blue:#c08a5a; --serif:"Songti SC","Noto Serif CJK SC",serif;
+    --sans:"Hiragino Sans GB","PingFang SC",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.9;font-size:17px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px 90px}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(216,162,74,.35)}
+  a:hover{border-bottom-color:var(--gold)}
+  sup{font-size:.72em;line-height:0}
+  sup a{border:none;color:var(--gold);opacity:.9}
+
+  .stop{display:flex;align-items:center;gap:14px;margin:44px 0 18px;color:var(--ink2);font-size:14px;letter-spacing:.12em}
+  .stop .no{font-family:var(--serif);border:1px solid var(--line);padding:4px 12px;border-radius:3px}
+  .stop .route{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  h1{font-family:var(--serif);font-size:50px;line-height:1.25;font-weight:700;letter-spacing:.02em}
+  h1 .en{display:block;font-size:22px;color:var(--blue);letter-spacing:.16em;margin-top:8px;font-weight:600}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin:22px 0 0;color:var(--ink2);font-size:14.5px}
+  .meta b{color:var(--ink);font-weight:600}
+  .lede{font-family:var(--serif);font-size:20px;color:#ded8cd;border-left:3px solid var(--gold);padding:6px 0 6px 20px;margin:34px 0 10px;line-height:2}
+
+  section{margin-top:64px}
+  h2{font-family:var(--serif);font-size:27px;font-weight:700;margin-bottom:6px;display:flex;align-items:baseline;gap:14px}
+  h2 .k{color:var(--gold);font-size:16px;letter-spacing:.18em;font-family:var(--sans);font-weight:600}
+  .rule{height:1px;background:var(--line);margin:14px 0 26px}
+  h3{font-size:18.5px;margin:30px 0 8px;color:var(--ink)}
+  p{margin:12px 0;color:#d8d2c7}
+  .muted{color:var(--ink2);font-size:14.5px}
+
+  figure{margin:26px 0}
+  figure img{width:100%;display:block;border-radius:4px}
+  figure.half{max-width:520px;margin-left:auto;margin-right:auto}
+  figure.narrow{max-width:380px;margin-left:auto;margin-right:auto}
+  figcaption{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.7}
+  figcaption b{color:#c3baab;font-weight:600}
+  .row{display:flex;gap:16px;flex-wrap:wrap}
+  .row figure{flex:1 1 260px;margin:20px 0 0}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px 24px;margin:22px 0}
+  .fact{display:grid;grid-template-columns:120px 1fr;gap:6px 18px;font-size:15.5px}
+  .fact dt{color:var(--ink2)}
+  .fact dd{color:var(--ink)}
+
+  table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--ink2);font-weight:600;font-size:13.5px;letter-spacing:.06em}
+  td.yr{color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+  .tl{list-style:none;margin:18px 0}
+  .tl li{position:relative;padding:0 0 22px 118px;font-size:15.5px}
+  .tl li::before{content:"";position:absolute;left:86px;top:11px;bottom:-2px;width:1px;background:var(--line)}
+  .tl li:last-child::before{display:none}
+  .tl .yr{position:absolute;left:0;top:1px;font-family:var(--serif);color:var(--gold);font-size:16px;letter-spacing:.03em}
+  .tl b{color:var(--ink)}
+
+  .song{background:linear-gradient(180deg,#191512,#141210);border:1px solid var(--line);border-radius:10px;padding:30px 30px 24px;margin-top:22px}
+  .song .t{font-family:var(--serif);font-size:34px;font-weight:700}
+  .song .t span{color:var(--gold)}
+  .lyric{font-family:var(--serif);color:#efece4;font-size:19px;line-height:2.05;border-left:3px solid var(--gold);padding-left:20px;margin:24px 0}
+  .lyric small{display:block;font-family:var(--sans);font-size:13px;color:var(--ink2);margin-top:14px}
+  .lyric .id{color:#d9d4c9}
+  .lyric .cn{color:#a89f8f;font-size:16px}
+  .recs{display:flex;gap:16px;flex-wrap:wrap}
+  .rec{flex:1 1 300px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+  .rec .n{font-family:var(--serif);font-size:21px;font-weight:700}
+  .rec .y{color:var(--gold);font-size:14px;margin-left:8px}
+  .rec p{font-size:14.5px;margin-top:8px;color:#ccc6ba}
+
+  .note{background:rgba(216,162,74,.07);border:1px solid rgba(216,162,74,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#e3d3b6;margin:16px 0}
+  .warn{background:rgba(192,138,90,.07);border:1px solid rgba(192,138,90,.3);border-radius:8px;padding:14px 18px;font-size:14.5px;color:#dcc9b2;margin:16px 0}
+
+  ol.src{font-size:13.5px;color:var(--ink2);line-height:2;padding-left:24px}
+  ol.src li{margin:4px 0}
+  ol.src a{word-break:break-all}
+
+  .duo{display:flex;gap:20px;flex-wrap:wrap;margin:20px 0}
+  .duo .card{flex:1 1 300px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+  .duo .n{font-family:var(--serif);font-size:22px;font-weight:700}
+  .duo .en{color:var(--blue);font-size:14px;letter-spacing:.08em}
+  .duo dl{display:grid;grid-template-columns:78px 1fr;gap:4px 14px;font-size:14.5px;margin-top:12px}
+  .duo dt{color:var(--ink2)}
+  .duo dd{color:var(--ink)}
+  footer{margin-top:80px;border-top:1px solid var(--line);padding-top:26px;color:var(--ink2);font-size:13px;line-height:2}
+  .site-bar{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px;padding-top:34px}
+  .site-bar .brand{font-family:var(--serif);font-size:18px;color:var(--ink);border:none;letter-spacing:.04em}
+  .site-bar .brand em{font-style:normal;font-size:12px;color:#8A8377;margin-left:8px;letter-spacing:.12em}
+  .site-bar .back{font-size:13px;color:#8A8377;border:none}
+  .site-bar .back:hover{color:var(--gold)}
+  .video-box{background:#000;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:20px 0}
+  .video-box video{width:100%;display:block}
+</style>
+</head>
+<body>
+  <div class="site-bar">
+    <a class="brand" href="index.html">给我一首歌的时间<em>The Length of a Song</em></a>
+    <a class="back" href="index.html">← 全部期数</a>
+  </div>
+
+<div class="wrap">
+
+  <div class="stop"><span class="no">10</span><span>印度尼西亚 · INDONESIA</span><span class="route"></span><span>1973–今</span></div>
+  <h1>God Bless<span class="en">THE LENGTH OF A SONG · 给我一首歌的时间</span></h1>
+  <div class="meta">
+    <span>地区 <b>印度尼西亚（雅加达）</b></span>
+    <span>成立 <b>1973 年 5 月 5 日</b></span>
+    <span>本期歌曲 <b>〈Rumah Kita〉4:48.76</b></span>
+  </div>
+
+  <p class="lede">一九七三年，一个从荷兰回来的主唱在雅加达组了这支乐队，第二年，鼓手和键盘手死于车祸，他们在纪念演出上抬着一口棺材回到舞台。一九八八年，一首写竹墙茅草屋的歌从一张硬摇滚专辑里长出来——写词的乐评人没有房，写曲的吉他手住在租来的房子里。二〇二五年六月，这首歌唱在了世界杯预选赛印尼对中国队的开球之前。</p>
+
+  <section>
+    <h2><span class="k">基本资料</span>Fact Sheet</h2>
+    <div class="rule"></div>
+    <div class="panel">
+      <dl class="fact">
+        <dt>队名</dt><dd>God Bless——直接取自英文「上帝保佑」。乐队是印尼公认最早的摇滚拓荒者之一，印尼文维基称其「被视为具有高水准音乐品质的先驱（pelopor）」<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup></dd>
+        <dt>成立</dt><dd>1973 年 5 月 5 日，雅加达；首演在伊斯迈尔·马尔祖基公园（Taman Ismail Marzuki，雅加达艺术中心）<sup><a href="#src1">[1]</a><a href="#src2">[2]</a><a href="#src3">[3]</a></sup></dd>
+        <dt>创始成员</dt><dd>Ahmad Albar（主唱）、Jockie Soerjoprajogo（键盘）、Fuad Hassan（鼓）、Donny Fattah（贝斯）、Ludwig Lemans（吉他，荷兰人）——乐器分工按英文／印尼文维基；另有报道与之出入，见「来源分歧」<sup><a href="#src1">[1]</a><a href="#src19">[19]</a></sup></dd>
+        <dt>关键人物</dt><dd>Ian Antono：1950 年生于玛琅（Malang），1974 年经 Jockie 引荐加入，任主音吉他手；《Rumah Kita》作曲者之一<sup><a href="#src5">[5]</a><a href="#src2">[2]</a><a href="#src6">[6]</a></sup></dd>
+        <dt>活跃</dt><dd>1973 年至今，五十余年从未正式宣布解散；成员更替据印尼文维基「不下十五拨」<sup><a href="#src2">[2]</a></sup></dd>
+        <dt>代表作</dt><dd>〈Kehidupan〉〈Rumah Kita〉〈Semut Hitam〉（1988《Semut Hitam》）；〈Menjilat Matahari〉（1989《Raksasa》）<sup><a href="#src1">[1]</a><a href="#src6">[6]</a><a href="#src7">[7]</a></sup></dd>
+        <dt>国家认证</dt><dd>2020 年，印尼邮政发行音乐主题邮票，God Bless 五人合影上票<sup><a href="#src16">[16]</a></sup>；2009 年 Rolling Stone Indonesia「25 位最伟大的印尼音乐人」在列<sup><a href="#src2">[2]</a></sup></dd>
+      </dl>
+    </div>
+  </section>
+
+  <figure class="half">
+    <img src="assets/gb_stamp2020.jpg" alt="2020 年印尼音乐主题邮票上的 God Bless">
+    <figcaption><b>[图1]</b> 2020 年印度尼西亚音乐主题邮票，面值 3000 印尼盾，票面为 God Bless 五人合影。公有领域，取自 Wikimedia Commons 文件页。</figcaption>
+  </figure>
+
+  <section>
+    <h2><span class="k">一</span>从荷兰回来的主唱</h2>
+    <div class="rule"></div>
+    <p>Ahmad Albar 出生于东爪哇的阿拉伯裔家庭，小时候演过电影<sup><a href="#src3">[3]</a></sup>。约一九六〇年前后他去了荷兰，先在 Take Five 拿过音乐节最佳歌手，一九六七至一九七二年在乐队 <b>Clover Leaf</b> 唱了九年，发过九张单曲，其中〈Don't Spoil My Day〉〈Grey Clouds〉在荷兰小有名气<sup><a href="#src3">[3]</a></sup>。</p>
+    <p>一九七二年底，他带着 Clover Leaf 的荷兰吉他手 <b>Ludwig Lemans</b> 回到雅加达，拉上鼓手 Fuad Hassan、贝斯手 Donny Fattah，在 Puncak 闭关排练两周，准备一九七三年五月在伊斯迈尔·马尔祖基公园的演出——排练期间，乐队定名 <b>God Bless</b><sup><a href="#src3">[3]</a><a href="#src1">[1]</a></sup>。</p>
+    <figure class="narrow">
+      <img src="assets/gb_albar_child.jpg" alt="Ahmad Albar 童年照">
+      <figcaption><b>[图2]</b> Ahmad Albar 童年照。公有领域，取自 Wikimedia Commons（原件见 dennysakrie63.wordpress.com）。</figcaption>
+    </figure>
+    <p class="muted">键盘手 Jockie Soerjoprajogo 的加入时点，两份维基说法不同：英文维基把他列为创始成员；印尼文维基则记他一九七三年初才顶替 Deddy Dores 加入，其后一度离队（由 Soman Lubis 顶替）。分歧记录见「来源分歧」第 4 条<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup>。</p>
+  </section>
+
+  <section>
+    <h2><span class="k">二</span>1973：定名，与印尼第一场露天摇滚音乐会</h2>
+    <div class="rule"></div>
+    <p>一九七三年五月五日，乐队在伊斯迈尔·马尔祖基公园（TIM）第一次登台，这一天被算作乐队正式的生日<sup><a href="#src1">[1]</a><a href="#src2">[2]</a><a href="#src3">[3]</a></sup>。同年八月十六日，他们在拉古南（Ragunan）办了一场叫 <b>Summer 28</b> 的露天演出——印尼文维基形容它「类似印尼版的 Woodstock」，印尼、马来西亚、菲律宾的乐队都来参加；英文维基引 Theodore KS 的传记，称它是一九〇〇年以来（截至 2004 年）印尼最大的露天音乐会<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup>。</p>
+    <p>一九七五年，他们为来雅加达演出的英国乐队 <b>Deep Purple</b> 暖场；同年九月二十七日，Albar 登上《Tempo》杂志封面——报道形容他转着麦克风、一身佐罗式的行头，是印尼最早的摇滚巨星形象<sup><a href="#src1">[1]</a><a href="#src3">[3]</a><a href="#src5">[5]</a></sup>。</p>
+    <div class="row">
+      <figure>
+        <img src="assets/gb_tim_jakarta.jpg" alt="雅加达伊斯迈尔·马尔祖基公园">
+        <figcaption><b>[图3]</b> 伊斯迈尔·马尔祖基公园（TIM），1973 年 5 月 5 日乐队首演地。摄者 Fitri Penyalai，CC BY-SA 4.0，Wikimedia Commons。</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gb_tim_grahebakti.jpg" alt="TIM 园内的 Graha Bakti Budaya">
+        <figcaption><b>[图4]</b> TIM 园内的 Graha Bakti Budaya（2025）。摄者 Medelam，CC BY-SA 4.0，Wikimedia Commons。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="k">三</span>1974：车祸、棺材，与 Ian Antono 的到来</h2>
+    <div class="rule"></div>
+    <p>一九七四年六月，鼓手 <b>Fuad Hassan</b> 与键盘手 <b>Soman Lubis</b> 在雅加达南区的 Pancoran 纪念碑附近死于车祸；几乎同时，荷兰吉他手 Lemans 决定回国——五个人只剩两个<sup><a href="#src2">[2]</a></sup>。</p>
+    <p>键盘手 Jockie 重新归队，并带来了两个人：吉他手 <b>Ian Antono</b> 与鼓手 Teddy Sujaya<sup><a href="#src2">[2]</a></sup>。为纪念逝去的一百天，乐队回到 TIM 舞台办了一场纪念演出——印尼文维基的记载是，他们在台上「抬着一口棺材（mengusung peti mati）」<sup><a href="#src2">[2]</a></sup>。</p>
+    <p>那时的 God Bless 还是一支翻唱乐队，唱 Kansas、Genesis、Deep Purple 的歌。转变发生在录音棚：他们试写的样带辗转到了唱片公司 Aquarius Musikindo 手里——老板 Suryoko 常去 Ian 家学吉他，两人是老朋友<sup><a href="#src2">[2]</a></sup>。</p>
+  </section>
+
+  <section>
+    <h2><span class="k">四</span>三张唱片：从前卫摇滚到黑蚂蚁</h2>
+    <div class="rule"></div>
+    <div class="tl">
+      <li><span class="yr">1975</span><b>《God Bless》</b>——首专（年份与名称见「来源分歧」第 1 条）。其中〈Huma di Atas Bukit〉（山上的稻田）改编自 Genesis〈Firth of Fifth〉，后来成了电影《Laila Majenun》的主题曲<sup><a href="#src1">[1]</a><a href="#src13">[13]</a><a href="#src14">[14]</a></sup></li>
+      <li><span class="yr">1980</span><b>《Cermin》（镜子）</b>——英文维基形容它更抒情，带 Deep Purple 与 Van Halen 的影响<sup><a href="#src1">[1]</a></sup></li>
+      <li><span class="yr">1988</span><b>《Semut Hitam》（黑蚂蚁）</b>——时隔八年的回归之作，「在市场上爆了」，是乐队卖得最好的一张；曲风从前卫摇滚转向硬摇滚／重金属<sup><a href="#src2">[2]</a><a href="#src1">[1]</a><a href="#src7">[7]</a></sup></li>
+      <li><span class="yr">1989</span><b>《Raksasa》（巨兽）</b>——Ian Antono 录完后离队，由 Eet Sjahranie 顶替；〈Menjilat Matahari〉〈Misteri〉走红<sup><a href="#src2">[2]</a></sup></li>
+      <li><span class="yr">1997</span><b>《Apa Kabar?》</b>——Ian Antono 回归后的重聚专辑，此后再度沉寂<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup></li>
+      <li><span class="yr">2009</span><b>《36th》</b>——Albar 出狱后的复归之作；同年末乐队登上 Rolling Stone Indonesia 封面<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup></li>
+      <li><span class="yr">2023</span><b>《Anthology 50th Year Anniversary》</b>——与吉他手 Tohpati 及捷克交响乐团合作，纪念成军五十年<sup><a href="#src11">[11]</a></sup></li>
+    </div>
+    <p>《Semut Hitam》的词作者名单里有一个后来更响的名字：<b>Iwan Fals</b>——印尼最具代表性的民谣抗议歌手，为这张专辑写了〈Damai Yang Hilang〉（失落和平）〈Orang Dalam Kaca〉（镜中人）〈Trauma〉三首词<sup><a href="#src6">[6]</a></sup>。英文维基引《雅加达邮报》的评论：God Bless 的歌常为穷人与工人阶级发声<sup><a href="#src1">[1]</a></sup>。</p>
+    <div class="row">
+      <figure>
+        <img src="assets/gb_cover_1975.jpg" alt="《God Bless》首专封面（1975）">
+        <figcaption><b>[图5]</b> 《God Bless》（1975）首专封面。取自 Cover Art Archive（MusicBrainz），版权归原权利人。</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gb_cover_semut1988.jpg" alt="《Semut Hitam》专辑封面（1988）">
+        <figcaption><b>[图6]</b> 《Semut Hitam》（Logiss Records，1988）封面，五人为 Albar、Ian Antono、Donny Fattah、Jockie、Teddy Sujaya。取自 Cover Art Archive（MusicBrainz），版权归原权利人。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="k">五</span>本期歌曲〈Rumah Kita〉——两个没有家的人，写了一首关于家的歌</h2>
+    <div class="rule"></div>
+    <div class="song">
+      <div class="t">〈Rumah Kita〉<span>　我们的家</span></div>
+      <p class="muted">《Semut Hitam》第 2 轨 · 1988 · 词曲 Ian Antono ／ Theodore KS · 全曲 4:48.76（Apple Music 与网易云一致；Discogs 记 4:46，见来源分歧第 6 条）<sup><a href="#src6">[6]</a><a href="#src10">[10]</a><a href="#src11">[11]</a><a href="#src12">[12]</a></sup></p>
+    </div>
+    <h3>它从一栋不存在的房子开始</h3>
+    <p>一九八七年，词作者 <b>Theodore KS</b>——印尼音乐圈最有名的乐评人之一，后来写了 Albar 的传记《Achmad Albar, Sang Ikon》<sup><a href="#src1">[1]</a></sup>——想要一栋自己的房子。据二〇二〇年翻唱项目的报道转述，哪怕它小一点、破一点、位置偏一点，只要是自己的就好。他把写好的歌词交给了 God Bless 的吉他手 <b>Ian Antono</b>；而这位吉他手当时正在参与《Semut Hitam》的录音——他住的地方，还是租来的<sup><a href="#src9">[9]</a></sup>。</p>
+    <p>两个没有房的人，写出了一首后来被整个国家传唱的歌。</p>
+    <h3>歌里有什么</h3>
+    <p>主歌的画面极其具体：竹子做的墙，没有装饰，没有画；茅草做顶，泥地做地板；院子围着一圈芒草，没有康乃馨（anyelir），没有茉莉（melati），只有野百合（bunga bakung）长在院子里。然后是那句反复的、几乎是固执的宣告：<b>「可这一切，是我们的——完完全全是我们的。」</b><sup><a href="#src10">[10]</a></sup></p>
+    <p>唱到桥段，歌问了那句要害的话：<b>「难道我们要动身去城市？那座满是问号的城市？」</b>再接副歌的回答——「最好在这里，我们自己的家；全能者的一切恩赐，都在这里。」<sup><a href="#src10">[10]</a></sup></p>
+    <p>音乐上，它是一首慢摇滚（slow rock）叙事曲：旋律线简单到一听就能跟唱，与专辑其余的硬摇滚曲目形成落差——ProgArchives 的乐评称它「旋律抓耳、流动平滑」，并认为歌词「讲的是无论外面的世界怎么发展，人应当留在自己的土地」<sup><a href="#src7">[7]</a></sup>。它不是《Semut Hitam》里最先红的歌（〈Kehidupan〉先爆），但传唱得更久——主唱 Albar 二〇一一年在 Hard Rock Cafe 的演出现场对观众说：「<b>这是一首关于城市化的歌。</b>那晚全场跟着他唱完了整首歌」——《雅加达邮报》这样记录<sup><a href="#src8">[8]</a></sup>。</p>
+    <p>它至今仍是各类「家／国家」主题的电视节目配乐，也常被翻唱：二〇二〇年独立日前，Lesti、Melly Goeslaw 等人把它重录成极简钢琴版，制作人是 Anto Hoed 与 Melly Goeslaw<sup><a href="#src9">[9]</a></sup>。在 Rolling Stone Indonesia 二〇〇九年的「一百五十首史上最好的印尼歌曲」里，〈Kehidupan〉排第八，〈Rumah Kita〉排第二十二<sup><a href="#src15">[15]</a></sup>。二〇二五年六月五日，世界杯预选赛印尼对中国队，开球前，主教练 Kluivert 亲自打电话请乐队到场——他们唱的正是这首<sup><a href="#src10b">[10]</a></sup>。</p>
+    <div class="note">「本页选择，非榜单结论」——God Bless 没有一份权威「最经典一首」榜单；本页选〈Rumah Kita〉依据：Rolling Stone Indonesia 150 大第 22 名（乐队两首上榜之一）＋ 2025 年国家体育场开球曲 ＋ 长期被翻唱与电视引用。〈Kehidupan〉排名更高（第 8），同样值得先听。</div>
+    <div class="lyric">
+      <span class="id">Hanya bilik bambu tempat tinggal kita<br>
+      Tanpa hiasan, tanpa lukisan<br>
+      Beratap jerami, beralaskan tanah<br>
+      Namun semua ini punya kita<br>
+      Memang semua ini milik kita sendiri</span><br>
+      <span class="cn">一间竹屋，是我们住的地方／没有装饰，没有画／茅草作顶，泥地作床／但这一切，属于我们／这一切，确实只属于我们自己</span>
+      <span class="id">Haruskah kita beranjak ke kota<br>
+      Yang penuh dengan tanya?<br>
+      Lebih baik di sini, rumah kita sendiri<br>
+      Segala nikmat dan anugerah Yang Kuasa<br>
+      Semuanya ada di sini, rumah kita</span><br>
+      <span class="cn">难道我们要动身去城市？那座满是问号的城市？／最好在这里，我们自己的家／全能者的一切恩赐与福分／都在这里——我们的家</span>
+      <small>印尼语原文（词：Ian Antono ／ Theodore KS）；中文为本页参考译文，非官方译本。歌词全文见 Shazam 官方 credits 页与 LyricsMode<sup><a href="#src10">[10]</a></sup>。</small>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="k">六</span>延伸推荐</h2>
+    <div class="rule"></div>
+    <div class="recs">
+      <div class="rec">
+        <div class="n">〈Kehidupan〉<span class="y">《Semut Hitam》· 1988</span></div>
+        <p>专辑真正的开门红，全国性大热单曲；Jockie 写的旋律与编曲带着一点交响化的流行摇滚腔，Rolling Stone Indonesia 150 大第 8 名——想知道 God Bless 巅峰期什么样，先听它。<sup><a href="#src7">[7]</a><a href="#src15">[15]</a></sup></p>
+      </div>
+      <div class="rec">
+        <div class="n">〈Damai Yang Hilang〉<span class="y">《Semut Hitam》· 1988</span></div>
+        <p>Iwan Fals 写词的反战抒情曲——「战争成了买卖，新闻里再没有幸福」；一支硬摇滚乐队把民谣诗人的歌词唱成了慢板颂歌，是这张专辑另一半性格。<sup><a href="#src6">[6]</a><a href="#src7">[7]</a></sup></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="k">七</span>解散之后 · 成员去向</h2>
+    <div class="rule"></div>
+    <p>乐队没有解散的那一天——五十多年里成员进进出出「不下十五拨」<sup><a href="#src2">[2]</a></sup>，把乐队带到今天的核心是四个人<sup><a href="#src1">[1]</a></sup>：</p>
+    <div class="duo">
+      <div class="card">
+        <div class="n">Ahmad Albar <span class="en">主唱</span></div>
+        <dl>
+          <dt>此后</dt><dd>1977–78 与 Ucok Harahap 组 Duo Kribo；1979 出 dangdut 专辑《Zakia》；1991 组 Gong 2000，首场演出十万人。2007 年 9 月因毒品案被捕，2008 年 6 月被判 8 个月，7 月获释——乐队为此停摆至 2009 年复出<sup><a href="#src3">[3]</a><a href="#src1">[1]</a><a href="#src2">[2]</a></sup></dd>
+        </dl>
+      </div>
+      <div class="card">
+        <div class="n">Ian Antono <span class="en">吉他</span></div>
+        <dl>
+          <dt>此后</dt><dd>1988 年后离队发展个人事业，为 Iwan Fals、Anggun、Nicky Astria 等写歌编曲；1991–96 组 Gong 2000；1997 年与 2002 年两度回归 God Bless 至今<sup><a href="#src2">[2]</a><a href="#src5">[5]</a></sup></dd>
+        </dl>
+      </div>
+      <div class="card">
+        <div class="n">Jockie Soerjoprajogo <span class="en">键盘</span></div>
+        <dl>
+          <dt>此后</dt><dd>乐队之外，他给 Chrisye 编了〈Lilin-Lilin Kecil〉、参与电影配乐《Badai Pasti Berlalu》（16 年卖出 900 万张）；2003 年因 Albar 毒品问题的激烈冲突离队。2018 年 2 月 5 日在雅加达去世，63 岁<sup><a href="#src4">[4]</a><a href="#src1">[1]</a></sup></dd>
+        </dl>
+      </div>
+      <div class="card">
+        <div class="n">Donny Fattah <span class="en">贝斯</span></div>
+        <dl>
+          <dt>此后</dt><dd>从建队起唯一从未离开的创始成员（2012 年曾因心脏病暂别半年）；2026 年 3 月 7 日去世，76 岁。早于此的 2025 年 12 月 8 日，鼓手 Yaya Moektio 因肺结核去世，68 岁<sup><a href="#src1">[1]</a><a href="#src2">[2]</a><a href="#src17">[17]</a><a href="#src18">[18]</a></sup></dd>
+        </dl>
+      </div>
+    </div>
+    <div class="row">
+      <figure>
+        <img src="assets/gb_albar_portrait.jpg" alt="Ahmad Albar 肖像">
+        <figcaption><b>[图7]</b> Ahmad Albar。摄者 Victor Pogadaev，CC0，Wikimedia Commons。</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gb_ianantono.jpg" alt="Ian Antono">
+        <figcaption><b>[图8]</b> Ian Antono。官方照片，公有领域，Wikimedia Commons。</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gb_yockie2016.jpg" alt="Jockie Soerjoprajogo（2016）">
+        <figcaption><b>[图9]</b> Jockie Soerjoprajogo（2016）。摄者 Ruth Toruan，公有领域，Wikimedia Commons。</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gb_donny2023.jpg" alt="Donny Fattah（2023）">
+        <figcaption><b>[图10]</b> Donny Fattah（2023）。摄者 Denny MR，公有领域，Wikimedia Commons。</figcaption>
+      </figure>
+    </div>
+    <figure class="narrow">
+      <img src="assets/gb_albar_konsert2015.jpg" alt="Ahmad Albar 2015 年音乐节现场">
+      <figcaption><b>[图11]</b> Albar 在 2015 年音乐节现场。摄者 Victor Pogadaev，CC0，Wikimedia Commons。</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2><span class="k">八</span>本期短片</h2>
+    <div class="rule"></div>
+    <figure class="half">
+      <img src="assets/gb_monas.jpg" alt="雅加达独立纪念碑与天际线">
+      <figcaption><b>[图12]</b> 雅加达独立纪念碑（Monas）。摄者 Ramayoni，CC BY-SA 4.0，Wikimedia Commons。</figcaption>
+    </figure>
+    <p>资料短片与〈Rumah Kita〉全曲等长（<b>4:49</b>，288.76 秒，本地音源实测），共 14 段画面：2020 年印尼音乐邮票、Albar 童年照、伊斯迈尔·马尔祖基公园、1974 年车祸与棺材卡、《God Bless》与《Semut Hitam》封面、〈Rumah Kita〉词曲诞生卡、雅加达天际线、四张成员肖像、Rolling Stone 榜单卡，以及 2025 年 6 月 5 日国家体育场的一幕。配音版正片待解说稿定稿后制作；本站嵌入的是无声资料版。</p>
+    <div class="video-box">
+      <video controls preload="metadata" src="10-god-bless-film.mp4"></video>
+    </div>
+    <div class="note">本片<b>不含音频</b>（与全曲 4:49 等长），请同步播放 God Bless〈Rumah Kita〉。画面全部为真实素材：Wikimedia Commons 照片与邮票、Cover Art Archive 专辑封面；本期未使用 AI 生成影像。印尼语歌词不用普通话念，歌词留白页放在全片最后一段。</div>
+  </section>
+
+  <section>
+    <h2><span class="k">九</span>来源分歧</h2>
+    <div class="rule"></div>
+    <table>
+      <tr><th style="width:190px">事项</th><th>各来源说法</th><th style="width:210px">本页处理</th></tr>
+      <tr><td>首专年份与名称</td><td>MusicBrainz／印尼文维基／Ian Antono 传记页作 1975《God Bless》；英文维基正文与 2023 年回顾展清单作 1976《Huma di Atas Bukit》</td><td>按 MusicBrainz 与实物封面（〈Huma di Atas Bukit〉为首专内曲目）取 1975《God Bless》，两说并列<sup><a href="#src13">[13]</a><a href="#src1">[1]</a><a href="#src19">[19]</a></sup></td></tr>
+      <tr><td>创始成员乐器分工</td><td>英文／印尼文维基：Fuad=鼓、Donny=贝斯、Lemans=吉他；Indonesian Observer 回顾展报道：Donny=吉他、Fuad=贝斯、另列 Coki Bollemeyer（鼓）</td><td>取两份维基的一致口径<sup><a href="#src1">[1]</a><a href="#src19">[19]</a></sup></td></tr>
+      <tr><td>Deep Purple 暖场与首专先后</td><td>英文维基：1975 暖场 → 次年首专；印尼文维基：首专成功 → 获选暖场</td><td>两说并存，页面只陈述「1975 年暖场」<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup></td></tr>
+      <tr><td>Jockie 的加入时点</td><td>英文维基列其为创始成员；印尼文维基记 1973 年初顶替 Deddy Dores 加入、一度离队、1974 年归队</td><td>正文采用印尼文维基的编年（其来源为 Theodore KS 2004 传记），分歧在此如实记录<sup><a href="#src1">[1]</a><a href="#src2">[2]</a></sup></td></tr>
+      <tr><td>〈Rumah Kita〉词曲署名</td><td>Discogs／Shazam 记 Ian Antono ＋ Theodore KS；Gramedia 等媒体只记 Ian Antono</td><td>按唱片 credits 取双署名<sup><a href="#src6">[6]</a><a href="#src10">[10]</a></sup></td></tr>
+      <tr><td>〈Rumah Kita〉时长</td><td>Apple Music／网易云 4:48.76（288760ms）；Discogs／ProGGnosis 曲目表 4:46</td><td>以实测音源（4:48.76）为准<sup><a href="#src11">[11]</a><a href="#src12">[12]</a><a href="#src6">[6]</a></sup></td></tr>
+      <tr><td>Albar 被捕日期</td><td>印尼文维基：2007-09-26 在家中被捕；英文维基："imprisoned in November 2007"</td><td>正文写「2007 年 9 月被捕」<sup><a href="#src3">[3]</a><a href="#src1">[1]</a></sup></td></tr>
+      <tr><td>Jockie 去世年份</td><td>英文维基 2018-02-05（63 岁）；部分网络聚合站作 2021</td><td>取英文维基（有讣闻佐证），2021 说判为低质来源不采<sup><a href="#src4">[4]</a></sup></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="k">十</span>资料来源</h2>
+    <div class="rule"></div>
+    <ol class="src">
+      <li id="src1">[1] Wikipedia（英文）：God Bless —— https://en.wikipedia.org/wiki/God_Bless（引 Theodore KS 2004《Achmad Albar, Sang Ikon》、The Jakarta Post 2009/2011、Leo 2010 等）</li>
+      <li id="src2">[2] Wikipedia（印尼文）：God Bless —— https://id.wikipedia.org/wiki/God_Bless</li>
+      <li id="src3">[3] Wikipedia（印尼文）：Achmad Albar —— https://id.wikipedia.org/wiki/Achmad_Albar（引 tirto.id、Kompas.tv、Suara Merdeka 等）</li>
+      <li id="src4">[4] Wikipedia（英文）：Jockie Soerjoprajogo —— https://en.wikipedia.org/wiki/Jockie_Soerjoprajogo</li>
+      <li id="src5">[5] Wikipedia（英文）：Ian Antono —— https://en.wikipedia.org/wiki/Ian_Antono（1950-10-29 生于玛琅；1974 年起任 God Bless 主音吉他手）</li>
+      <li id="src6">[6] Discogs：God Bless – Semut Hitam（Logiss Records，曲长与词曲 credits）—— https://www.discogs.com/God-Bless-Semut-Hitam/release/5517961</li>
+      <li id="src7">[7] ProgArchives：GOD BLESS – Semut Hitam (1988) 乐评 —— https://www.progarchives.com/album.asp?id=16859</li>
+      <li id="src8">[8] The Jakarta Post（2011-06-26）：Keep on rocking（Albar：「This is a song about urbanization」）—— https://www.thejakartapost.com/news/2011/06/26/keep-rocking.html</li>
+      <li id="src9">[9] BingkaiKarya（2020）：Lesti, Melly Goeslaw, Nagita Slavina &amp; Celine Evangelista Present Minimalist Concept in Remake "Rumah Kita"（1987 年词曲 origin 一节）—— https://bingkaikarya.com/News/lesti-melly-goeslaw-nagita-slavina-celine-evangelista-present-minimalist-concept-in-remake-rumah-kita/</li>
+      <li id="src10">[10] Shazam：God Bless – Rumah Kita（官方 credits 与歌词全文）—— https://www.shazam.com/en-gb/song/1544899757/rumah-kita-live-at-aquarius-studio</li>
+      <li id="src10b">[10] Jakarta Daily（2025-05-29）：God Bless to Fire Up Crowd Ahead of Indonesia vs China World Cup Qualifier —— https://www.jakartadaily.id/sports/amp/16215275667/</li>
+      <li id="src11">[11] iTunes Search API（ID 区）：Rumah Kita = 288760ms；《Anthology 50th Year Anniversary》（2023）曲目表</li>
+      <li id="src12">[12] 网易云音乐：Rumah Kita（《Semut Hitam》），id 1393803013，288760ms</li>
+      <li id="src13">[13] MusicBrainz：God Bless（artist d2b28cf0-d884-4001-833f-c722d5875576）release-group 表 —— https://musicbrainz.org/artist/d2b28cf0-d884-4001-833f-c722d5875576</li>
+      <li id="src14">[14] Cover Art Archive：God Bless（1975）／Semut Hitam（1988）／18 Greatest Hits（1992）封面 —— https://coverartarchive.org</li>
+      <li id="src15">[15] Rolling Stone Indonesia №56（2009-12）：150 Lagu Indonesia Terbaik Sepanjang Masa（Kehidupan #8、Rumah Kita #22；转引自 [1]）</li>
+      <li id="src16">[16] Wikimedia Commons 文件页：God Bless 2020 stamp of Indonesia（公有领域）—— https://commons.wikimedia.org/wiki/File:God_Bless_2020_stamp_of_Indonesia.jpg</li>
+      <li id="src17">[17] detikpop（2025-12-08）：Kronologi Meninggalnya Yaya Moektio Eks Drummer God Bless（转引自 [1]）</li>
+      <li id="src18">[18] Kompas（2026-03-07）：Sebelum Meninggal, Donny Fattah God Bless Berjuang Melawan 3 Penyakit（转引自 [1]）</li>
+      <li id="src19">[19] Indonesian Observer（2023）：Celebrating the 50-year journey of Indonesian legendary rock band God Bless（国家美术馆回顾展报道）—— https://observerid.com/?p=39988</li>
+      <li id="src20">[20] Internet Archive：semut-hitam（音频 item，本页短片音源比对用）—— https://archive.org/details/semut-hitam</li>
+    </ol>
+    <h3>图片来源</h3>
+    <ol class="src">
+      <li>[图1] 2020 印尼音乐主题邮票（公有领域，Wikimedia Commons [16]）</li>
+      <li>[图2] Ahmad Albar 童年照（公有领域，Wikimedia Commons）</li>
+      <li>[图3] TIM（摄者 Fitri Penyalai，CC BY-SA 4.0，Wikimedia Commons）</li>
+      <li>[图4] Graha Bakti Budaya, TIM（摄者 Medelam，CC BY-SA 4.0，Wikimedia Commons）</li>
+      <li>[图5] 《God Bless》首专封面（Cover Art Archive / MusicBrainz [14]，版权归原权利人）</li>
+      <li>[图6] 《Semut Hitam》封面（Cover Art Archive / MusicBrainz [14]，版权归原权利人）</li>
+      <li>[图7] Ahmad Albar 肖像（摄者 Victor Pogadaev，CC0，Wikimedia Commons）</li>
+      <li>[图8] Ian Antono（Ian Antono Official，公有领域，Wikimedia Commons）</li>
+      <li>[图9] Jockie Soerjoprajogo（摄者 Ruth Toruan，公有领域，Wikimedia Commons）</li>
+      <li>[图10] Donny Fattah（摄者 Denny MR，公有领域，Wikimedia Commons）</li>
+      <li>[图11] Ahmad Albar 演出照（摄者 Victor Pogadaev，CC0，Wikimedia Commons）</li>
+      <li>[图12] 雅加达独立纪念碑（摄者 Ramayoni，CC BY-SA 4.0，Wikimedia Commons）</li>
+    </ol>
+  </section>
+
+  <footer>
+    给我一首歌的时间 · 第 10 站 · 印度尼西亚 · God Bless — The Length of a Song<br>
+    事实核查截至 2026-10-22；来源分歧如实并列，未采信无出处细节。本期未使用 AI 生成影像。<br>
+    经典曲〈Rumah Kita〉4:48.76 = 本期短片全长；配音版正片待解说稿定稿后制作。
+  </footer>
+</div>
+</body>
+</html>
